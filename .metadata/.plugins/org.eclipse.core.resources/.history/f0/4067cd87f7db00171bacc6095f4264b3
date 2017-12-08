@@ -1,0 +1,29 @@
+package com.cioclass.controller.or;
+
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.cioclass.domain.or.ORBatchInfo;
+import com.cioclass.service.or.QrcodeBuilder4XSService;
+import com.cioclass.util.RController;
+
+@Controller
+@RequestMapping("/or/qr")
+public class QrcodeBuilder4XSController {
+	private final static org.slf4j.Logger LOG = LoggerFactory.getLogger(QrcodeBuilder4XSController.class);
+	@Autowired
+	private QrcodeBuilder4XSService qrcodeBuilder4XSService;
+	
+	@ResponseBody
+    @PostMapping("add")
+    public String add(QrcodeBuilder4XSEntity orBatchInfo) {
+        RController<QrcodeBuilder4XSEntity> r = new RController<>();
+        ORBatchInfo batchInfo = qrcodeBuilder4XSService.save(orBatchInfo);
+        LOG.info("保存信息："+batchInfo);
+        return r.getOne(batchInfo);
+    }
+}

@@ -1,0 +1,11 @@
+package com.cioclass.domain.or;
+
+public class QrcodeBuilder4XSVo {
+	private String en;
+	private String bn;
+	private String url;
+	private int size;
+	private int num;
+	
+	
+}

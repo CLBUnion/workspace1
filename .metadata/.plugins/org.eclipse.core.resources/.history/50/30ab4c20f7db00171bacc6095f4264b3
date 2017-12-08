@@ -1,0 +1,8 @@
+package com.cioclass.controller.or;
+
+import com.cioclass.service.or.QrcodeBuilder4XSService;
+
+public class QrcodeBuilder4XSController {
+	
+	private QrcodeBuilder4XSService qrcodeBuilder4XSService;
+}

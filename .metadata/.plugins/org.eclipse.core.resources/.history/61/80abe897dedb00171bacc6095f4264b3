@@ -1,0 +1,32 @@
+package com.cioclass.service.or;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+@RunWith(SpringJUnit4ClassRunner.class) // 此处调用Spring单元测试类
+@ContextConfiguration(locations = { "classpath:beans.xml" }) // 加载Spring配置文件
+public class QrcodeBuilder4XSService4XSImplTest {
+	@Autowired
+	private QrcodeBuilder4XSService qb;
+
+	@Test
+	public void testCreateContent() {
+		String en = "43";
+		String bn = "13";
+		String url = "http://cioclass.com/o";
+		int size = 8;
+		int num = 100000;
+		qb.createContent(en, bn, url, size, num);
+	}
+	
+	@Test
+	public void testFindByEnBnNum() {
+		String en = "43";
+		String bn = "13";
+		String numStr = "000 123";
+		qb.findByEnBnNum(en, bn, numStr);
+	}
+}

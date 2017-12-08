@@ -1,0 +1,50 @@
+package com.cioclass.service.or;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort.Direction;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import com.cioclass.domain.or.QrcodeBuilder4XSEntity;
+import com.cioclass.domain.or.QrcodeBuilder4XSVo;
+
+@RunWith(SpringJUnit4ClassRunner.class) // 此处调用Spring单元测试类
+@ContextConfiguration(locations = { "classpath:beans.xml" }) // 加载Spring配置文件
+public class QrcodeBuilder4XSService4XSImplTest {
+	@Autowired
+	private QrcodeBuilder4XSService qb;
+
+	@Test
+	public void testCreateContent() {
+		String en = "43";
+		String bn = "13";
+		String url = "http://cioclass.com/o";
+		int size = 8;
+		int num = 100000;
+		QrcodeBuilder4XSVo vo = new QrcodeBuilder4XSVo();
+		vo.setEn(en);
+		vo.setBn(bn);
+		vo.setUrl(url);
+		vo.setSize(size);
+		vo.setNum(num);
+		qb.createContent(en, bn, url, size, num);
+	}
+	
+	@Test
+	public void testFindByEnBnNum() {
+		Page<QrcodeBuilder4XSEntity> page = null;
+		String en = "43";
+		String bn = "13";
+		String numStr = "000 123";
+		Pageable pageable = new PageRequest(0, 10, Direction.ASC, "id");
+		page = qb.findByEnBnNum(en, bn, numStr,pageable);
+		for(QrcodeBuilder4XSEntity e : page.getContent()) {
+			System.out.println(e);
+		}
+	}
+}

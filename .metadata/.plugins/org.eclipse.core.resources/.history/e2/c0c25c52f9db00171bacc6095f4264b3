@@ -1,0 +1,42 @@
+package com.cioclass.domain.or;
+
+public class QrcodeBuilder4XSVo {
+	private String en;
+	private String bn;
+	private String url;
+	private int size;
+	private int num;
+	public String getEn() {
+		return en;
+	}
+	public void setEn(String en) {
+		this.en = en;
+	}
+	public String getBn() {
+		return bn;
+	}
+	public void setBn(String bn) {
+		this.bn = bn;
+	}
+	public String getUrl() {
+		return url;
+	}
+	public void setUrl(String url) {
+		this.url = url;
+	}
+	public int getSize() {
+		return size;
+	}
+	public void setSize(int size) {
+		this.size = size;
+	}
+	public int getNum() {
+		return num;
+	}
+	public void setNum(int num) {
+		this.num = num;
+	}
+	
+	
+	
+}

@@ -1,0 +1,18 @@
+package com.cioclass.controller.or;
+
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.cioclass.service.or.QrcodeBuilder4XSService;
+
+@Controller
+@RequestMapping("/or/qr")
+public class QrcodeBuilder4XSController {
+	private final static org.slf4j.Logger LOG = LoggerFactory.getLogger(QrcodeBuilder4XSController.class);
+	@Autowired
+	private QrcodeBuilder4XSService qrcodeBuilder4XSService;
+	
+	
+}
