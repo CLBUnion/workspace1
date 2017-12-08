@@ -1,0 +1,7 @@
+@CHARSET "UTF-8";
+a,a:hover{ text-decoration:none;}
+.page{padding:15px 20px;text-align:center;}
+.page a:hover{text-decoration:none;border: 1px solid #428bca;}
+.page a,.page span.current{display: inline-block;height:25px;line-height:25px;padding:0 10px;margin:0 2px;border-radius:4px;vertical-align:middle;}
+.page a{color: #428bca;border:1px solid #ddd;}
+.page span.current{color:#fff;background-color:#428bca;border:1px solid #428bca;cursor:default;}

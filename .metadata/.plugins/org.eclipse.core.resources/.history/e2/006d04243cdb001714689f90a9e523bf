@@ -1,0 +1,7 @@
+package com.cioclass.service.or.impl;
+
+import com.cioclass.service.or.QrcodeBuilder4XSService;
+
+public class QrcodeBuilder4XSServiceImpl implements QrcodeBuilder4XSService {
+
+}

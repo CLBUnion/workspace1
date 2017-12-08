@@ -1,0 +1,15 @@
+package com.cioclass.util.or.xs;
+
+public class QrcodeBuilder4XSEntity {
+	
+	private String en;
+	private String bn;
+	/**
+	 * 流水码
+	 */
+	private String no;
+	private String url;
+	private String prefix;
+	private String code;
+	private String codeSize;
+}

@@ -1,0 +1,52 @@
+package com.cioclass.util.or;
+
+import java.util.List;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import com.cioclass.util.or.xs.QrcodeBuilder4XS2File;
+import com.cioclass.util.or.xs.QrcodeBuilder4XSEntity;
+
+public class QrcodeBuilder4XS2FileTest {
+	private QrcodeBuilder4XS2File qbf = null;
+
+	@Before
+	public void before() {
+		qbf = new QrcodeBuilder4XS2File();
+	}
+
+	@Test
+	public void testCreateContentInFile() {
+		String en = "43";
+		String bn = "15";
+		String url = "http://cioclass.com/o";
+		int size = 8;
+		int num = 2;
+		String fname = "E://cioclass//test01";
+		System.out.println(qbf.createContentInFile(en, bn, url, size, num, fname));
+	}
+
+	@Test
+	public void testReadContentFromFile() {
+		String fname = "E://cioclass//test01";
+		String en = "43";
+		String bn = "15";
+		List<String> list = qbf.readContentFromFile(en, bn, fname);
+		for (String s : list) {
+			System.out.println(s);
+		}
+	}
+	
+	@Test
+	public void testReadContent2BeanFromFile() {
+		String fname = "E://cioclass//test01";
+		String en = "43";
+		String bn = "14";
+		List<QrcodeBuilder4XSEntity> list = qbf.readContent2BeanFromFile(en, bn, fname);
+		for (QrcodeBuilder4XSEntity s : list) {
+			System.out.println(s);
+		}
+	}
+	
+}

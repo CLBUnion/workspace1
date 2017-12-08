@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="com.google.common.collect.Lists"/>
+    <fullyQualifiedTypeName name="com.cioclass.util.or.IQrcodeBuilder"/>
+    <fullyQualifiedTypeName name="org.junit.Before"/>
+    <fullyQualifiedTypeName name="com.cioclass.util.GlobalConstant.ActivateStatus"/>
+    <fullyQualifiedTypeName name="com.cioclass.util.GlobalConstant"/>
+    <fullyQualifiedTypeName name="com.cioclass.util.GlobalConstant.Status"/>
+    <fullyQualifiedTypeName name="com.cioclass.util.or.xs.QrcodeBuilder4XSEntity"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="com.cioclass.util.DateUtils"/>
+    <fullyQualifiedTypeName name="com.cioclass.dao.or.QrcodeBuilder4XSDao"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+</qualifiedTypeNameHistroy>

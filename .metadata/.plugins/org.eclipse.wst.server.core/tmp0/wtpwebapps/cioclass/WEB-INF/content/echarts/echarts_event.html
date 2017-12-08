@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+  ~ Copyright (c) 2017.  by 洋葱头信息科技有限公司
+  -->
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="main" style="height:400px"></div>
+<!-- ECharts单文件引入 -->
+<script src="http://echarts.baidu.com/build/dist/echarts-all.js"></script>
+<script>
+    // 基于准备好的dom，初始化echarts图表
+    var myChart = echarts.init(document.getElementById('main'));
+
+
+    myChart.title = '坐标轴刻度与标签对齐';
+    var option = {
+        tooltip: {
+            show: true
+        },
+        legend: {
+            data:['销量']
+        },
+        xAxis : [
+            {
+                type : 'category',
+                data : ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value'
+            }
+        ],
+        series : [
+
+            {
+                "name":"销量",
+                "type":"bar",
+                clickable : true,
+                "data":[5, 20, 40, 10, 10, 20]
+            }
+        ]
+    };
+    // 为echarts对象加载数据
+    myChart.setOption(option);
+    myChart.on('click', function (params) {
+        console.log(params);
+    });
+
+
+
+    /* 给柱状图绑定click事件 */
+    //var ecConfig = require('echarts/config');
+    //function eConsole(param) {
+        // 弹出当前柱子的数值
+        //alert(param.value); 　　
+    //}
+    //myChart.on(ecConfig.EVENT.CLICK, eConsole);
+</script>
+</body>
+</html>

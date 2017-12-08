@@ -1,0 +1,25 @@
+package com.cioclass.service.or.impl;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.cioclass.domain.or.QrcodeBuilder4XSEntity;
+import com.cioclass.service.or.QrcodeBuilder4XSService;
+@Service
+public class QrcodeBuilder4XSServiceImpl implements QrcodeBuilder4XSService {
+	
+	
+	@Override
+	public QrcodeBuilder4XSEntity save(QrcodeBuilder4XSEntity qbe) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<QrcodeBuilder4XSEntity> save(List<QrcodeBuilder4XSEntity> list) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

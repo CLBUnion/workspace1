@@ -1,0 +1,37 @@
+package com.cioclass.util.or.xs;
+
+import java.util.List;
+import java.util.Set;
+import java.util.UUID;
+
+import com.cioclass.util.or.IQrcodeBuilder;
+import com.google.common.collect.Sets;
+
+public abstract class QrcodeBuilder4XS implements IQrcodeBuilder {
+
+	/**
+	 * 2位商家码+2位批号码+1个空格+6位流水码前3位+空格+6位流水码后3位+逗号+网址前缀+参数+2位商家码+2位批号码+8位防伪码
+	 * =25字符+网址长度(参数为 ?n=) =46字符(http://cioclass.com/o)
+	 */
+	@SuppressWarnings("rawtypes")
+	@Override
+	public abstract List createContent(String en, String bn, String url, int size, int num);
+
+	@Override
+	public String getNumStr(int no, int size) {
+		String ns = String.format("%0" + size + "d", no);
+		return ns.substring(0, 3) + " " + ns.substring(3);
+	}
+
+	@Override
+	public Set<String> getSet(int size, int num) {
+		Set<String> set = Sets.newHashSet();
+		int count = 0;
+		while (count < num) {
+			if (set.add(UUID.randomUUID().toString().replace("-", "").substring(0, size))) {
+				count++;
+			}
+		}
+		return set;
+	}
+}

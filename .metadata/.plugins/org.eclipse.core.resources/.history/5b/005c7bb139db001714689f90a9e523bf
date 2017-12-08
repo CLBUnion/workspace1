@@ -1,0 +1,10 @@
+package com.cioclass.dao.or;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+
+import com.cioclass.util.or.xs.QrcodeBuilder4XS;
+
+public interface QrcodeBuilder4XSDao extends JpaRepository<QrcodeBuilder4XS, Integer>, JpaSpecificationExecutor<QrcodeBuilder4XS> {
+
+}

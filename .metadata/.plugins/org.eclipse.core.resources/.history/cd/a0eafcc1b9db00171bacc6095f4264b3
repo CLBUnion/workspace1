@@ -1,0 +1,208 @@
+package com.cioclass.service.or.impl;
+import com.cioclass.dao.or.*;
+import com.cioclass.domain.or.*;
+import com.cioclass.dto.ORRetroactiveInfoTemp;
+import com.cioclass.service.or.OrBatchInfoService;
+import com.cioclass.util.RType;
+import com.cioclass.util.exception.ResultException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+import java.util.ArrayList;
+import java.util.List;
+/**
+ * ORBatchInfoServiceImpl 批号信息服务实现类
+ * @author lb_chen
+ */
+@Service
+public class OrBatchInfoServiceImpl implements OrBatchInfoService {
+    private final static Logger log = LoggerFactory.getLogger(OrBatchInfoServiceImpl.class);
+	@Autowired
+	private OrBatchInfoDao orBatchInfoDao;
+	@Autowired
+	private OrCompanyDao orCompanyDao;
+	@Autowired
+	private OrProcessLogDao orProcessLogDao;
+	@Autowired
+	private OrSearchDao orSearchDao;
+
+	@Override
+	public List<Integer> findCompanyIdsByBatchNumber(String batchNumber) {
+		Integer id = this.findIdByBatchNumber(batchNumber);
+		return orBatchInfoDao.findCompanyIdsById(id);
+	}
+
+	@Override
+	public Integer findIdByBatchNumber(String batchNumber) {
+		return orBatchInfoDao.findIdByBatchNumber(batchNumber);
+	}
+
+	@Override
+	public ORBatchInfo findByBatchNumber(String batchNumber) {
+		return orBatchInfoDao.findByBatchNumber(batchNumber);
+	}
+
+	@Override
+	public List<ORCompany> findCompanyByBatchNumber(String batchNumber) {
+		List<Integer> idlist = this.findCompanyIdsByBatchNumber(batchNumber);
+		List<ORCompany> list = new ArrayList<>();
+		ORCompany company = null;
+		for (Integer i : idlist) {
+			company = orCompanyDao.findOne(i);
+			list.add(company);
+		}
+		return list;
+	}
+
+	@Override
+	public List<Integer> findProcessLogIdsByBatchNumber(String batchNumber) {
+		return orBatchInfoDao.findProcessLogIdsByBatchNumber(batchNumber);
+	}
+
+	@Override
+	public List<ORProcessLog> findProcessLogByBatchNumber(String batchNumber) {
+		List<Integer> idlist = this.findProcessLogIdsByBatchNumber(batchNumber);
+		List<ORProcessLog> list = new ArrayList<>();
+		ORProcessLog pl = null;
+		for (Integer i : idlist) {
+			pl = orProcessLogDao.findOne(i);
+			list.add(pl);
+		}
+		return list;
+	}
+
+	@Override
+	public ORBatchInfo findById(Integer id) {
+		return orBatchInfoDao.findMiniBaseById(id);
+	}
+
+	@Override
+	public boolean exists(Integer id) {
+		return orBatchInfoDao.exists(id);
+	}
+
+	@Override
+	public void deleteById(Integer id) {
+		try {
+			orBatchInfoDao.delete(id);
+		} catch (DataIntegrityViolationException e) {
+			System.out.println("与搜索类发生外键冲突");
+			List<Integer> idlist = orBatchInfoDao.findSearchIdsById(id);
+			for (Integer i : idlist) {
+				orSearchDao.delete(i);
+			}
+			System.out.println("搜索类删除成功");
+		}
+	}
+
+	@Override
+	public ORBatchInfo save(ORBatchInfo batchInfo) {
+		return saveOrUpdate(batchInfo);
+	}
+
+	@Override
+	public ORBatchInfo saveOrUpdate(ORBatchInfo batchInfo) {
+		if (batchInfo == null || batchInfo.getBatchNumber() == null) {
+		    log.error("批次编号不能为空！！");
+			throw new ResultException(RType.insert_error_num_empty);
+		}
+		ORBatchInfo temp = findByBatchNumber(batchInfo.getBatchNumber());
+		/**
+		 * 如果该产品批号的批号信息已经存在，则将原来的批号信息返回，否则新增新的批号信息
+		 */
+		return temp == null ? orBatchInfoDao.saveAndFlush(batchInfo) : temp;
+	}
+
+	@Override
+	public List<Integer> findSearchIdsById(Integer id) {
+		return orBatchInfoDao.findSearchIdsById(id);
+	}
+
+	@Override
+	public List<ORRetroactiveInfoTemp> findRetroactiveInfoListById(Integer batchInfiId) {
+		List<Object[]> olist = orBatchInfoDao.findRetroactiveInfoListById(batchInfiId);
+		if (olist.size() == 0) {
+			return null;
+		}
+		List<ORRetroactiveInfoTemp> list = new ArrayList<>();
+		ORRetroactiveInfoTemp rit = null;
+		for (Object[] r : olist) {
+			rit = new ORRetroactiveInfoTemp();
+			rit.setId(Integer.valueOf("0"+r[0]));
+			rit.setContent(r[1]+"");
+			rit.setTypeName(r[2]+"");
+			list.add(rit);
+		}
+		return list;
+	}
+
+	@Override
+	public List<ORProcessLog> findLogById(Integer batchInfoId) {
+		List<Object[]> olist = orBatchInfoDao.findLogById(batchInfoId);
+		if (olist.size() == 0) {
+			return null;
+		}
+		List<ORProcessLog> list = new ArrayList<>();
+		ORProcessLog log = null;
+		for (Object[] o : olist) {
+			log = new ORProcessLog();
+			log.setId(Integer.valueOf("0"+o[0]));
+			log.setContent(o[1]+"");
+			log.setTacheDate(o[2]+"");
+			log.setTacheName(o[3]+"");
+			log.setTacheNo(o[4]+"");
+			list.add(log);
+		}
+		return list;
+	}
+
+	@Override
+	public List<ORInspectionInfo> findInspectionInfosById(Integer batchInfoId) {
+		List<Object[]> olist = orBatchInfoDao.findInspectionInfosById(batchInfoId);
+		if (olist.size() == 0) {
+			return null;
+		}
+		List<ORInspectionInfo> list = new ArrayList<>();
+		ORInspectionInfo ii = null;
+		for (Object[] o : olist) {
+			ii = new ORInspectionInfo();
+			ii.setId(Integer.valueOf("0"+o[0]));
+			ii.setCensorate(o[1]+"");
+			ii.setResult(o[2]+"");
+			ii.setSuggestion(o[3]+"");
+			ii.setRemark(o[4]+"");
+			list.add(ii);
+		}
+		return list;
+	}
+
+	@Override
+	public List<ORRetroactiveInfo> findRetroactiveInfosById(Integer batchInfoId) {
+		List<Object[]> olist = orBatchInfoDao.findRetroactiveInfosById(batchInfoId);
+		if (olist.size() == 0) {
+			return null;
+		}
+		List<ORRetroactiveInfo> list = new ArrayList<>();
+		ORRetroactiveInfo ri = null;
+		for (Object[] o : olist) {
+			ri = new ORRetroactiveInfo();
+			ri.setId(Integer.valueOf("0"+o[0]));
+			ri.setContent(o[1]+"");
+
+			Integer id = Integer.valueOf("0"+o[2]);
+			ORTraceType tt = orTraceTypeDao.findOne(id);
+			ri.setTraceType(tt);
+			list.add(ri);
+		}
+		return list;
+	}
+
+	@Override
+	public Page<ORBatchInfo> getPage(Pageable pageable) {
+		return orBatchInfoDao.findAll(pageable);
+	}
+}

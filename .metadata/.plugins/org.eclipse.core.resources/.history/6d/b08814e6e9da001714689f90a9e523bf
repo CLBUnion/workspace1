@@ -1,0 +1,10 @@
+package com.cioclass.util.or;
+
+import java.util.List;
+import java.util.Set;
+
+public interface IQrcodeBuilder {
+	List<String> createContent(String en, String bn, String url, int size, int num);
+	String getNumStr(int no,int size);
+	Set<String> getSet(int size, int num)
+}

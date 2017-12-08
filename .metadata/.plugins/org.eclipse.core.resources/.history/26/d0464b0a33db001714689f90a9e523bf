@@ -1,0 +1,7 @@
+package com.cioclass.util.or.xs;
+
+public class QrcodeBuilder4XS2DB extends QrcodeBuilder4XS {
+	public String createContentInFile(String en, String bn, String url, int size, int num, String fname) {
+		return null;
+	}
+}

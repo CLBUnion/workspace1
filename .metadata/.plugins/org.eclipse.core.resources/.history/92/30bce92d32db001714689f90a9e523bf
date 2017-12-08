@@ -1,0 +1,145 @@
+package com.cioclass.util.or.xs;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.google.common.collect.Lists;
+
+public class QrcodeBuilder4XS2File extends QrcodeBuilder4XS {
+	private static final Logger LOG = LoggerFactory.getLogger(QrcodeBuilder4XS2File.class);
+
+	/**
+	 * 生成单批次二维码
+	 * 
+	 * @param en
+	 *            enterprise code
+	 * @param bn
+	 *            batchInfo no
+	 * @param url
+	 *            url
+	 * @param size
+	 *            随机号码长度
+	 * @param num
+	 *            生成内容数量
+	 * @param fname
+	 *            文件路径
+	 * @return
+	 */
+	public String createContentInFile(String en, String bn, String url, int size, int num, String fname) {
+		String code = en + bn;
+		File tempf, f = new File(fname);
+		if (!f.exists()) {
+			f.mkdirs();
+		}
+		if (f.isDirectory()) {
+			tempf = new File(f, code + ".txt");
+			if (!tempf.exists()) {
+				LOG.info("存放内容的 " + f + code + ".txt 文件第一次尝试生成");
+			} else {
+				LOG.info("存放内容的 " + f + code + ".txt 文件之前已经生成");
+				return "存放内容的 " + f + code + ".txt 文件之前已经生成";
+			}
+			if (!tempf.canWrite()) {
+				tempf.setWritable(true);
+			}
+			try (FileWriter fw = new FileWriter(tempf); BufferedWriter writer = new BufferedWriter(fw);) {
+				for (String s : createContent(en, bn, url, size, num)) {
+					writer.write(s);
+					writer.newLine();
+				}
+				if (!tempf.exists()) {
+					LOG.info("存放内容的 " + f + code + ".txt 文件生成失败！");
+				} else {
+					LOG.info("存放内容的 " + f + code + ".txt 文件生成成功！");
+				}
+				writer.flush();
+				return "执行正常";
+			} catch (FileNotFoundException e) {
+				LOG.error(e.getMessage());
+				return e.getMessage();
+			} catch (IOException e) {
+				LOG.error(e.getMessage());
+				return e.getMessage();
+			}
+		} else {
+			LOG.info("'" + fname + "'" + "不是合法存放内容的目录");
+			return "'" + fname + "'" + "不是合法存放内容的目录";
+		}
+	}
+
+	public List<String> readContentFromFile(String en, String bn, String fname) {
+		List<String> list = Lists.newArrayList();
+		File f = new File(fname, en + bn + ".txt");
+		if (!f.isDirectory()) {
+			if (!f.canRead()) {
+				f.setReadable(true);
+			}
+			try (FileReader fr = new FileReader(f); BufferedReader read = new BufferedReader(fr);) {
+				String s = null;
+				while ((s = read.readLine()) != null) {
+					list.add(s);
+				}
+			} catch (FileNotFoundException e) {
+				LOG.error(e.getMessage());
+				return null;
+			} catch (IOException e) {
+				LOG.error(e.getMessage());
+				return null;
+			}
+		} else {
+			LOG.error(fname + "是一个目录！");
+			return null;
+		}
+		return list;
+	}
+	
+	public List<QrcodeBuilder4XSEntity> readContent2BeanFromFile(String en, String bn, String fname) {
+		List<QrcodeBuilder4XSEntity> list = Lists.newArrayList();
+		File f = new File(fname, en + bn + ".txt");
+		if (!f.isDirectory()) {
+			if (!f.canRead()) {
+				f.setReadable(true);
+			}
+			try (FileReader fr = new FileReader(f); BufferedReader read = new BufferedReader(fr);) {
+				String s = null;
+				QrcodeBuilder4XSEntity qbe = null;
+				while ((s = read.readLine()) != null) {
+					int num_end =s.indexOf(',');
+					int ask_chartAt =s.indexOf('?');
+					int equal_chartAt = s.indexOf('=');
+					String num = s.substring((en+bn).length(), num_end);
+					String code = s.substring(equal_chartAt+(en+bn).length()+1);
+					qbe = new QrcodeBuilder4XSEntity();
+					qbe.setEn(en);
+					qbe.setBn(bn);
+					qbe.setNum(num.trim());
+					qbe.setNumSize(num.trim().length());
+					qbe.setUrl(s.substring(num_end+1, ask_chartAt));
+					qbe.setPrefix(s.substring(ask_chartAt, equal_chartAt+1));
+					qbe.setCode(code);
+					qbe.setCodeSize(code.length());
+					list.add(qbe);
+				}
+			} catch (FileNotFoundException e) {
+				LOG.error(e.getMessage());
+				return null;
+			} catch (IOException e) {
+				LOG.error(e.getMessage());
+				return null;
+			}
+		} else {
+			LOG.error(fname + "是一个目录！");
+			return null;
+		}
+		return list;
+	}
+}

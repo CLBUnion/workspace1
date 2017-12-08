@@ -1,0 +1,293 @@
+package com.cioclass.util.or;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.UUID;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.google.common.collect.Sets;
+
+public class CreateFile {
+	private static final Logger LOG = LoggerFactory.getLogger(CreateFile.class);
+	private static final String batchInfoFile = "batchInfoFile.txt";
+
+	public static void main(String[] args) {
+		long d1 = System.currentTimeMillis();
+		String v = new CreateFile().createContent("4372", "123456", "http://cioclass.com/o", 8, 100000,
+				"E://cioclass//test");
+		long d2 = System.currentTimeMillis() - d1;
+		System.out.println(d2);
+		System.out.println(v);
+	}
+
+	/**
+	 * 生成单批次二维码
+	 * 
+	 * @param en
+	 *            enterprise code
+	 * @param bn
+	 *            batchInfo no
+	 * @param url
+	 *            url
+	 * @param size
+	 *            随机号码长度
+	 * @param num
+	 *            生成内容数量
+	 * @param fname
+	 *            文件路径
+	 * @return
+	 */
+	public String createContent(String en, String bn, String url, int size, int num, String fname) {
+		String code = en + bn;
+		File tempf, f = new File(fname);
+		if (!f.exists()) {
+			f.mkdirs();
+		}
+		if (f.isDirectory()) {
+			tempf = new File(f, code + ".txt");
+			if (tempf.exists()) {
+				LOG.info("文件冲突,该批号已生成");
+				return "文件冲突,该批号已生成";
+			}
+			if (!tempf.canWrite()) {
+				tempf.setWritable(true);
+			}
+
+			try (FileWriter fw = new FileWriter(tempf); BufferedWriter writer = new BufferedWriter(fw);) {
+				/* 记录批号日志 */
+				if (recordBatchInfo(Sets.newHashSet(code), fname, en)) {
+					for (String s : createContent(en, bn, url, size, num)) {
+						writer.write(s);
+						/* 换行 */
+						writer.newLine();
+					}
+					writer.flush();
+				} else {
+					return "批号生成或记录发生错误";
+				}
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		} else {
+			LOG.info("'" + fname + "'" + "不是目录");
+			return "'" + fname + "'" + "不是目录";
+		}
+		return code;
+	}
+
+	/**
+	 * 生成多批次二维码
+	 * 
+	 * @param batchSize
+	 *            单个批号字符串长度
+	 * @param batchNum
+	 *            批号生成数量
+	 * @param en
+	 *            enterprise code
+	 * @param url
+	 *            url
+	 * @param size
+	 *            随机号码长度
+	 * @param num
+	 *            生成内容数量
+	 * @param fname
+	 * @return 文件路径
+	 */
+	public String createMultityContent(int batchSize, int batchNum, String en, String url, int size, int num,
+			String fname) {
+		long time = System.currentTimeMillis();
+		File tempf, f = new File(fname);
+		if (!f.exists()) {
+			f.mkdirs();
+		}
+		if (f.isDirectory()) {
+			tempf = new File(f, en + time + ".txt");
+			if (tempf.exists()) {
+				LOG.info("文件冲突,该批号已生成");
+				return "文件冲突,该批号已生成";
+			}
+			if (!tempf.canWrite()) {
+				tempf.setWritable(true);
+			}
+			try (FileWriter fw = new FileWriter(tempf); BufferedWriter writer = new BufferedWriter(fw);) {
+				/**
+				 * 获取批次集合
+				 */
+				Set<String> batchNoSet = getSet(batchSize, batchNum);
+				/* 记录批号日志 */
+				if (recordBatchInfo(batchNoSet, fname, en)) {
+					for (String bn : getSet(batchSize, batchNum)) {
+						for (String s : createContent(en, bn, url, size, num)) {
+							writer.write(s);
+							/* 换行 */
+							writer.newLine();
+						}
+					}
+				} else {
+					return "批号生成或记录发生错误";
+				}
+				writer.flush();
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		} else {
+			LOG.info("'" + fname + "'" + "不是目录");
+			return "'" + fname + "'" + "不是目录";
+		}
+		return en + time;
+	}
+
+	/**
+	 * 创建二维码内容
+	 * 
+	 * @param en
+	 *            enterprise code
+	 * @param bn
+	 *            batchInfo code
+	 * @param url
+	 *            URL地址前缀
+	 * @param size
+	 *            随机号码长度
+	 * @param num
+	 *            生成内容数量
+	 */
+	private Set<String> createContent(String en, String bn, String url, int size, int num) {
+		StringBuilder sb = new StringBuilder().append(en).append(bn).append(",").append(url).append("?n=").append(en)
+				.append(bn);
+		StringBuilder temp = new StringBuilder().append(sb);
+		/**
+		 * 设置后面的随机数
+		 */
+		Set<String> set = getSet(size, num);
+		Set<String> r = Sets.newHashSet();
+		for (String s : set) {
+			temp = new StringBuilder().append(sb).append(s);
+			r.add(temp.toString());
+		}
+		return r;
+	}
+
+	/**
+	 * 获取字符串集合
+	 * 
+	 * @param size
+	 *            随机号码长度
+	 * @param num
+	 *            生成内容数量
+	 * @return
+	 */
+	private Set<String> getSet(int size, int num) {
+		Set<String> set = Sets.newHashSet();
+		int count = 0;
+		while (count < num) {
+			if (set.add(UUID.randomUUID().toString().replace("-", "").substring(0, size))) {
+				count++;
+			}
+		}
+		return set;
+	}
+	/**
+	 * 获取批次编号集合
+	 * @param size
+	 *            随机号码长度
+	 * @param num
+	 *            生成内容数量
+	 * @return
+	 */
+	private Set<String> getBatchNoSet(String en,int size, int num) {
+		Set<String> set = Sets.newHashSet();
+		int count = 0;
+		String temp = null;
+		while (count < num) {
+			temp = UUID.randomUUID().toString().replace("-", "").substring(0, size);
+			if (!set.contains(temp)) {
+				// TODO 判断文件没有此内容
+				String fileName = en+batchInfoFile+".txt";
+				count++;
+			}
+		}
+		return set;
+	}
+	
+	
+	private Set<String> ReadFileContents(String fileName,String str) {
+		Set<String> set = new HashSet<>();
+		File f = new File(fileName);
+		if (!f.isDirectory()) {
+			if (!f.canRead()) {
+				f.setReadable(true);
+			}
+			try (FileReader fr = new FileReader(f); BufferedReader read = new BufferedReader(fr);) {
+				String s = null;
+				while((s = read.readLine())!= null) {
+					set.add(s);
+				}
+			} catch (FileNotFoundException e) {
+				LOG.error(e.getMessage());
+				return null;
+			} catch (IOException e) {
+				LOG.error(e.getMessage());
+				return null;
+			}
+		} else {
+			LOG.error(fileName +"是一个目录！");
+			return null;
+		}
+		return set;
+	}
+	
+	/**
+	 * 记录批号信息
+	 * @param batchNoSet 批号信息集合
+	 * @param fname 文件路径
+	 * @param en enterprise code
+	 * @return 判断是否记录成功
+	 */
+	private boolean recordBatchInfo(Set<String> batchNoSet, String fname, String en) {
+		File f = new File(fname), tempf;
+		if (!f.exists()) {
+			f.mkdirs();
+		}
+		if (f.isDirectory()) {
+			tempf = new File(f, en + batchInfoFile + ".txt");
+			if (!tempf.exists()) {
+				LOG.info("文件冲突,该记录批号文件无法生成");
+				return false;
+			}
+			if (!tempf.canWrite()) {
+				tempf.setWritable(true);
+			}
+			try (FileWriter fw = new FileWriter(tempf); BufferedWriter writer = new BufferedWriter(fw);) {
+				for (String bn : batchNoSet) {
+					writer.append(bn);
+					/* 换行 */
+					writer.newLine();
+				}
+				writer.flush();
+				return true;
+			} catch (FileNotFoundException e) {
+				LOG.error(e.getMessage());
+				return false;
+			} catch (IOException e) {
+				LOG.error(e.getMessage());
+				return false;
+			}
+		} else {
+			LOG.info("'" + fname + "'" + "不是目录");
+			return false;
+		}
+	}
+}

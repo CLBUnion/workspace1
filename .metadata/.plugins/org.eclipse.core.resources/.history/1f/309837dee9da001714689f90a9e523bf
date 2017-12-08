@@ -1,0 +1,8 @@
+package com.cioclass.util.or;
+
+import java.util.List;
+
+public interface IQrcodeBuilder {
+	List<String> createContent(String en, String bn, String url, int size, int num);
+	
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<nav class="navbar navbar-default" role="navigation">
+<div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#example-navbar-collapse">
+            <span class="sr-only">change nav</span>
+            <!-- menu begin -->
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <!-- menu end -->
+        </button>
+        <a class="navbar-brand" href="${pageContext.request.contextPath}/xx/xxIndex">Select System</a>
+    </div>
+    <div class="collapse navbar-collapse" id="example-navbar-collapse">
+        <ul class="nav navbar-nav">
+        	<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					xx-ADD
+					<b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a href="${pageContext.request.contextPath}/xx/classifyAdd">classifyAdd</a></li>
+					<li><a href="${pageContext.request.contextPath}/xx/resAdd">resAdd</a></li>
+					<li><a href="${pageContext.request.contextPath}/xx/resAttributeRelationAdd">resAttributeRelationAdd</a></li>
+		            <li><a href="${pageContext.request.contextPath}/xx/attributeAdd">attributeAdd</a></li>
+		            <li><a href="${pageContext.request.contextPath}/xx/attributeValueAdd">attributeValueAdd</a></li>
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					xx-Page
+					<b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu">
+		            <li><a href="${pageContext.request.contextPath}/xx/classifyPage">classifyPage</a></li>
+		            <li><a href="${pageContext.request.contextPath}/xx/resPage">resPage</a></li>
+					<li><a href="${pageContext.request.contextPath}/xx/attributePage">attributePage</a></li>
+					<li><a href="${pageContext.request.contextPath}/xx/attributeValuePage">attributeValuePage</a></li>
+				</ul>
+			</li>
+        </ul>
+    </div>
+</div>
+</nav>

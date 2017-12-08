@@ -1,0 +1,15 @@
+package com.cioclass.util.or;
+
+import org.junit.Before;
+
+public class QrcodeBuilder4XS2FileTest {
+	private QrcodeBuilder4XS2File qbf= null;
+	@Before
+	public void before() {
+		 qbf = new QrcodeBuilder4XS2File();
+	}
+	
+	public void testCreateContentInFile() {
+		
+	}
+}

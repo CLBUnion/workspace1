@@ -1,0 +1,9 @@
+package com.cioclass.service.or.impl;
+
+import org.springframework.stereotype.Service;
+
+import com.cioclass.service.or.QrcodeBuilder4XSService;
+@Service
+public class QrcodeBuilder4XSServiceImpl implements QrcodeBuilder4XSService {
+
+}

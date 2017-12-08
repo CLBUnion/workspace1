@@ -1,0 +1,14 @@
+package com.cioclass.dao.or;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+
+import com.cioclass.domain.or.ORTraceType;
+
+/**
+ * 追溯类别数据访问对象接口
+ * @author lb_chen
+ */
+public interface OrTraceTypeDao extends JpaRepository<ORTraceType, Integer>, JpaSpecificationExecutor<ORTraceType> {
+
+}

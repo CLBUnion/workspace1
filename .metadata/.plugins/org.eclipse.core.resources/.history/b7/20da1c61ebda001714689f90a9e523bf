@@ -1,0 +1,38 @@
+package com.cioclass.util.or;
+
+import java.util.List;
+import java.util.Set;
+
+import com.google.common.collect.Lists;
+
+public class QrcodeBuilder4XS implements IQrcodeBuilder{
+
+	@Override
+	public List<String> createContent(String en, String bn, String url, int size, int num) {
+		Set<String> set = getSet(size, num);
+		List<String> list = Lists.newArrayList();
+		StringBuilder sb = null;
+		int i = 1;
+		for (String s : set) {
+			sb = new StringBuilder();
+			sb = sb.append(en).append(bn).append(" ").append(getNumStr(i, 6))
+					.append(",").append(url).append("?n=").append(en).append(bn).append(s);
+			list.add(sb.toString());
+			i++;
+		}
+		return list;
+	}
+
+	@Override
+	public String getNumStr(int no, int size) {
+		String ns = String.format("%0"+size+"d", no);
+		return ns.substring(0, 3)+" "+ns.substring(3);
+	}
+
+	@Override
+	public Set<String> getSet(int size, int num) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

@@ -1,0 +1,10 @@
+package com.cioclass.service.or;
+
+import java.util.List;
+
+import com.cioclass.domain.or.QrcodeBuilder4XSEntity;
+
+public interface QrcodeBuilder4XSService {
+	
+	List<QrcodeBuilder4XSEntity> save(QrcodeBuilder4XSEntity qbe);
+}
