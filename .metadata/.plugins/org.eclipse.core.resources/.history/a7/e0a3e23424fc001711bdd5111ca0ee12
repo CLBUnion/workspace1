@@ -1,0 +1,10 @@
+package com.cioclass.util.tts;
+
+public class BaiduTtsToken {
+	 private String access_token;
+	 private String session_key;
+	 private String scope;
+	 private String refresh_token;
+	 private String session_secret;
+	 private Integer expires_in;
+}

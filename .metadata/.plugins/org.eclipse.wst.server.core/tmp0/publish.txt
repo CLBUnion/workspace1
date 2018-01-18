@@ -1,4 +1,2 @@
 #Tomcat publish data
-#Thu Jan 18 15:16:38 CST 2018
-org.eclipse.jst.jee.server\:/binary\:E\:\\javaee\\workspace1\\cioclass\\WebContent\\WEB-INF\\lib-source\\spring-web-4.3.6.RELEASE-sources.jar=WEB-INF/lib-source/spring-web-4.3.6.RELEASE-sources.jar
-org.eclipse.jst.jee.server\:/binary\:E\:\\javaee\\workspace1\\cioclass\\WebContent\\WEB-INF\\lib\\spring-web-4.3.6.RELEASE.jar=WEB-INF/lib/spring-web-4.3.6.RELEASE.jar
+#Thu Jan 18 18:10:15 CST 2018

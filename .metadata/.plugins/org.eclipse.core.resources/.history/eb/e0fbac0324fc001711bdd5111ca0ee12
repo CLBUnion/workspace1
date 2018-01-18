@@ -1,0 +1,5 @@
+package com.cioclass.util.tts;
+
+public class BaiduTtsToken {
+
+}
