@@ -1,0 +1,19 @@
+package com.cioclass.domain.guns;
+
+import javax.persistence.Column;
+
+public class GunsDept {
+	private Integer id;
+	private Integer num;
+	private Integer pid;
+	@Column(name="pids",length=255,columnDefinition="")
+	private String pids;
+	@Column(name="simplename",length=45)
+	private String simpleName;
+	@Column(name="fullname",length=255)
+	private String fullName;
+	@Column(name="tips",length=255)
+	private String tips;
+	private Integer version;
+
+}

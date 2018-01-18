@@ -1,0 +1,14 @@
+package com.cioclass.util;
+
+import java.io.IOException;
+
+import org.junit.Test;
+
+public class UtilsTest {
+	@Test
+	public void getIpInfoTest() {
+		System.out.println(Utils.getIpInfo("192.168.0.101"));
+		System.out.println(Utils.getIpInfo("218.85.152.99"));
+		System.out.println(Utils.getIpInfo("218.5.241.13"));
+	}
+}

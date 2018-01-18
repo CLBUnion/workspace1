@@ -1,0 +1,8 @@
+package com.cioclass.util;
+
+public class UtilsTest {
+	@Test
+	public void getIpInfoTest() {
+		
+	}
+}

@@ -1,0 +1,1496 @@
+14:59:58 - Root WebApplicationContext: initialization started
+14:59:58 - Refreshing Root WebApplicationContext: startup date [Fri Jan 12 14:59:58 CST 2018]; root of context hierarchy
+14:59:58 - Loading XML bean definitions from class path resource [beans.xml]
+15:00:01 - Loading XML bean definitions from class path resource [mvc_security.xml]
+15:00:01 - You are running with Spring Security Core 4.2.3.RELEASE
+15:00:01 - **** You are advised to use Spring 4.3.9.RELEASE or later with this version. You are running: 4.3.6.RELEASE
+15:00:01 - Spring Security 'config' module version is 4.2.3.RELEASE
+15:00:01 - Creating access control expression attribute 'hasRole('ROLE_USER')' for /upload
+15:00:01 - Creating access control expression attribute 'hasRole('ROLE_USER')' for /admin/**
+15:00:01 - No login page configured. The default internal one will be used. Use the 'login-page' attribute to set the URL of the login page.
+15:00:01 - Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 200, Root bean: class [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 400, Root bean: class [org.springframework.security.web.header.HeaderWriterFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 500, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 800, <org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0>, order = 1200, Root bean: class [org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1400, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1600, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1700, Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.security.config.http.HttpConfigurationBuilder$SecurityContextHolderAwareRequestFilterBeanFactory#0; factoryMethodName=getBean; initMethodName=null; destroyMethodName=null, order = 1800, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2100, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2200, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2300, <org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0>, order = 2400]
+15:00:01 - Loading XML bean definitions from class path resource [spring_redis.xml]
+15:00:02 - Loading properties file from class path resource [db.properties]
+15:00:04 - Loaded JDBC driver: com.mysql.jdbc.Driver
+15:00:05 - Building JPA container EntityManagerFactory for persistence unit 'default'
+15:00:05 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+15:00:05 - HHH000412: Hibernate Core {4.3.6.Final}
+15:00:05 - HHH000206: hibernate.properties not found
+15:00:05 - HHH000021: Bytecode provider name : javassist
+15:00:06 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+15:00:07 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+15:00:08 - HHH000397: Using ASTQueryTranslatorFactory
+15:00:10 - HHH000228: Running hbm2ddl schema update
+15:00:10 - HHH000102: Fetching database metadata
+15:00:10 - HHH000396: Updating schema
+15:00:10 - HHH000261: Table found: spring_data.batch_inspection
+15:00:10 - HHH000037: Columns: [batch_id, inspection_id]
+15:00:10 - HHH000108: Foreign keys: [fk_8ylu2oofaeej6vxcjh8pdlut, fk_6gbrptqob4jokm1n4kcnws77q]
+15:00:10 - HHH000126: Indexes: [fk_8ylu2oofaeej6vxcjh8pdlut, fk_6gbrptqob4jokm1n4kcnws77q]
+15:00:10 - HHH000261: Table found: spring_data.batch_process
+15:00:10 - HHH000037: Columns: [process_id, batch_id]
+15:00:10 - HHH000108: Foreign keys: [fk_jewtgchoeandtsurq84mafd8v, fk_ejiwqyxh1ci9syj1netqshbhj]
+15:00:10 - HHH000126: Indexes: [fk_jewtgchoeandtsurq84mafd8v, fk_ejiwqyxh1ci9syj1netqshbhj]
+15:00:10 - HHH000261: Table found: spring_data.batch_retroactive
+15:00:10 - HHH000037: Columns: [retroactive_id, batch_id]
+15:00:10 - HHH000108: Foreign keys: [fk_hxuntw56vyeppk2h49gb2sov8, fk_jeejk398o3xj77oi3w2tx9i53]
+15:00:10 - HHH000126: Indexes: [fk_hxuntw56vyeppk2h49gb2sov8, fk_jeejk398o3xj77oi3w2tx9i53]
+15:00:11 - HHH000261: Table found: spring_data.bole
+15:00:11 - HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction]
+15:00:11 - HHH000108: Foreign keys: []
+15:00:11 - HHH000126: Indexes: [primary]
+15:00:11 - HHH000261: Table found: spring_data.exercise
+15:00:11 - HHH000037: Columns: [last_update_time, imgurl, flag, create_time, img_url, publishdate, remark, id, lastupdate_time, title, publish_date, url]
+15:00:11 - HHH000108: Foreign keys: []
+15:00:11 - HHH000126: Indexes: [primary]
+15:00:11 - HHH000261: Table found: spring_data.furniture
+15:00:11 - HHH000037: Columns: [name, alias, remark, id, furniture_project]
+15:00:11 - HHH000108: Foreign keys: [fk_kr70ijy8pqw71e8b614xioeuf]
+15:00:11 - HHH000126: Indexes: [fk_kr70ijy8pqw71e8b614xioeuf, primary]
+15:00:11 - HHH000261: Table found: spring_data.furniture_image
+15:00:11 - HHH000037: Columns: [furniture, image_order, id, create_date, image_desc, title, update_date, url]
+15:00:11 - HHH000108: Foreign keys: [fk_fi7ub87xpgkwsia48as3q6hq7]
+15:00:11 - HHH000126: Indexes: [fk_fi7ub87xpgkwsia48as3q6hq7, primary]
+15:00:11 - HHH000261: Table found: spring_data.furniture_project
+15:00:11 - HHH000037: Columns: [name, alias, remark, id]
+15:00:11 - HHH000108: Foreign keys: []
+15:00:11 - HHH000126: Indexes: [primary]
+15:00:11 - HHH000261: Table found: spring_data.jsoup_links
+15:00:11 - HHH000037: Columns: [create_time, domain, remark, id, text, title, url, domain_text]
+15:00:11 - HHH000108: Foreign keys: []
+15:00:11 - HHH000126: Indexes: [primary]
+15:00:11 - HHH000261: Table found: spring_data.km_attach
+15:00:11 - HHH000037: Columns: [fname, ftype, created, fkey, id, author_id]
+15:00:11 - HHH000108: Foreign keys: []
+15:00:11 - HHH000126: Indexes: [primary]
+15:00:11 - HHH000261: Table found: spring_data.km_comments
+15:00:11 - HHH000037: Columns: [parent, agent, mail, author, created, owner_id, ip, coid, type, content, url, author_id, cid, status]
+15:00:11 - HHH000108: Foreign keys: []
+15:00:11 - HHH000126: Indexes: [primary]
+15:00:11 - HHH000261: Table found: spring_data.km_contents
+15:00:11 - HHH000037: Columns: [allow_comment, created, comments_num, title, type, allow_ping, content, fmt_type, tags, hits, allow_feed, modified, categories, author_id, thumb_img, slug, cid, status]
+15:00:11 - HHH000108: Foreign keys: []
+15:00:11 - HHH000126: Indexes: [primary]
+15:00:11 - HHH000261: Table found: spring_data.km_logs
+15:00:11 - HHH000037: Columns: [data, created, ip, action, id, author_id]
+15:00:11 - HHH000108: Foreign keys: []
+15:00:11 - HHH000126: Indexes: [primary]
+15:00:12 - HHH000261: Table found: spring_data.km_metas
+15:00:12 - HHH000037: Columns: [parent, name, mid, description, sort, type, slug]
+15:00:12 - HHH000108: Foreign keys: []
+15:00:12 - HHH000126: Indexes: [primary]
+15:00:12 - HHH000261: Table found: spring_data.km_options
+15:00:12 - HHH000037: Columns: [name, description, id, value]
+15:00:12 - HHH000108: Foreign keys: []
+15:00:12 - HHH000126: Indexes: [primary]
+15:00:12 - HHH000261: Table found: spring_data.km_relationships
+15:00:12 - HHH000037: Columns: [mid, id, cid]
+15:00:12 - HHH000108: Foreign keys: []
+15:00:12 - HHH000126: Indexes: [primary]
+15:00:12 - HHH000261: Table found: spring_data.km_users
+15:00:12 - HHH000037: Columns: [uid, password, group_name, home_url, logged, screen_name, created, email, activated, username]
+15:00:12 - HHH000108: Foreign keys: []
+15:00:12 - HHH000126: Indexes: [primary]
+15:00:12 - HHH000261: Table found: spring_data.lecturer
+15:00:12 - HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction]
+15:00:12 - HHH000108: Foreign keys: []
+15:00:12 - HHH000126: Indexes: [primary]
+15:00:12 - HHH000261: Table found: spring_data.mall_cart
+15:00:12 - HHH000037: Columns: [update_time, quantity, create_time, user_id, product_id, checked, id]
+15:00:12 - HHH000108: Foreign keys: []
+15:00:12 - HHH000126: Indexes: [primary]
+15:00:12 - HHH000261: Table found: spring_data.mall_category
+15:00:12 - HHH000037: Columns: [update_time, create_time, parent_id, name, id, sort_order, status]
+15:00:12 - HHH000108: Foreign keys: []
+15:00:12 - HHH000126: Indexes: [primary]
+15:00:12 - HHH000261: Table found: spring_data.mall_order
+15:00:12 - HHH000037: Columns: [order_no, shipping_id, create_time, payment_time, end_time, close_time, postage, payment_type, update_time, send_time, user_id, payment, id, status]
+15:00:12 - HHH000108: Foreign keys: []
+15:00:12 - HHH000126: Indexes: [primary]
+15:00:12 - HHH000261: Table found: spring_data.mall_order_item
+15:00:12 - HHH000037: Columns: [current_unit_price, order_no, update_time, quantity, create_time, total_price, user_id, product_image, product_id, id, product_name]
+15:00:12 - HHH000108: Foreign keys: []
+15:00:12 - HHH000126: Indexes: [primary]
+15:00:12 - HHH000261: Table found: spring_data.mall_pay_info
+15:00:12 - HHH000037: Columns: [order_no, update_time, pay_platform, create_time, user_id, platform_number, id, platform_status]
+15:00:12 - HHH000108: Foreign keys: []
+15:00:12 - HHH000126: Indexes: [primary]
+15:00:12 - HHH000261: Table found: spring_data.mall_product
+15:00:12 - HHH000037: Columns: [update_time, category_id, create_time, sub_images, main_image, price, subtitle, name, id, detail, stock, status]
+15:00:12 - HHH000108: Foreign keys: []
+15:00:12 - HHH000126: Indexes: [primary]
+15:00:12 - HHH000261: Table found: spring_data.mall_shipping
+15:00:12 - HHH000037: Columns: [update_time, create_time, receiver_province, receiver_zip, user_id, receiver_city, receiver_district, receiver_address, receiver_name, id, receiver_phone, receiver_mobile]
+15:00:12 - HHH000108: Foreign keys: []
+15:00:12 - HHH000126: Indexes: [primary]
+15:00:12 - HHH000261: Table found: spring_data.mall_user
+15:00:12 - HHH000037: Columns: [password, update_time, role, answer, create_time, question, phone, id, email, username]
+15:00:12 - HHH000108: Foreign keys: []
+15:00:12 - HHH000126: Indexes: [primary]
+15:00:13 - HHH000261: Table found: spring_data.maxima
+15:00:13 - HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction]
+15:00:13 - HHH000108: Foreign keys: []
+15:00:13 - HHH000126: Indexes: [primary]
+15:00:13 - HHH000261: Table found: spring_data.menu
+15:00:13 - HHH000037: Columns: [parent_name, parentname, icon, ordernum, type, url, parentid, parent_id, name, menuid, perms, id, order_num, menu_id, open]
+15:00:13 - HHH000108: Foreign keys: []
+15:00:13 - HHH000126: Indexes: [primary]
+15:00:13 - HHH000261: Table found: spring_data.note_tickler
+15:00:13 - HHH000037: Columns: [create_time, tickler_id, title, content]
+15:00:13 - HHH000108: Foreign keys: []
+15:00:13 - HHH000126: Indexes: [primary]
+15:00:13 - HHH000261: Table found: spring_data.orbatch_info
+15:00:13 - HHH000037: Columns: [product, batch_number, date_of_manufacture, id, recall_status]
+15:00:13 - HHH000108: Foreign keys: [fk_m905y9o26fct9w7n56vrmctqf]
+15:00:13 - HHH000126: Indexes: [fk_m905y9o26fct9w7n56vrmctqf, primary]
+15:00:13 - HHH000261: Table found: spring_data.orbatch_sub
+15:00:13 - HHH000037: Columns: [code, orbatch_info, id, status]
+15:00:13 - HHH000108: Foreign keys: [fk_576tgfpucqpvch3lfhmgt51q1]
+15:00:13 - HHH000126: Indexes: [fk_576tgfpucqpvch3lfhmgt51q1, primary]
+15:00:13 - HHH000261: Table found: spring_data.orcompany
+15:00:13 - HHH000037: Columns: [summary, main_product, responsible_person, legal_representative, industry, remark, abbreviation, date_of_application, registered_capital, zip_code, mailing_address, number_of_employees, mobile_phone, period_of_validity, id, area_covered, enterprise_code, region, enterprise_name, email, home_agent, business_registration_no]
+15:00:13 - HHH000108: Foreign keys: []
+15:00:13 - HHH000126: Indexes: [primary]
+15:00:13 - HHH000261: Table found: spring_data.orinspection_info
+15:00:13 - HHH000037: Columns: [result, censorate, suggestion, remark, id]
+15:00:13 - HHH000108: Foreign keys: []
+15:00:13 - HHH000126: Indexes: [primary]
+15:00:13 - HHH000261: Table found: spring_data.orprocess_log
+15:00:13 - HHH000037: Columns: [tache_no, id, content, tache_date, tache_name]
+15:00:13 - HHH000108: Foreign keys: []
+15:00:13 - HHH000126: Indexes: [primary]
+15:00:13 - HHH000261: Table found: spring_data.orproduct
+15:00:13 - HHH000037: Columns: [term_of_validity, remark, source_area, id, product_code, retroactive_info, product_name, spec]
+15:00:13 - HHH000108: Foreign keys: [fk_5y3e438839af8ej6tfya1ivat]
+15:00:13 - HHH000126: Indexes: [fk_5y3e438839af8ej6tfya1ivat, primary]
+15:00:13 - HHH000261: Table found: spring_data.orretroactive_info
+15:00:13 - HHH000037: Columns: [trace_type, id, content]
+15:00:13 - HHH000108: Foreign keys: []
+15:00:13 - HHH000126: Indexes: [primary]
+15:00:13 - HHH000261: Table found: spring_data.orsearch
+15:00:13 - HHH000037: Columns: [batch_info, company, id]
+15:00:13 - HHH000108: Foreign keys: [fk_hxm9mj5ufynmfumq43x59ob42, fk_cohojre21pfk8jm0le2yfwisk]
+15:00:13 - HHH000126: Indexes: [fk_hxm9mj5ufynmfumq43x59ob42, fk_cohojre21pfk8jm0le2yfwisk, primary]
+15:00:13 - HHH000261: Table found: spring_data.ortrace_type
+15:00:13 - HHH000037: Columns: [type_name, id]
+15:00:13 - HHH000108: Foreign keys: []
+15:00:13 - HHH000126: Indexes: [primary]
+15:00:13 - HHH000261: Table found: spring_data.qrcode_builder4xsentity
+15:00:13 - HHH000037: Columns: [code_size, code, create_time, batch_id, prefix, activate_status, num, en, remark, bn, url, num_size, update_time, id, status]
+15:00:13 - HHH000108: Foreign keys: []
+15:00:13 - HHH000126: Indexes: [primary]
+15:00:13 - HHH000261: Table found: spring_data.recruit
+15:00:13 - HHH000037: Columns: [requirements, flag, create_time, remark, auditing, lastupdate_time, salary, linkman, last_update_time, phone, companyname, company_name, station, id, email]
+15:00:13 - HHH000108: Foreign keys: []
+15:00:13 - HHH000126: Indexes: [primary]
+15:00:14 - HHH000261: Table found: spring_data.shop_goods
+15:00:14 - HHH000037: Columns: [goods_name, goods_id]
+15:00:14 - HHH000108: Foreign keys: []
+15:00:14 - HHH000126: Indexes: [primary]
+15:00:14 - HHH000261: Table found: spring_data.shop_goods_catalog
+15:00:14 - HHH000037: Columns: [catalog_id, catalog_name, pid]
+15:00:14 - HHH000108: Foreign keys: []
+15:00:14 - HHH000126: Indexes: [primary]
+15:00:14 - HHH000261: Table found: spring_data.shop_goods_property
+15:00:14 - HHH000037: Columns: [prop_id, length, pid, type, prop_desc, property_name]
+15:00:14 - HHH000108: Foreign keys: []
+15:00:14 - HHH000126: Indexes: [primary]
+15:00:14 - HHH000261: Table found: spring_data.shop_goods_property_condition
+15:00:14 - HHH000037: Columns: [condition_str, condition_name, condition_id]
+15:00:14 - HHH000108: Foreign keys: []
+15:00:14 - HHH000126: Indexes: [primary]
+15:00:14 - HHH000261: Table found: spring_data.shop_goods_property_value
+15:00:14 - HHH000037: Columns: [catalog_id, prop_id, nid, goods_id, value]
+15:00:14 - HHH000108: Foreign keys: [fk_aq3p9hnq6x7n1hrb9xulxd8sr, fk_osahi002qauqin44gb96kxj91, fk_6q7nb5jufvimrjdinr5mmcfhh]
+15:00:14 - HHH000126: Indexes: [fk_aq3p9hnq6x7n1hrb9xulxd8sr, fk_6q7nb5jufvimrjdinr5mmcfhh, primary]
+15:00:14 - HHH000261: Table found: spring_data.sys_acl
+15:00:14 - HHH000037: Columns: [code, acl_module_id, name, remark, id, type, operator, seq, url, operate_ip, operate_time, status]
+15:00:14 - HHH000108: Foreign keys: []
+15:00:14 - HHH000126: Indexes: [primary]
+15:00:14 - HHH000261: Table found: spring_data.sys_acl_module
+15:00:14 - HHH000037: Columns: [level, parent_id, name, remark, id, operator, seq, operate_ip, operate_time, status]
+15:00:14 - HHH000108: Foreign keys: []
+15:00:14 - HHH000126: Indexes: [primary]
+15:00:14 - HHH000261: Table found: spring_data.sys_dept
+15:00:14 - HHH000037: Columns: [level, parent_id, name, remark, id, operator, seq, operate_ip, operate_time]
+15:00:14 - HHH000108: Foreign keys: []
+15:00:14 - HHH000126: Indexes: [primary]
+15:00:14 - HHH000261: Table found: spring_data.sys_log
+15:00:14 - HHH000037: Columns: [target_id, id, type, operator, operate_ip, operate_time, status]
+15:00:14 - HHH000108: Foreign keys: []
+15:00:14 - HHH000126: Indexes: [primary]
+15:00:14 - HHH000261: Table found: spring_data.sys_role
+15:00:14 - HHH000037: Columns: [name, remark, id, type, operator, operate_ip, operate_time, status]
+15:00:14 - HHH000108: Foreign keys: []
+15:00:14 - HHH000126: Indexes: [primary]
+15:00:14 - HHH000261: Table found: spring_data.sys_role_acl
+15:00:14 - HHH000037: Columns: [role_id, id, acl_id, operator, operate_ip, operate_time]
+15:00:14 - HHH000108: Foreign keys: []
+15:00:14 - HHH000126: Indexes: [primary]
+15:00:14 - HHH000261: Table found: spring_data.sys_role_user
+15:00:14 - HHH000037: Columns: [role_id, user_id, id, operator, operate_ip, operate_time]
+15:00:14 - HHH000108: Foreign keys: []
+15:00:14 - HHH000126: Indexes: [primary]
+15:00:14 - HHH000261: Table found: spring_data.sys_user
+15:00:14 - HHH000037: Columns: [password, mail, remark, telephone, id, dept_id, operator, operate_ip, operate_time, status, username]
+15:00:14 - HHH000108: Foreign keys: []
+15:00:14 - HHH000126: Indexes: [primary]
+15:00:14 - HHH000261: Table found: spring_data.trainee
+15:00:14 - HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction]
+15:00:14 - HHH000108: Foreign keys: []
+15:00:14 - HHH000126: Indexes: [primary]
+15:00:14 - HHH000261: Table found: spring_data.user
+15:00:14 - HHH000037: Columns: [last_update_time, password, flag, answer, create_time, question, phone, name, remark, id, email]
+15:00:14 - HHH000108: Foreign keys: []
+15:00:14 - HHH000126: Indexes: [primary]
+15:00:15 - HHH000261: Table found: spring_data.xx_attribute
+15:00:15 - HHH000037: Columns: [attr_desc, check_user_id, attr_checked, length, pid, remark, type, update_date, attr_id, attr_level, name, make_user_id, short_name, create_date]
+15:00:15 - HHH000108: Foreign keys: []
+15:00:15 - HHH000126: Indexes: [primary]
+15:00:15 - HHH000261: Table found: spring_data.xx_attribute_value
+15:00:15 - HHH000037: Columns: [score, attrid, classify_id, res_id, value_id, value, resid, attr_id]
+15:00:15 - HHH000108: Foreign keys: []
+15:00:15 - HHH000126: Indexes: [primary]
+15:00:15 - HHH000261: Table found: spring_data.xx_classify
+15:00:15 - HHH000037: Columns: [classify_status, check_user_id, classify_id, classify_level, pid, remark, update_date, classify_checked, classify_option, classify_desc, name, make_user_id, short_name, create_date]
+15:00:15 - HHH000108: Foreign keys: []
+15:00:15 - HHH000126: Indexes: [primary]
+15:00:15 - HHH000261: Table found: spring_data.xx_demand
+15:00:15 - HHH000037: Columns: [demand_id, name]
+15:00:15 - HHH000108: Foreign keys: []
+15:00:15 - HHH000126: Indexes: [primary]
+15:00:15 - HHH000261: Table found: spring_data.xx_question
+15:00:15 - HHH000037: Columns: [id, question_des]
+15:00:15 - HHH000108: Foreign keys: []
+15:00:15 - HHH000126: Indexes: [primary]
+15:00:15 - HHH000261: Table found: spring_data.xx_question_item
+15:00:15 - HHH000037: Columns: [item_desc, question, id, item_value]
+15:00:15 - HHH000108: Foreign keys: [fk_ljngho2cn3h57rifqic2aq95j]
+15:00:15 - HHH000126: Indexes: [fk_ljngho2cn3h57rifqic2aq95j, primary]
+15:00:15 - HHH000261: Table found: spring_data.xx_res
+15:00:15 - HHH000037: Columns: [res_desc, check_user_id, res_checked, res_id, name, res_status, make_user_id, short_name, remark, create_date, update_date, res_level]
+15:00:15 - HHH000108: Foreign keys: []
+15:00:15 - HHH000126: Indexes: [primary]
+15:00:15 - HHH000261: Table found: spring_data.xx_res_attrs
+15:00:15 - HHH000037: Columns: [id, xx_res, attrs]
+15:00:15 - HHH000108: Foreign keys: []
+15:00:15 - HHH000126: Indexes: [primary]
+15:00:16 - HHH000232: Schema update complete
+15:00:16 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:00:21 - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.SecurityContextPersistenceFilter@834f95, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@18d8f00, org.springframework.security.web.header.HeaderWriterFilter@1bf60b1, org.springframework.security.web.authentication.logout.LogoutFilter@121f0a7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@10e3390, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7c24ef, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@118abe2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1514793, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@e8920d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@64b03b, org.springframework.security.web.session.SessionManagementFilter@14c44df, org.springframework.security.web.access.ExceptionTranslationFilter@1427493, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@12f4191]
+15:00:21 - Checking whether login URL '/login' is accessible with your configuration
+15:00:22 - Root WebApplicationContext: initialization completed in 23746 ms
+15:00:22 - FrameworkServlet 'mvc_dispatcher': initialization started
+15:00:22 - Refreshing WebApplicationContext for namespace 'mvc_dispatcher-servlet': startup date [Fri Jan 12 15:00:22 CST 2018]; parent: Root WebApplicationContext
+15:00:22 - Loading XML bean definitions from class path resource [mvc_dispatcher.xml]
+15:00:23 - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+15:00:23 - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+15:00:23 - Mapped "{[/admin/{path}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.admin.AdminController.base(java.lang.String)
+15:00:23 - Mapped "{[/admin/or],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.cioclass.controller.admin.AdminController.orXiaShang(int,int,java.lang.String,javax.servlet.http.HttpServletRequest)
+15:00:23 - Mapped "{[/addBole],methods=[POST]}" onto public java.lang.String com.cioclass.controller.BoleController.addBole(com.cioclass.domain.Bole)
+15:00:23 - Mapped "{[/getBole],methods=[GET]}" onto public java.lang.String com.cioclass.controller.BoleController.getBole()
+15:00:23 - Mapped "{[/delBoleById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.BoleController.delBoleById(java.lang.Integer)
+15:00:23 - Mapped "{[/getBoleById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.BoleController.getBoleById(java.lang.Integer)
+15:00:23 - Mapped "{[/getBolePage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.BoleController.getBolePage(int,int)
+15:00:23 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ControllerTest.index()
+15:00:23 - Mapped "{[/{path}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ControllerTest.base(java.lang.String)
+15:00:23 - Mapped "{[/test/{path}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ControllerTest.test(java.lang.String)
+15:00:23 - Mapped "{[/o],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ControllerTest.o(java.lang.String,int,int)
+15:00:23 - Mapped "{[/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.cioclass.controller.ControllerTest.login(java.lang.String,java.lang.String)
+15:00:23 - Mapped "{[/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.cioclass.controller.ControllerTest.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+15:00:23 - Mapped "{[/sql],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ControllerTest.sql(java.lang.String,java.lang.String,java.lang.String)
+15:00:23 - Mapped "{[/oSearch],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.cioclass.controller.ControllerTest.oSearch(java.lang.String,java.lang.String)
+15:00:23 - Mapped "{[/echarts/{path}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.echarts.EchartsController.base(java.lang.String)
+15:00:23 - Mapped "{[/getExercisePage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ExerciseController.getBolePage(int,int)
+15:00:23 - Mapped "{[/addExercise],methods=[POST]}" onto public java.lang.String com.cioclass.controller.ExerciseController.addExercise(com.cioclass.domain.Exercise)
+15:00:23 - Mapped "{[/delExerciseById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ExerciseController.delExerciseById(java.lang.Integer)
+15:00:23 - Mapped "{[/getExerciseById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ExerciseController.getExerciseById(java.lang.Integer)
+15:00:23 - Mapped "{[/getExercise],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ExerciseController.getExercise()
+15:00:23 - Mapped "{[/fileUpload],methods=[POST]}" onto public java.lang.String com.cioclass.controller.FileController.fileUpload(javax.servlet.http.HttpServletRequest,org.springframework.web.multipart.MultipartFile)
+15:00:23 - Mapped "{[/filesUpload],methods=[POST]}" onto public java.lang.String com.cioclass.controller.FileController.fileUploads(javax.servlet.http.HttpServletRequest,org.springframework.web.multipart.MultipartFile[])
+15:00:23 - Mapped "{[/zx/{path}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.jsoup.JsoupController.base(java.lang.String)
+15:00:23 - Mapped "{[/zx/getPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.jsoup.JsoupLinksController.getPage(int,int)
+15:00:23 - Mapped "{[/zx/searchLinks],methods=[GET]}" onto public java.lang.String com.cioclass.controller.jsoup.JsoupLinksController.addLinks(java.lang.String)
+15:00:23 - Mapped "{[/zx/saveLink],methods=[POST]}" onto public java.lang.String com.cioclass.controller.jsoup.JsoupLinksController.saveLink(com.cioclass.domain.jsoup.JsoupLinks)
+15:00:23 - Mapped "{[/zx/delById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.jsoup.JsoupLinksController.delById(java.lang.Integer)
+15:00:23 - Mapped "{[/zx/getLinkById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.jsoup.JsoupLinksController.getLinkById(java.lang.Integer)
+15:00:23 - Mapped "{[/zx/updateTitle],methods=[GET]}" onto public java.lang.String com.cioclass.controller.jsoup.JsoupLinksController.updateTitle()
+15:00:23 - Mapped "{[/addLecturer],methods=[POST]}" onto public java.lang.String com.cioclass.controller.LecturerController.addLecturer(com.cioclass.domain.Lecturer)
+15:00:23 - Mapped "{[/delLecturerById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.LecturerController.delLecturerById(java.lang.Integer)
+15:00:23 - Mapped "{[/getLecturerById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.LecturerController.getLecturerById(java.lang.Integer)
+15:00:23 - Mapped "{[/getLecturer],methods=[GET]}" onto public java.lang.String com.cioclass.controller.LecturerController.getLecturer()
+15:00:23 - Mapped "{[/getLecturerPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.LecturerController.getLecturerPage(int,int)
+15:00:23 - Mapped "{[/addMaxima_c],methods=[POST]}" onto public java.lang.String com.cioclass.controller.MaximaController.addMaxima_c(com.cioclass.domain.Maxima)
+15:00:23 - Mapped "{[/addMaxima_z],methods=[POST]}" onto public java.lang.String com.cioclass.controller.MaximaController.addMaxima_z(com.cioclass.domain.Maxima)
+15:00:23 - Mapped "{[/addMaxima_g],methods=[POST]}" onto public java.lang.String com.cioclass.controller.MaximaController.addMaxima_g(com.cioclass.domain.Maxima)
+15:00:23 - Mapped "{[/delMaximaById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.MaximaController.delMaximaById(java.lang.Integer)
+15:00:23 - Mapped "{[/getMaximaById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.MaximaController.getMaximaById(java.lang.Integer)
+15:00:23 - Mapped "{[/getMaxima],methods=[GET]}" onto public java.lang.String com.cioclass.controller.MaximaController.getMaxima()
+15:00:23 - Mapped "{[/getMaximaPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.MaximaController.getMaximaPage(int,int)
+15:00:23 - Mapped "{[/getMaximaPageSub],methods=[GET]}" onto public java.lang.String com.cioclass.controller.MaximaController.getMaximaPageSub(int,int,java.lang.String)
+15:00:23 - Mapped "{[/note/{path}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.note.NoteController.noteBase(java.lang.String)
+15:00:23 - Mapped "{[/note/addTickler],methods=[POST]}" onto public java.lang.String com.cioclass.controller.note.TicklerController.addTickler(com.cioclass.domain.note.Tickler)
+15:00:23 - Mapped "{[/note/getTicklerById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.note.TicklerController.getTicklerById(java.lang.Integer)
+15:00:23 - Mapped "{[/note/getTickler],methods=[GET]}" onto public java.lang.String com.cioclass.controller.note.TicklerController.getTickler()
+15:00:23 - Mapped "{[/note/getTicklerPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.note.TicklerController.getTicklerPage(int,int)
+15:00:23 - Mapped "{[/note/delTicklerById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.note.TicklerController.delGoodsById(java.lang.Integer)
+15:00:23 - Mapped "{[/or/batchInfo/add],methods=[POST]}" onto public java.lang.String com.cioclass.controller.or.OrBatchInfoController.add(com.cioclass.domain.or.ORBatchInfo)
+15:00:23 - Mapped "{[/or/batchInfo/findRetroactiveInfoTempListById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrBatchInfoController.findRetroactiveInfoListById(java.lang.Integer)
+15:00:23 - Mapped "{[/or/batchInfo/findLogById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrBatchInfoController.findLogById(java.lang.Integer)
+15:00:23 - Mapped "{[/or/batchInfo/findCompanysByBatchNumber],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrBatchInfoController.findCompanysByBatchNumber(java.lang.String)
+15:00:23 - Mapped "{[/or/batchInfo/{id}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrBatchInfoController.getBatchInfoById(java.lang.Integer)
+15:00:23 - Mapped "{[/or/batchInfo/getBatchInfoPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrBatchInfoController.getBatchInfoPage(int,int)
+15:00:23 - Mapped "{[/or/batchSub/{id}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrBatchSubController.getCompanyById(java.lang.Integer)
+15:00:23 - Mapped "{[/or/company/{id}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrCompanyController.getCompanyById(java.lang.Integer)
+15:00:23 - Mapped "{[/or/company/deleteById/{id}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrCompanyController.companyPage(java.lang.Integer)
+15:00:23 - Mapped "{[/or/company/companyPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrCompanyController.companyPage(int,int)
+15:00:23 - Mapped "{[/or/company/saveCompany],methods=[POST]}" onto public java.lang.String com.cioclass.controller.or.OrCompanyController.saveCompany(com.cioclass.domain.or.ORCompany)
+15:00:23 - Mapped "{[/or/{path}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.cioclass.controller.or.OrController.base(java.lang.String,java.lang.Integer)
+15:00:23 - Mapped "{[/or/inspection],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrInspectionInfoController.getById(java.lang.Integer)
+15:00:23 - Mapped "{[/or/inspection/{id}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrInspectionInfoController.getInspectionInfoByBatchInfoId(java.lang.Integer)
+15:00:23 - Mapped "{[/or/product/add],methods=[POST]}" onto public java.lang.String com.cioclass.controller.or.OrProductController.add(com.cioclass.domain.or.ORProduct)
+15:00:23 - Mapped "{[/or/product/getPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrProductController.getPage(int,int)
+15:00:23 - Mapped "{[/or/product/findRIByPID],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrProductController.findORRetroactiveInfoByProductId(java.lang.Integer)
+15:00:23 - Mapped "{[/or/product/findBaseProductByBatchInfoId],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrProductController.findBaseProductByBatchInfoId(java.lang.Integer)
+15:00:23 - Mapped "{[/or/retroactive/{id}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrRetroactiveInfoController.getCompanyById(java.lang.Integer)
+15:00:23 - Mapped "{[/or/search],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.cioclass.controller.or.OrSearchController.base(java.lang.String,java.lang.String,java.lang.String)
+15:00:23 - Mapped "{[/or/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.cioclass.controller.or.OrSearchController.main(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+15:00:23 - Mapped "{[/or/searchOld],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.cioclass.controller.or.OrSearchController.searchOld(java.lang.String,java.lang.String,java.lang.String)
+15:00:23 - Mapped "{[/or/searchBrand],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.cioclass.controller.or.OrSearchController.searchBrand(java.lang.Integer,java.lang.Integer)
+15:00:23 - Mapped "{[/or/search/addSearch],methods=[POST]}" onto public java.lang.String com.cioclass.controller.or.OrSearchController.addSearch(java.lang.Integer,java.lang.Integer)
+15:00:23 - Mapped "{[/or/qr/addOne],methods=[POST]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.addOne(com.cioclass.domain.or.QrcodeBuilder4XSEntity)
+15:00:23 - Mapped "{[/or/qr/findByEn],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.findByEn(java.lang.String,int,int)
+15:00:23 - Mapped "{[/or/qr/findByEnBnNumLeftMatch],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.findByEnBnNumLeftMatch(java.lang.String,java.lang.String,java.lang.String,int,int)
+15:00:23 - Mapped "{[/or/qr/findByEnBnNumRightMatch],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.findByEnBnNumRightMatch(java.lang.String,java.lang.String,java.lang.String,int,int)
+15:00:23 - Mapped "{[/or/qr/findByEnBnNumMatch],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.findByEnBnNumMatch(java.lang.String,java.lang.String,java.lang.String,int,int)
+15:00:23 - Mapped "{[/or/qr/findByEnBnNumCode],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.findByEnBnNumCode(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,int)
+15:00:23 - Mapped "{[/or/qr/findAllEn],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.findAllEn(int,int)
+15:00:23 - Mapped "{[/or/qr/findAllBn],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.findAllBn(int,int)
+15:00:23 - Mapped "{[/or/qr/findByEnBn],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.findByEnBn(java.lang.String,java.lang.String,int,int)
+15:00:23 - Mapped "{[/or/qr/findByEnBnNum],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.findByEnBnNum(java.lang.String,java.lang.String,java.lang.String,int,int)
+15:00:23 - Mapped "{[/or/qr/delById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.delById(java.lang.Integer)
+15:00:23 - Mapped "{[/or/qr/findById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.findById(java.lang.String)
+15:00:23 - Mapped "{[/or/qr/delByIds],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.delByIds(java.lang.Integer...)
+15:00:23 - Mapped "{[/or/qr/updateOfActive],methods=[POST]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.updateOfActive(java.lang.String,java.lang.Integer...)
+15:00:23 - Mapped "{[/or/qr/updateOfStatus],methods=[POST]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.updateOfStatus(java.lang.String,java.lang.Integer...)
+15:00:23 - Mapped "{[/or/qr/updateInfo],methods=[POST]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.updateInfo(com.cioclass.dto.or.QrcodeBuilder4XSUpdateDto,java.lang.Integer...)
+15:00:23 - Mapped "{[/or/qr/readFromFile2DB],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.readFromFile2DB(java.lang.String,java.lang.String,java.lang.String)
+15:00:23 - Mapped "{[/or/qr/readFromDB2File],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.readFromDB2File(java.lang.String,java.lang.String,java.lang.String)
+15:00:23 - Mapped "{[/or/qr/addBatchContentInDB],methods=[POST]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.addBatchContentInDB(com.cioclass.dto.or.QrcodeBuilder4XSDto)
+15:00:23 - Mapped "{[/delRecruitById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.RecruitController.delMaximaById(java.lang.Integer)
+15:00:23 - Mapped "{[/addRecruit],methods=[POST]}" onto public java.lang.String com.cioclass.controller.RecruitController.addRecruit(com.cioclass.domain.Recruit)
+15:00:23 - Mapped "{[/getRecruit],methods=[GET]}" onto public java.lang.String com.cioclass.controller.RecruitController.getRecruit()
+15:00:23 - Mapped "{[/getRecruitById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.RecruitController.getRecruitById(java.lang.Integer)
+15:00:23 - Mapped "{[/getRecruitPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.RecruitController.getRecruitPage(int,int)
+15:00:23 - Mapped "{[/shop/addCGPV],methods=[POST]}" onto public java.lang.String com.cioclass.controller.shop.CatalogGoodsPropertyValueController.addCGPV(com.cioclass.domain.shop.CatalogGoodsPropertyValue)
+15:00:23 - Mapped "{[/shop/getCGPV],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogGoodsPropertyValueController.getCGPV()
+15:00:23 - Mapped "{[/shop/getCGPVById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogGoodsPropertyValueController.getCGPVById(java.lang.Integer)
+15:00:23 - Mapped "{[/shop/getCGPVPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogGoodsPropertyValueController.getCGPVPage(int,int)
+15:00:23 - Mapped "{[/shop/delCGPVById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogGoodsPropertyValueController.delCGPVById(java.lang.Integer)
+15:00:23 - Mapped "{[/shop/getPropsByCatalogId],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogGoodsPropertyValueController.getPropsByCatalogId(java.lang.Integer)
+15:00:23 - Mapped "{[/shop/getPropsValueByCatalogId],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogGoodsPropertyValueController.getPropsValueByCatalogId(java.lang.Integer)
+15:00:23 - Mapped "{[/shop/getGoodsByCatalogId],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogGoodsPropertyValueController.getGoodsByCatalogId(java.lang.Integer)
+15:00:23 - Mapped "{[/shop/addGoodsProperty],methods=[POST]}" onto public java.lang.String com.cioclass.controller.shop.CatalogPropertyController.addGoodsProperty(com.cioclass.domain.shop.GoodsProperty)
+15:00:23 - Mapped "{[/shop/getGoodsProperty],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogPropertyController.getGoodsProperty()
+15:00:23 - Mapped "{[/shop/getGoodsPropertyById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogPropertyController.getGoodsPropertyById(java.lang.Integer)
+15:00:23 - Mapped "{[/shop/getGoodsPropertyPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogPropertyController.getGoodsPropertyPage(int,int)
+15:00:23 - Mapped "{[/shop/getOneGoodsProperty],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogPropertyController.getOneGoodsProperty(java.lang.Integer)
+15:00:23 - Mapped "{[/shop/delGoodsPropertyById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogPropertyController.delGoodsPropertyById(java.lang.Integer)
+15:00:23 - Mapped "{[/shop/delGoodsCatalogById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.GoodsCatalogController.delGoodsById(java.lang.Integer)
+15:00:23 - Mapped "{[/shop/addcatalog],methods=[POST]}" onto public java.lang.String com.cioclass.controller.shop.GoodsCatalogController.addcatalog(com.cioclass.domain.shop.GoodsCatalog)
+15:00:23 - Mapped "{[/shop/getGoodsCatalog],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.GoodsCatalogController.getGoodsCatalog()
+15:00:23 - Mapped "{[/shop/getGoodsCatalogById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.GoodsCatalogController.getGoodsCatalogById(java.lang.Integer)
+15:00:23 - Mapped "{[/shop/getGoodsCatalogPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.GoodsCatalogController.getGoodsCatalogPage(int,int)
+15:00:23 - Mapped "{[/shop/getOneGoodsCatalog],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.GoodsCatalogController.getOneGoodsCatalog(java.lang.Integer)
+15:00:23 - Mapped "{[/shop/addGoods],methods=[POST]}" onto public java.lang.String com.cioclass.controller.shop.GoodsController.addGoods(com.cioclass.domain.shop.Goods)
+15:00:23 - Mapped "{[/shop/getGoods],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.GoodsController.getGoods()
+15:00:23 - Mapped "{[/shop/delGoodsById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.GoodsController.delGoodsById(java.lang.Integer)
+15:00:23 - Mapped "{[/shop/getGoodsById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.GoodsController.getGoodsById(java.lang.Integer)
+15:00:23 - Mapped "{[/shop/getGoodsPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.GoodsController.getGoodsPage(int,int)
+15:00:23 - Mapped "{[/shop/getOneGoods],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.GoodsController.getOneGoodsCatalog(java.lang.Integer)
+15:00:23 - Mapped "{[/shop/{path}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.ShopController.shopBase(java.lang.String)
+15:00:23 - Mapped "{[/ss/{path}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ss.SSDataController.base(java.lang.String)
+15:00:23 - Mapped "{[/addTrainee],methods=[POST]}" onto public java.lang.String com.cioclass.controller.TraineeController.addTrainee(com.cioclass.domain.Trainee)
+15:00:23 - Mapped "{[/delTraineeById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.TraineeController.delTraineeById(java.lang.Integer)
+15:00:23 - Mapped "{[/getTraineeById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.TraineeController.getTraineeById(java.lang.Integer)
+15:00:23 - Mapped "{[/getTrainee],methods=[GET]}" onto public java.lang.String com.cioclass.controller.TraineeController.getTrainee()
+15:00:23 - Mapped "{[/getTraineePage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.TraineeController.getTraineePage(int,int)
+15:00:23 - Mapped "{[/getTraineeAll],methods=[GET]}" onto public java.lang.String com.cioclass.controller.TraineeController.getTraineeAll()
+15:00:23 - Mapped "{[/findQuestionByName],methods=[GET]}" onto public java.lang.String com.cioclass.controller.UserController.findQuestionByName(java.lang.String)
+15:00:23 - Mapped "{[/findQuestionByEmail],methods=[GET]}" onto public java.lang.String com.cioclass.controller.UserController.findQuestionByEmail(java.lang.String)
+15:00:23 - Mapped "{[/findQuestionByPhone],methods=[GET]}" onto public java.lang.String com.cioclass.controller.UserController.findQuestionByPhone(java.lang.String)
+15:00:23 - Mapped "{[/findAnswerByEmail],methods=[GET]}" onto public java.lang.String com.cioclass.controller.UserController.findAnswerByEmail(java.lang.String)
+15:00:23 - Mapped "{[/findAnswerByPhone],methods=[GET]}" onto public java.lang.String com.cioclass.controller.UserController.findAnswerByPhone(java.lang.String)
+15:00:23 - Mapped "{[/findAnswerByName],methods=[GET]}" onto public java.lang.String com.cioclass.controller.UserController.findAnswerByName(java.lang.String)
+15:00:23 - Mapped "{[/addUser],methods=[POST]}" onto public java.lang.String com.cioclass.controller.UserController.addUser(com.cioclass.domain.User)
+15:00:23 - Mapped "{[/getUserById],methods=[POST]}" onto public java.lang.String com.cioclass.controller.UserController.getUserById(java.lang.Integer)
+15:00:23 - Mapped "{[/findRepeat],methods=[GET]}" onto public java.lang.String com.cioclass.controller.UserController.findRepeat(java.lang.String)
+15:00:23 - Mapped "{[/findByNameAndPassword],methods=[GET]}" onto public java.lang.String com.cioclass.controller.UserController.findByNameAndPassword(java.lang.String,java.lang.String)
+15:00:23 - Mapped "{[/findByEmailAndPassword],methods=[GET]}" onto public java.lang.String com.cioclass.controller.UserController.findByEmailAndPassword(java.lang.String,java.lang.String)
+15:00:23 - Mapped "{[/findByPhoneAndPassword],methods=[GET]}" onto public java.lang.String com.cioclass.controller.UserController.findByPhoneAndPassword(java.lang.String,java.lang.String)
+15:00:23 - Mapped "{[/xx/attribute/add],methods=[POST]}" onto public java.lang.String com.cioclass.controller.xx.AttributeController.add(com.cioclass.domain.xx.Attribute)
+15:00:23 - Mapped "{[/xx/attribute/getPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeController.getPage(int,int)
+15:00:23 - Mapped "{[/xx/attribute/getList],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeController.getList()
+15:00:23 - Mapped "{[/xx/attribute/findByClassifyId],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeController.findByClassifyId(java.lang.Integer)
+15:00:23 - Mapped "{[/xx/attribute/getById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeController.getById(java.lang.Integer)
+15:00:23 - Mapped "{[/xx/attribute/delById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeController.delById(java.lang.Integer)
+15:00:23 - Mapped "{[/xx/attributeValue/add],methods=[POST]}" onto public java.lang.String com.cioclass.controller.xx.AttributeValueController.add(com.cioclass.domain.xx.AttributeValue)
+15:00:23 - Mapped "{[/xx/attributeValue/getPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeValueController.getPage(int,int)
+15:00:23 - Mapped "{[/xx/attributeValue/findCan],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeValueController.findCan(java.lang.Integer,java.lang.Integer)
+15:00:23 - Mapped "{[/xx/attributeValue/getList],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeValueController.getList()
+15:00:23 - Mapped "{[/xx/attributeValue/findAlready],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeValueController.findAlready(java.lang.Integer,java.lang.Integer)
+15:00:23 - Mapped "{[/xx/attributeValue/getById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeValueController.getById(java.lang.Integer)
+15:00:23 - Mapped "{[/xx/attributeValue/delById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeValueController.delById(java.lang.Integer)
+15:00:23 - Mapped "{[/xx/attributeValue/getAttrValues],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeValueController.getAttrValues(java.lang.Integer,java.lang.Integer)
+15:00:23 - Mapped "{[/xx/attributeValue/getResByclassifyId],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeValueController.getResByclassifyId(java.lang.Integer)
+15:00:23 - Mapped "{[/xx/attributeValue/getResByclassifyId1],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeValueController.getResByclassifyId1(java.lang.Integer)
+15:00:23 - Mapped "{[/xx/classify/add],methods=[POST]}" onto public java.lang.String com.cioclass.controller.xx.ClassifyController.add(com.cioclass.domain.xx.Classify)
+15:00:23 - Mapped "{[/xx/classify/getPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ClassifyController.getPage(int,int)
+15:00:23 - Mapped "{[/xx/classify/getList],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ClassifyController.getList()
+15:00:23 - Mapped "{[/xx/classify/getById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ClassifyController.getById(java.lang.Integer)
+15:00:23 - Mapped "{[/xx/classify/delById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ClassifyController.delById(java.lang.Integer)
+15:00:23 - Mapped "{[/xx/modal/resModal],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ModalController.resModal(int,int)
+15:00:23 - Mapped "{[/xx/modal/model6],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ModalController.model6(int,int)
+15:00:23 - Mapped "{[/xx/modal/model5],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ModalController.model5()
+15:00:23 - Mapped "{[/xx/modal/attrModal],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ModalController.attrModal(int,int)
+15:00:23 - Mapped "{[/xx/modal/classifyModal],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ModalController.classifyModal(int,int)
+15:00:23 - Mapped "{[/xx/question/getPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.QuestionController.getPage(int,int)
+15:00:23 - Mapped "{[/xx/questionItem/getPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.QuestionItemController.getPage(int,int)
+15:00:23 - Mapped "{[/xx/questionItem/getPage2],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.QuestionItemController.getPage2(int,int,java.lang.String...)
+15:00:23 - Mapped "{[/xx/questionItem/getQuestionById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.QuestionItemController.getQuestionById(java.lang.Integer)
+15:00:23 - Mapped "{[/xx/modal/add],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ResAttributeRelationController.add(com.cioclass.domain.xx.ResAttribute)
+15:00:23 - Mapped "{[/xx/modal/deleteById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ResAttributeRelationController.deelteById(java.lang.Integer)
+15:00:23 - Mapped "{[/xx/modal/deleteByResIdAndAttributeId],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ResAttributeRelationController.deleteByResIdAndAttributeId(java.lang.Integer,java.lang.Integer)
+15:00:23 - Mapped "{[/xx/modal/addByResIdAndAttributeId],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ResAttributeRelationController.addByResIdAndAttributeId(java.lang.Integer,java.lang.Integer)
+15:00:23 - Mapped "{[/xx/modal/resAttrRelationModal],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ResAttributeRelationController.resAttrRelationModal(java.lang.String,java.lang.Integer,java.lang.Integer)
+15:00:23 - Mapped "{[/xx/modal/resAttrRelationModal1],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ResAttributeRelationController.resAttrRelationModal1(java.lang.String)
+15:00:23 - Mapped "{[/xx/res/add],methods=[POST]}" onto public java.lang.String com.cioclass.controller.xx.ResController.add(com.cioclass.domain.xx.Res)
+15:00:23 - Mapped "{[/xx/res/getPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ResController.getPage(int,int)
+15:00:23 - Mapped "{[/xx/res/getList],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ResController.getList()
+15:00:23 - Mapped "{[/xx/res/getById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ResController.getById(java.lang.Integer)
+15:00:23 - Mapped "{[/xx/res/delById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ResController.delById(java.lang.Integer)
+15:00:23 - Mapped "{[/xx/{path}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.XXController.base(java.lang.String,java.lang.Integer)
+15:00:24 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'mvc_dispatcher-servlet': startup date [Fri Jan 12 15:00:22 CST 2018]; parent: Root WebApplicationContext
+15:00:24 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'mvc_dispatcher-servlet': startup date [Fri Jan 12 15:00:22 CST 2018]; parent: Root WebApplicationContext
+15:00:24 - Detected @ExceptionHandler methods in resultExceptionHandler
+15:00:24 - FrameworkServlet 'mvc_dispatcher': initialization completed in 2394 ms
+15:15:58 - 访问路径：companyList
+15:16:08 - 访问路径：batchInfoList
+15:16:18 - 访问路径：companyList
+15:16:22 - 访问路径：batchInfoList
+15:16:23 - 访问路径：productList
+15:16:26 - 访问路径：qrcode4XSBatchUpdate
+15:16:27 - 访问路径：qrcode4XSBatchNo
+15:16:37 - 访问路径：qrcode4XSBatchUpdate
+15:16:38 - 访问路径：readFromFile2DB
+15:16:51 - 访问路径：companyList
+15:16:53 - 访问路径：batchInfoList
+15:19:00 - 访问路径：qrcode4XSBatchUpdate
+15:19:01 - 【system error】: java.lang.NumberFormatException: For input string: ""
+15:19:02 - 访问路径：qrcode4XSBatchNo
+15:20:03 - 访问路径：companyList
+15:20:05 - 访问路径：batchInfoList
+15:20:06 - 访问路径：productList
+15:20:24 - 访问路径：productList
+15:20:25 - 访问路径：companyList
+15:20:26 - 访问路径：batchInfoList
+15:20:33 - 访问路径：qrcode4XSBatchNo
+15:20:47 - 访问路径：qrcode4XSBatchUpdate
+15:20:47 - 【system error】: java.lang.NumberFormatException: For input string: ""
+15:21:51 - 访问路径：qrcode4XSBatchNo
+17:14:08 - Closing WebApplicationContext for namespace 'mvc_dispatcher-servlet': startup date [Fri Jan 12 15:00:22 CST 2018]; parent: Root WebApplicationContext
+17:14:08 - Closing Root WebApplicationContext: startup date [Fri Jan 12 14:59:58 CST 2018]; root of context hierarchy
+17:14:08 - Closing JPA EntityManagerFactory for persistence unit 'default'
+17:14:21 - Root WebApplicationContext: initialization started
+17:14:21 - Refreshing Root WebApplicationContext: startup date [Fri Jan 12 17:14:21 CST 2018]; root of context hierarchy
+17:14:21 - Loading XML bean definitions from class path resource [beans.xml]
+17:14:24 - Loading XML bean definitions from class path resource [mvc_security.xml]
+17:14:24 - You are running with Spring Security Core 4.2.3.RELEASE
+17:14:24 - **** You are advised to use Spring 4.3.9.RELEASE or later with this version. You are running: 4.3.6.RELEASE
+17:14:24 - Spring Security 'config' module version is 4.2.3.RELEASE
+17:14:24 - Creating access control expression attribute 'hasRole('ROLE_USER')' for /upload
+17:14:24 - Creating access control expression attribute 'hasRole('ROLE_USER')' for /admin/**
+17:14:24 - No login page configured. The default internal one will be used. Use the 'login-page' attribute to set the URL of the login page.
+17:14:24 - Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 200, Root bean: class [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 400, Root bean: class [org.springframework.security.web.header.HeaderWriterFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 500, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 800, <org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0>, order = 1200, Root bean: class [org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1400, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1600, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1700, Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.security.config.http.HttpConfigurationBuilder$SecurityContextHolderAwareRequestFilterBeanFactory#0; factoryMethodName=getBean; initMethodName=null; destroyMethodName=null, order = 1800, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2100, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2200, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2300, <org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0>, order = 2400]
+17:14:24 - Loading XML bean definitions from class path resource [spring_redis.xml]
+17:14:25 - Loading properties file from class path resource [db.properties]
+17:14:27 - Loaded JDBC driver: com.mysql.jdbc.Driver
+17:14:27 - Building JPA container EntityManagerFactory for persistence unit 'default'
+17:14:27 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+17:14:27 - HHH000412: Hibernate Core {4.3.6.Final}
+17:14:27 - HHH000206: hibernate.properties not found
+17:14:27 - HHH000021: Bytecode provider name : javassist
+17:14:28 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+17:14:29 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+17:14:30 - HHH000397: Using ASTQueryTranslatorFactory
+17:14:31 - HHH000228: Running hbm2ddl schema update
+17:14:31 - HHH000102: Fetching database metadata
+17:14:31 - HHH000396: Updating schema
+17:14:31 - HHH000261: Table found: spring_data.batch_inspection
+17:14:31 - HHH000037: Columns: [batch_id, inspection_id]
+17:14:31 - HHH000108: Foreign keys: [fk_8ylu2oofaeej6vxcjh8pdlut, fk_6gbrptqob4jokm1n4kcnws77q]
+17:14:31 - HHH000126: Indexes: [fk_8ylu2oofaeej6vxcjh8pdlut, fk_6gbrptqob4jokm1n4kcnws77q]
+17:14:31 - HHH000261: Table found: spring_data.batch_process
+17:14:31 - HHH000037: Columns: [process_id, batch_id]
+17:14:31 - HHH000108: Foreign keys: [fk_jewtgchoeandtsurq84mafd8v, fk_ejiwqyxh1ci9syj1netqshbhj]
+17:14:31 - HHH000126: Indexes: [fk_jewtgchoeandtsurq84mafd8v, fk_ejiwqyxh1ci9syj1netqshbhj]
+17:14:31 - HHH000261: Table found: spring_data.batch_retroactive
+17:14:31 - HHH000037: Columns: [retroactive_id, batch_id]
+17:14:31 - HHH000108: Foreign keys: [fk_hxuntw56vyeppk2h49gb2sov8, fk_jeejk398o3xj77oi3w2tx9i53]
+17:14:31 - HHH000126: Indexes: [fk_hxuntw56vyeppk2h49gb2sov8, fk_jeejk398o3xj77oi3w2tx9i53]
+17:14:31 - HHH000261: Table found: spring_data.bole
+17:14:31 - HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction]
+17:14:31 - HHH000108: Foreign keys: []
+17:14:31 - HHH000126: Indexes: [primary]
+17:14:31 - HHH000261: Table found: spring_data.exercise
+17:14:31 - HHH000037: Columns: [last_update_time, imgurl, flag, create_time, img_url, publishdate, remark, id, lastupdate_time, title, publish_date, url]
+17:14:31 - HHH000108: Foreign keys: []
+17:14:31 - HHH000126: Indexes: [primary]
+17:14:31 - HHH000261: Table found: spring_data.furniture
+17:14:31 - HHH000037: Columns: [name, alias, remark, id, furniture_project]
+17:14:31 - HHH000108: Foreign keys: [fk_kr70ijy8pqw71e8b614xioeuf]
+17:14:31 - HHH000126: Indexes: [fk_kr70ijy8pqw71e8b614xioeuf, primary]
+17:14:31 - HHH000261: Table found: spring_data.furniture_image
+17:14:31 - HHH000037: Columns: [furniture, image_order, id, create_date, image_desc, title, update_date, url]
+17:14:31 - HHH000108: Foreign keys: [fk_fi7ub87xpgkwsia48as3q6hq7]
+17:14:31 - HHH000126: Indexes: [fk_fi7ub87xpgkwsia48as3q6hq7, primary]
+17:14:31 - HHH000261: Table found: spring_data.furniture_project
+17:14:31 - HHH000037: Columns: [name, alias, remark, id]
+17:14:31 - HHH000108: Foreign keys: []
+17:14:31 - HHH000126: Indexes: [primary]
+17:14:31 - HHH000261: Table found: spring_data.jsoup_links
+17:14:31 - HHH000037: Columns: [create_time, domain, remark, id, text, title, url, domain_text]
+17:14:31 - HHH000108: Foreign keys: []
+17:14:31 - HHH000126: Indexes: [primary]
+17:14:31 - HHH000261: Table found: spring_data.km_attach
+17:14:31 - HHH000037: Columns: [fname, ftype, created, fkey, id, author_id]
+17:14:31 - HHH000108: Foreign keys: []
+17:14:31 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.km_comments
+17:14:32 - HHH000037: Columns: [parent, agent, mail, author, created, owner_id, ip, coid, type, content, url, author_id, cid, status]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.km_contents
+17:14:32 - HHH000037: Columns: [allow_comment, created, comments_num, title, type, allow_ping, content, fmt_type, tags, hits, allow_feed, modified, categories, author_id, thumb_img, slug, cid, status]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.km_logs
+17:14:32 - HHH000037: Columns: [data, created, ip, action, id, author_id]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.km_metas
+17:14:32 - HHH000037: Columns: [parent, name, mid, description, sort, type, slug]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.km_options
+17:14:32 - HHH000037: Columns: [name, description, id, value]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.km_relationships
+17:14:32 - HHH000037: Columns: [mid, id, cid]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.km_users
+17:14:32 - HHH000037: Columns: [uid, password, group_name, home_url, logged, screen_name, created, email, activated, username]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.lecturer
+17:14:32 - HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.mall_cart
+17:14:32 - HHH000037: Columns: [update_time, quantity, create_time, user_id, product_id, checked, id]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.mall_category
+17:14:32 - HHH000037: Columns: [update_time, create_time, parent_id, name, id, sort_order, status]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.mall_order
+17:14:32 - HHH000037: Columns: [order_no, shipping_id, create_time, payment_time, end_time, close_time, postage, payment_type, update_time, send_time, user_id, payment, id, status]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.mall_order_item
+17:14:32 - HHH000037: Columns: [current_unit_price, order_no, update_time, quantity, create_time, total_price, user_id, product_image, product_id, id, product_name]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.mall_pay_info
+17:14:32 - HHH000037: Columns: [order_no, update_time, pay_platform, create_time, user_id, platform_number, id, platform_status]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.mall_product
+17:14:32 - HHH000037: Columns: [update_time, category_id, create_time, sub_images, main_image, price, subtitle, name, id, detail, stock, status]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.mall_shipping
+17:14:32 - HHH000037: Columns: [update_time, create_time, receiver_province, receiver_zip, user_id, receiver_city, receiver_district, receiver_address, receiver_name, id, receiver_phone, receiver_mobile]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.mall_user
+17:14:32 - HHH000037: Columns: [password, update_time, role, answer, create_time, question, phone, id, email, username]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.maxima
+17:14:32 - HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.menu
+17:14:32 - HHH000037: Columns: [parent_name, parentname, icon, ordernum, type, url, parentid, parent_id, name, menuid, perms, id, order_num, menu_id, open]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.note_tickler
+17:14:32 - HHH000037: Columns: [create_time, tickler_id, title, content]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.orbatch_info
+17:14:32 - HHH000037: Columns: [product, batch_number, date_of_manufacture, id, recall_status]
+17:14:32 - HHH000108: Foreign keys: [fk_m905y9o26fct9w7n56vrmctqf]
+17:14:32 - HHH000126: Indexes: [fk_m905y9o26fct9w7n56vrmctqf, primary]
+17:14:32 - HHH000261: Table found: spring_data.orbatch_sub
+17:14:32 - HHH000037: Columns: [code, orbatch_info, id, status]
+17:14:32 - HHH000108: Foreign keys: [fk_576tgfpucqpvch3lfhmgt51q1]
+17:14:32 - HHH000126: Indexes: [fk_576tgfpucqpvch3lfhmgt51q1, primary]
+17:14:32 - HHH000261: Table found: spring_data.orcompany
+17:14:32 - HHH000037: Columns: [summary, main_product, responsible_person, legal_representative, industry, remark, abbreviation, date_of_application, registered_capital, zip_code, mailing_address, number_of_employees, mobile_phone, period_of_validity, id, area_covered, enterprise_code, region, enterprise_name, email, home_agent, business_registration_no]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.orinspection_info
+17:14:32 - HHH000037: Columns: [result, censorate, suggestion, remark, id]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.orprocess_log
+17:14:32 - HHH000037: Columns: [tache_no, id, content, tache_date, tache_name]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.orproduct
+17:14:32 - HHH000037: Columns: [term_of_validity, remark, source_area, id, product_code, retroactive_info, product_name, spec]
+17:14:32 - HHH000108: Foreign keys: [fk_5y3e438839af8ej6tfya1ivat]
+17:14:32 - HHH000126: Indexes: [fk_5y3e438839af8ej6tfya1ivat, primary]
+17:14:32 - HHH000261: Table found: spring_data.orretroactive_info
+17:14:32 - HHH000037: Columns: [trace_type, id, content]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.orsearch
+17:14:32 - HHH000037: Columns: [batch_info, company, id]
+17:14:32 - HHH000108: Foreign keys: [fk_hxm9mj5ufynmfumq43x59ob42, fk_cohojre21pfk8jm0le2yfwisk]
+17:14:32 - HHH000126: Indexes: [fk_hxm9mj5ufynmfumq43x59ob42, fk_cohojre21pfk8jm0le2yfwisk, primary]
+17:14:32 - HHH000261: Table found: spring_data.ortrace_type
+17:14:32 - HHH000037: Columns: [type_name, id]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.qrcode_builder4xsentity
+17:14:32 - HHH000037: Columns: [code_size, code, create_time, batch_id, prefix, activate_status, num, en, remark, bn, url, num_size, update_time, id, status]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.recruit
+17:14:32 - HHH000037: Columns: [requirements, flag, create_time, remark, auditing, lastupdate_time, salary, linkman, last_update_time, phone, companyname, company_name, station, id, email]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.shop_goods
+17:14:32 - HHH000037: Columns: [goods_name, goods_id]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.shop_goods_catalog
+17:14:32 - HHH000037: Columns: [catalog_id, catalog_name, pid]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.shop_goods_property
+17:14:32 - HHH000037: Columns: [prop_id, length, pid, type, prop_desc, property_name]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.shop_goods_property_condition
+17:14:32 - HHH000037: Columns: [condition_str, condition_name, condition_id]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.shop_goods_property_value
+17:14:32 - HHH000037: Columns: [catalog_id, prop_id, nid, goods_id, value]
+17:14:32 - HHH000108: Foreign keys: [fk_aq3p9hnq6x7n1hrb9xulxd8sr, fk_osahi002qauqin44gb96kxj91, fk_6q7nb5jufvimrjdinr5mmcfhh]
+17:14:32 - HHH000126: Indexes: [fk_aq3p9hnq6x7n1hrb9xulxd8sr, fk_6q7nb5jufvimrjdinr5mmcfhh, primary]
+17:14:32 - HHH000261: Table found: spring_data.sys_acl
+17:14:32 - HHH000037: Columns: [code, acl_module_id, name, remark, id, type, operator, seq, url, operate_ip, operate_time, status]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.sys_acl_module
+17:14:32 - HHH000037: Columns: [level, parent_id, name, remark, id, operator, seq, operate_ip, operate_time, status]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.sys_dept
+17:14:32 - HHH000037: Columns: [level, parent_id, name, remark, id, operator, seq, operate_ip, operate_time]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.sys_log
+17:14:32 - HHH000037: Columns: [target_id, id, type, operator, operate_ip, operate_time, status]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.sys_role
+17:14:32 - HHH000037: Columns: [name, remark, id, type, operator, operate_ip, operate_time, status]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.sys_role_acl
+17:14:32 - HHH000037: Columns: [role_id, id, acl_id, operator, operate_ip, operate_time]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.sys_role_user
+17:14:32 - HHH000037: Columns: [role_id, user_id, id, operator, operate_ip, operate_time]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.sys_user
+17:14:32 - HHH000037: Columns: [password, mail, remark, telephone, id, dept_id, operator, operate_ip, operate_time, status, username]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.trainee
+17:14:32 - HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.user
+17:14:32 - HHH000037: Columns: [last_update_time, password, flag, answer, create_time, question, phone, name, remark, id, email]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.xx_attribute
+17:14:32 - HHH000037: Columns: [attr_desc, check_user_id, attr_checked, length, pid, remark, type, update_date, attr_id, attr_level, name, make_user_id, short_name, create_date]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.xx_attribute_value
+17:14:32 - HHH000037: Columns: [score, attrid, classify_id, res_id, value_id, value, resid, attr_id]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.xx_classify
+17:14:32 - HHH000037: Columns: [classify_status, check_user_id, classify_id, classify_level, pid, remark, update_date, classify_checked, classify_option, classify_desc, name, make_user_id, short_name, create_date]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.xx_demand
+17:14:32 - HHH000037: Columns: [demand_id, name]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.xx_question
+17:14:32 - HHH000037: Columns: [id, question_des]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.xx_question_item
+17:14:32 - HHH000037: Columns: [item_desc, question, id, item_value]
+17:14:32 - HHH000108: Foreign keys: [fk_ljngho2cn3h57rifqic2aq95j]
+17:14:32 - HHH000126: Indexes: [fk_ljngho2cn3h57rifqic2aq95j, primary]
+17:14:32 - HHH000261: Table found: spring_data.xx_res
+17:14:32 - HHH000037: Columns: [res_desc, check_user_id, res_checked, res_id, name, res_status, make_user_id, short_name, remark, create_date, update_date, res_level]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:32 - HHH000261: Table found: spring_data.xx_res_attrs
+17:14:32 - HHH000037: Columns: [id, xx_res, attrs]
+17:14:32 - HHH000108: Foreign keys: []
+17:14:32 - HHH000126: Indexes: [primary]
+17:14:33 - HHH000232: Schema update complete
+17:14:33 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+17:14:39 - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.SecurityContextPersistenceFilter@bc7a20, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@941169, org.springframework.security.web.header.HeaderWriterFilter@19de3c7, org.springframework.security.web.authentication.logout.LogoutFilter@96b4ea, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@411450, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@c45f3f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@8ef94b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e40075, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1c0030e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1e83d51, org.springframework.security.web.session.SessionManagementFilter@1ca11b0, org.springframework.security.web.access.ExceptionTranslationFilter@3d66d4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@289db]
+17:14:39 - Checking whether login URL '/login' is accessible with your configuration
+17:14:39 - Root WebApplicationContext: initialization completed in 18280 ms
+17:14:39 - FrameworkServlet 'mvc_dispatcher': initialization started
+17:14:39 - Refreshing WebApplicationContext for namespace 'mvc_dispatcher-servlet': startup date [Fri Jan 12 17:14:39 CST 2018]; parent: Root WebApplicationContext
+17:14:39 - Loading XML bean definitions from class path resource [mvc_dispatcher.xml]
+17:14:40 - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+17:14:40 - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+17:14:41 - Mapped "{[/admin/{path}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.admin.AdminController.base(java.lang.String)
+17:14:41 - Mapped "{[/admin/or],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.cioclass.controller.admin.AdminController.orXiaShang(int,int,java.lang.String,javax.servlet.http.HttpServletRequest)
+17:14:41 - Mapped "{[/addBole],methods=[POST]}" onto public java.lang.String com.cioclass.controller.BoleController.addBole(com.cioclass.domain.Bole)
+17:14:41 - Mapped "{[/getBole],methods=[GET]}" onto public java.lang.String com.cioclass.controller.BoleController.getBole()
+17:14:41 - Mapped "{[/delBoleById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.BoleController.delBoleById(java.lang.Integer)
+17:14:41 - Mapped "{[/getBoleById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.BoleController.getBoleById(java.lang.Integer)
+17:14:41 - Mapped "{[/getBolePage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.BoleController.getBolePage(int,int)
+17:14:41 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ControllerTest.index()
+17:14:41 - Mapped "{[/{path}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ControllerTest.base(java.lang.String)
+17:14:41 - Mapped "{[/test/{path}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ControllerTest.test(java.lang.String)
+17:14:41 - Mapped "{[/o],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ControllerTest.o(java.lang.String,int,int)
+17:14:41 - Mapped "{[/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.cioclass.controller.ControllerTest.login(java.lang.String,java.lang.String)
+17:14:41 - Mapped "{[/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.cioclass.controller.ControllerTest.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:14:41 - Mapped "{[/sql],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ControllerTest.sql(java.lang.String,java.lang.String,java.lang.String)
+17:14:41 - Mapped "{[/ip],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ControllerTest.sql(java.lang.String)
+17:14:41 - Mapped "{[/oSearch],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.cioclass.controller.ControllerTest.oSearch(java.lang.String,java.lang.String)
+17:14:41 - Mapped "{[/echarts/{path}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.echarts.EchartsController.base(java.lang.String)
+17:14:41 - Mapped "{[/getExercisePage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ExerciseController.getBolePage(int,int)
+17:14:41 - Mapped "{[/addExercise],methods=[POST]}" onto public java.lang.String com.cioclass.controller.ExerciseController.addExercise(com.cioclass.domain.Exercise)
+17:14:41 - Mapped "{[/delExerciseById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ExerciseController.delExerciseById(java.lang.Integer)
+17:14:41 - Mapped "{[/getExerciseById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ExerciseController.getExerciseById(java.lang.Integer)
+17:14:41 - Mapped "{[/getExercise],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ExerciseController.getExercise()
+17:14:41 - Mapped "{[/fileUpload],methods=[POST]}" onto public java.lang.String com.cioclass.controller.FileController.fileUpload(javax.servlet.http.HttpServletRequest,org.springframework.web.multipart.MultipartFile)
+17:14:41 - Mapped "{[/filesUpload],methods=[POST]}" onto public java.lang.String com.cioclass.controller.FileController.fileUploads(javax.servlet.http.HttpServletRequest,org.springframework.web.multipart.MultipartFile[])
+17:14:41 - Mapped "{[/zx/{path}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.jsoup.JsoupController.base(java.lang.String)
+17:14:41 - Mapped "{[/zx/getPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.jsoup.JsoupLinksController.getPage(int,int)
+17:14:41 - Mapped "{[/zx/searchLinks],methods=[GET]}" onto public java.lang.String com.cioclass.controller.jsoup.JsoupLinksController.addLinks(java.lang.String)
+17:14:41 - Mapped "{[/zx/saveLink],methods=[POST]}" onto public java.lang.String com.cioclass.controller.jsoup.JsoupLinksController.saveLink(com.cioclass.domain.jsoup.JsoupLinks)
+17:14:41 - Mapped "{[/zx/delById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.jsoup.JsoupLinksController.delById(java.lang.Integer)
+17:14:41 - Mapped "{[/zx/getLinkById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.jsoup.JsoupLinksController.getLinkById(java.lang.Integer)
+17:14:41 - Mapped "{[/zx/updateTitle],methods=[GET]}" onto public java.lang.String com.cioclass.controller.jsoup.JsoupLinksController.updateTitle()
+17:14:41 - Mapped "{[/addLecturer],methods=[POST]}" onto public java.lang.String com.cioclass.controller.LecturerController.addLecturer(com.cioclass.domain.Lecturer)
+17:14:41 - Mapped "{[/delLecturerById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.LecturerController.delLecturerById(java.lang.Integer)
+17:14:41 - Mapped "{[/getLecturerById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.LecturerController.getLecturerById(java.lang.Integer)
+17:14:41 - Mapped "{[/getLecturer],methods=[GET]}" onto public java.lang.String com.cioclass.controller.LecturerController.getLecturer()
+17:14:41 - Mapped "{[/getLecturerPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.LecturerController.getLecturerPage(int,int)
+17:14:41 - Mapped "{[/addMaxima_c],methods=[POST]}" onto public java.lang.String com.cioclass.controller.MaximaController.addMaxima_c(com.cioclass.domain.Maxima)
+17:14:41 - Mapped "{[/addMaxima_z],methods=[POST]}" onto public java.lang.String com.cioclass.controller.MaximaController.addMaxima_z(com.cioclass.domain.Maxima)
+17:14:41 - Mapped "{[/addMaxima_g],methods=[POST]}" onto public java.lang.String com.cioclass.controller.MaximaController.addMaxima_g(com.cioclass.domain.Maxima)
+17:14:41 - Mapped "{[/delMaximaById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.MaximaController.delMaximaById(java.lang.Integer)
+17:14:41 - Mapped "{[/getMaximaById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.MaximaController.getMaximaById(java.lang.Integer)
+17:14:41 - Mapped "{[/getMaxima],methods=[GET]}" onto public java.lang.String com.cioclass.controller.MaximaController.getMaxima()
+17:14:41 - Mapped "{[/getMaximaPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.MaximaController.getMaximaPage(int,int)
+17:14:41 - Mapped "{[/getMaximaPageSub],methods=[GET]}" onto public java.lang.String com.cioclass.controller.MaximaController.getMaximaPageSub(int,int,java.lang.String)
+17:14:41 - Mapped "{[/note/{path}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.note.NoteController.noteBase(java.lang.String)
+17:14:41 - Mapped "{[/note/addTickler],methods=[POST]}" onto public java.lang.String com.cioclass.controller.note.TicklerController.addTickler(com.cioclass.domain.note.Tickler)
+17:14:41 - Mapped "{[/note/getTicklerById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.note.TicklerController.getTicklerById(java.lang.Integer)
+17:14:41 - Mapped "{[/note/getTickler],methods=[GET]}" onto public java.lang.String com.cioclass.controller.note.TicklerController.getTickler()
+17:14:41 - Mapped "{[/note/getTicklerPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.note.TicklerController.getTicklerPage(int,int)
+17:14:41 - Mapped "{[/note/delTicklerById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.note.TicklerController.delGoodsById(java.lang.Integer)
+17:14:41 - Mapped "{[/or/batchInfo/add],methods=[POST]}" onto public java.lang.String com.cioclass.controller.or.OrBatchInfoController.add(com.cioclass.domain.or.ORBatchInfo)
+17:14:41 - Mapped "{[/or/batchInfo/findRetroactiveInfoTempListById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrBatchInfoController.findRetroactiveInfoListById(java.lang.Integer)
+17:14:41 - Mapped "{[/or/batchInfo/findLogById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrBatchInfoController.findLogById(java.lang.Integer)
+17:14:41 - Mapped "{[/or/batchInfo/findCompanysByBatchNumber],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrBatchInfoController.findCompanysByBatchNumber(java.lang.String)
+17:14:41 - Mapped "{[/or/batchInfo/{id}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrBatchInfoController.getBatchInfoById(java.lang.Integer)
+17:14:41 - Mapped "{[/or/batchInfo/getBatchInfoPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrBatchInfoController.getBatchInfoPage(int,int)
+17:14:41 - Mapped "{[/or/batchSub/{id}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrBatchSubController.getCompanyById(java.lang.Integer)
+17:14:41 - Mapped "{[/or/company/{id}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrCompanyController.getCompanyById(java.lang.Integer)
+17:14:41 - Mapped "{[/or/company/deleteById/{id}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrCompanyController.companyPage(java.lang.Integer)
+17:14:41 - Mapped "{[/or/company/companyPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrCompanyController.companyPage(int,int)
+17:14:41 - Mapped "{[/or/company/saveCompany],methods=[POST]}" onto public java.lang.String com.cioclass.controller.or.OrCompanyController.saveCompany(com.cioclass.domain.or.ORCompany)
+17:14:41 - Mapped "{[/or/{path}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.cioclass.controller.or.OrController.base(java.lang.String,java.lang.Integer)
+17:14:41 - Mapped "{[/or/inspection],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrInspectionInfoController.getById(java.lang.Integer)
+17:14:41 - Mapped "{[/or/inspection/{id}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrInspectionInfoController.getInspectionInfoByBatchInfoId(java.lang.Integer)
+17:14:41 - Mapped "{[/or/product/add],methods=[POST]}" onto public java.lang.String com.cioclass.controller.or.OrProductController.add(com.cioclass.domain.or.ORProduct)
+17:14:41 - Mapped "{[/or/product/getPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrProductController.getPage(int,int)
+17:14:41 - Mapped "{[/or/product/findRIByPID],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrProductController.findORRetroactiveInfoByProductId(java.lang.Integer)
+17:14:41 - Mapped "{[/or/product/findBaseProductByBatchInfoId],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrProductController.findBaseProductByBatchInfoId(java.lang.Integer)
+17:14:41 - Mapped "{[/or/retroactive/{id}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrRetroactiveInfoController.getCompanyById(java.lang.Integer)
+17:14:41 - Mapped "{[/or/search],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.cioclass.controller.or.OrSearchController.base(java.lang.String,java.lang.String,java.lang.String)
+17:14:41 - Mapped "{[/or/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.cioclass.controller.or.OrSearchController.main(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:14:41 - Mapped "{[/or/searchOld],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.cioclass.controller.or.OrSearchController.searchOld(java.lang.String,java.lang.String,java.lang.String)
+17:14:41 - Mapped "{[/or/searchBrand],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.cioclass.controller.or.OrSearchController.searchBrand(java.lang.Integer,java.lang.Integer)
+17:14:41 - Mapped "{[/or/search/addSearch],methods=[POST]}" onto public java.lang.String com.cioclass.controller.or.OrSearchController.addSearch(java.lang.Integer,java.lang.Integer)
+17:14:41 - Mapped "{[/or/qr/addOne],methods=[POST]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.addOne(com.cioclass.domain.or.QrcodeBuilder4XSEntity)
+17:14:41 - Mapped "{[/or/qr/findByEn],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.findByEn(java.lang.String,int,int)
+17:14:41 - Mapped "{[/or/qr/findByEnBnNumLeftMatch],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.findByEnBnNumLeftMatch(java.lang.String,java.lang.String,java.lang.String,int,int)
+17:14:41 - Mapped "{[/or/qr/findByEnBnNumRightMatch],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.findByEnBnNumRightMatch(java.lang.String,java.lang.String,java.lang.String,int,int)
+17:14:41 - Mapped "{[/or/qr/findByEnBnNumMatch],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.findByEnBnNumMatch(java.lang.String,java.lang.String,java.lang.String,int,int)
+17:14:41 - Mapped "{[/or/qr/findByEnBnNumCode],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.findByEnBnNumCode(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,int)
+17:14:41 - Mapped "{[/or/qr/findAllEn],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.findAllEn(int,int)
+17:14:41 - Mapped "{[/or/qr/findAllBn],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.findAllBn(int,int)
+17:14:41 - Mapped "{[/or/qr/findByEnBn],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.findByEnBn(java.lang.String,java.lang.String,int,int)
+17:14:41 - Mapped "{[/or/qr/findByEnBnNum],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.findByEnBnNum(java.lang.String,java.lang.String,java.lang.String,int,int)
+17:14:41 - Mapped "{[/or/qr/delById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.delById(java.lang.Integer)
+17:14:41 - Mapped "{[/or/qr/findById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.findById(java.lang.String)
+17:14:41 - Mapped "{[/or/qr/delByIds],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.delByIds(java.lang.Integer...)
+17:14:41 - Mapped "{[/or/qr/updateOfActive],methods=[POST]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.updateOfActive(java.lang.String,java.lang.Integer...)
+17:14:41 - Mapped "{[/or/qr/updateOfStatus],methods=[POST]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.updateOfStatus(java.lang.String,java.lang.Integer...)
+17:14:41 - Mapped "{[/or/qr/updateInfo],methods=[POST]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.updateInfo(com.cioclass.dto.or.QrcodeBuilder4XSUpdateDto,java.lang.Integer...)
+17:14:41 - Mapped "{[/or/qr/readFromFile2DB],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.readFromFile2DB(java.lang.String,java.lang.String,java.lang.String)
+17:14:41 - Mapped "{[/or/qr/readFromDB2File],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.readFromDB2File(java.lang.String,java.lang.String,java.lang.String)
+17:14:41 - Mapped "{[/or/qr/addBatchContentInDB],methods=[POST]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.addBatchContentInDB(com.cioclass.dto.or.QrcodeBuilder4XSDto)
+17:14:41 - Mapped "{[/delRecruitById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.RecruitController.delMaximaById(java.lang.Integer)
+17:14:41 - Mapped "{[/addRecruit],methods=[POST]}" onto public java.lang.String com.cioclass.controller.RecruitController.addRecruit(com.cioclass.domain.Recruit)
+17:14:41 - Mapped "{[/getRecruit],methods=[GET]}" onto public java.lang.String com.cioclass.controller.RecruitController.getRecruit()
+17:14:41 - Mapped "{[/getRecruitById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.RecruitController.getRecruitById(java.lang.Integer)
+17:14:41 - Mapped "{[/getRecruitPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.RecruitController.getRecruitPage(int,int)
+17:14:41 - Mapped "{[/shop/addCGPV],methods=[POST]}" onto public java.lang.String com.cioclass.controller.shop.CatalogGoodsPropertyValueController.addCGPV(com.cioclass.domain.shop.CatalogGoodsPropertyValue)
+17:14:41 - Mapped "{[/shop/getCGPV],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogGoodsPropertyValueController.getCGPV()
+17:14:41 - Mapped "{[/shop/getCGPVById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogGoodsPropertyValueController.getCGPVById(java.lang.Integer)
+17:14:41 - Mapped "{[/shop/getCGPVPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogGoodsPropertyValueController.getCGPVPage(int,int)
+17:14:41 - Mapped "{[/shop/delCGPVById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogGoodsPropertyValueController.delCGPVById(java.lang.Integer)
+17:14:41 - Mapped "{[/shop/getPropsByCatalogId],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogGoodsPropertyValueController.getPropsByCatalogId(java.lang.Integer)
+17:14:41 - Mapped "{[/shop/getPropsValueByCatalogId],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogGoodsPropertyValueController.getPropsValueByCatalogId(java.lang.Integer)
+17:14:41 - Mapped "{[/shop/getGoodsByCatalogId],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogGoodsPropertyValueController.getGoodsByCatalogId(java.lang.Integer)
+17:14:41 - Mapped "{[/shop/addGoodsProperty],methods=[POST]}" onto public java.lang.String com.cioclass.controller.shop.CatalogPropertyController.addGoodsProperty(com.cioclass.domain.shop.GoodsProperty)
+17:14:41 - Mapped "{[/shop/getGoodsProperty],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogPropertyController.getGoodsProperty()
+17:14:41 - Mapped "{[/shop/getGoodsPropertyById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogPropertyController.getGoodsPropertyById(java.lang.Integer)
+17:14:41 - Mapped "{[/shop/getGoodsPropertyPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogPropertyController.getGoodsPropertyPage(int,int)
+17:14:41 - Mapped "{[/shop/getOneGoodsProperty],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogPropertyController.getOneGoodsProperty(java.lang.Integer)
+17:14:41 - Mapped "{[/shop/delGoodsPropertyById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogPropertyController.delGoodsPropertyById(java.lang.Integer)
+17:14:41 - Mapped "{[/shop/delGoodsCatalogById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.GoodsCatalogController.delGoodsById(java.lang.Integer)
+17:14:41 - Mapped "{[/shop/addcatalog],methods=[POST]}" onto public java.lang.String com.cioclass.controller.shop.GoodsCatalogController.addcatalog(com.cioclass.domain.shop.GoodsCatalog)
+17:14:41 - Mapped "{[/shop/getGoodsCatalog],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.GoodsCatalogController.getGoodsCatalog()
+17:14:41 - Mapped "{[/shop/getGoodsCatalogById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.GoodsCatalogController.getGoodsCatalogById(java.lang.Integer)
+17:14:41 - Mapped "{[/shop/getGoodsCatalogPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.GoodsCatalogController.getGoodsCatalogPage(int,int)
+17:14:41 - Mapped "{[/shop/getOneGoodsCatalog],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.GoodsCatalogController.getOneGoodsCatalog(java.lang.Integer)
+17:14:41 - Mapped "{[/shop/addGoods],methods=[POST]}" onto public java.lang.String com.cioclass.controller.shop.GoodsController.addGoods(com.cioclass.domain.shop.Goods)
+17:14:41 - Mapped "{[/shop/getGoods],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.GoodsController.getGoods()
+17:14:41 - Mapped "{[/shop/delGoodsById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.GoodsController.delGoodsById(java.lang.Integer)
+17:14:41 - Mapped "{[/shop/getGoodsById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.GoodsController.getGoodsById(java.lang.Integer)
+17:14:41 - Mapped "{[/shop/getGoodsPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.GoodsController.getGoodsPage(int,int)
+17:14:41 - Mapped "{[/shop/getOneGoods],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.GoodsController.getOneGoodsCatalog(java.lang.Integer)
+17:14:41 - Mapped "{[/shop/{path}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.ShopController.shopBase(java.lang.String)
+17:14:41 - Mapped "{[/ss/{path}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ss.SSDataController.base(java.lang.String)
+17:14:41 - Mapped "{[/addTrainee],methods=[POST]}" onto public java.lang.String com.cioclass.controller.TraineeController.addTrainee(com.cioclass.domain.Trainee)
+17:14:41 - Mapped "{[/delTraineeById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.TraineeController.delTraineeById(java.lang.Integer)
+17:14:41 - Mapped "{[/getTraineeById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.TraineeController.getTraineeById(java.lang.Integer)
+17:14:41 - Mapped "{[/getTrainee],methods=[GET]}" onto public java.lang.String com.cioclass.controller.TraineeController.getTrainee()
+17:14:41 - Mapped "{[/getTraineePage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.TraineeController.getTraineePage(int,int)
+17:14:41 - Mapped "{[/getTraineeAll],methods=[GET]}" onto public java.lang.String com.cioclass.controller.TraineeController.getTraineeAll()
+17:14:41 - Mapped "{[/findQuestionByName],methods=[GET]}" onto public java.lang.String com.cioclass.controller.UserController.findQuestionByName(java.lang.String)
+17:14:41 - Mapped "{[/findQuestionByEmail],methods=[GET]}" onto public java.lang.String com.cioclass.controller.UserController.findQuestionByEmail(java.lang.String)
+17:14:41 - Mapped "{[/findQuestionByPhone],methods=[GET]}" onto public java.lang.String com.cioclass.controller.UserController.findQuestionByPhone(java.lang.String)
+17:14:41 - Mapped "{[/findAnswerByEmail],methods=[GET]}" onto public java.lang.String com.cioclass.controller.UserController.findAnswerByEmail(java.lang.String)
+17:14:41 - Mapped "{[/findAnswerByPhone],methods=[GET]}" onto public java.lang.String com.cioclass.controller.UserController.findAnswerByPhone(java.lang.String)
+17:14:41 - Mapped "{[/findAnswerByName],methods=[GET]}" onto public java.lang.String com.cioclass.controller.UserController.findAnswerByName(java.lang.String)
+17:14:41 - Mapped "{[/addUser],methods=[POST]}" onto public java.lang.String com.cioclass.controller.UserController.addUser(com.cioclass.domain.User)
+17:14:41 - Mapped "{[/getUserById],methods=[POST]}" onto public java.lang.String com.cioclass.controller.UserController.getUserById(java.lang.Integer)
+17:14:41 - Mapped "{[/findRepeat],methods=[GET]}" onto public java.lang.String com.cioclass.controller.UserController.findRepeat(java.lang.String)
+17:14:41 - Mapped "{[/findByNameAndPassword],methods=[GET]}" onto public java.lang.String com.cioclass.controller.UserController.findByNameAndPassword(java.lang.String,java.lang.String)
+17:14:41 - Mapped "{[/findByEmailAndPassword],methods=[GET]}" onto public java.lang.String com.cioclass.controller.UserController.findByEmailAndPassword(java.lang.String,java.lang.String)
+17:14:41 - Mapped "{[/findByPhoneAndPassword],methods=[GET]}" onto public java.lang.String com.cioclass.controller.UserController.findByPhoneAndPassword(java.lang.String,java.lang.String)
+17:14:41 - Mapped "{[/xx/attribute/add],methods=[POST]}" onto public java.lang.String com.cioclass.controller.xx.AttributeController.add(com.cioclass.domain.xx.Attribute)
+17:14:41 - Mapped "{[/xx/attribute/getPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeController.getPage(int,int)
+17:14:41 - Mapped "{[/xx/attribute/getList],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeController.getList()
+17:14:41 - Mapped "{[/xx/attribute/findByClassifyId],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeController.findByClassifyId(java.lang.Integer)
+17:14:41 - Mapped "{[/xx/attribute/getById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeController.getById(java.lang.Integer)
+17:14:41 - Mapped "{[/xx/attribute/delById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeController.delById(java.lang.Integer)
+17:14:41 - Mapped "{[/xx/attributeValue/add],methods=[POST]}" onto public java.lang.String com.cioclass.controller.xx.AttributeValueController.add(com.cioclass.domain.xx.AttributeValue)
+17:14:41 - Mapped "{[/xx/attributeValue/getPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeValueController.getPage(int,int)
+17:14:41 - Mapped "{[/xx/attributeValue/findCan],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeValueController.findCan(java.lang.Integer,java.lang.Integer)
+17:14:41 - Mapped "{[/xx/attributeValue/getList],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeValueController.getList()
+17:14:41 - Mapped "{[/xx/attributeValue/findAlready],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeValueController.findAlready(java.lang.Integer,java.lang.Integer)
+17:14:41 - Mapped "{[/xx/attributeValue/getById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeValueController.getById(java.lang.Integer)
+17:14:41 - Mapped "{[/xx/attributeValue/delById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeValueController.delById(java.lang.Integer)
+17:14:41 - Mapped "{[/xx/attributeValue/getAttrValues],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeValueController.getAttrValues(java.lang.Integer,java.lang.Integer)
+17:14:41 - Mapped "{[/xx/attributeValue/getResByclassifyId],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeValueController.getResByclassifyId(java.lang.Integer)
+17:14:41 - Mapped "{[/xx/attributeValue/getResByclassifyId1],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeValueController.getResByclassifyId1(java.lang.Integer)
+17:14:41 - Mapped "{[/xx/classify/add],methods=[POST]}" onto public java.lang.String com.cioclass.controller.xx.ClassifyController.add(com.cioclass.domain.xx.Classify)
+17:14:41 - Mapped "{[/xx/classify/getPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ClassifyController.getPage(int,int)
+17:14:41 - Mapped "{[/xx/classify/getList],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ClassifyController.getList()
+17:14:41 - Mapped "{[/xx/classify/getById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ClassifyController.getById(java.lang.Integer)
+17:14:41 - Mapped "{[/xx/classify/delById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ClassifyController.delById(java.lang.Integer)
+17:14:41 - Mapped "{[/xx/modal/resModal],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ModalController.resModal(int,int)
+17:14:41 - Mapped "{[/xx/modal/model6],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ModalController.model6(int,int)
+17:14:41 - Mapped "{[/xx/modal/model5],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ModalController.model5()
+17:14:41 - Mapped "{[/xx/modal/attrModal],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ModalController.attrModal(int,int)
+17:14:41 - Mapped "{[/xx/modal/classifyModal],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ModalController.classifyModal(int,int)
+17:14:41 - Mapped "{[/xx/question/getPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.QuestionController.getPage(int,int)
+17:14:41 - Mapped "{[/xx/questionItem/getPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.QuestionItemController.getPage(int,int)
+17:14:41 - Mapped "{[/xx/questionItem/getPage2],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.QuestionItemController.getPage2(int,int,java.lang.String...)
+17:14:41 - Mapped "{[/xx/questionItem/getQuestionById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.QuestionItemController.getQuestionById(java.lang.Integer)
+17:14:41 - Mapped "{[/xx/modal/add],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ResAttributeRelationController.add(com.cioclass.domain.xx.ResAttribute)
+17:14:41 - Mapped "{[/xx/modal/deleteById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ResAttributeRelationController.deelteById(java.lang.Integer)
+17:14:41 - Mapped "{[/xx/modal/deleteByResIdAndAttributeId],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ResAttributeRelationController.deleteByResIdAndAttributeId(java.lang.Integer,java.lang.Integer)
+17:14:41 - Mapped "{[/xx/modal/addByResIdAndAttributeId],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ResAttributeRelationController.addByResIdAndAttributeId(java.lang.Integer,java.lang.Integer)
+17:14:41 - Mapped "{[/xx/modal/resAttrRelationModal],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ResAttributeRelationController.resAttrRelationModal(java.lang.String,java.lang.Integer,java.lang.Integer)
+17:14:41 - Mapped "{[/xx/modal/resAttrRelationModal1],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ResAttributeRelationController.resAttrRelationModal1(java.lang.String)
+17:14:41 - Mapped "{[/xx/res/add],methods=[POST]}" onto public java.lang.String com.cioclass.controller.xx.ResController.add(com.cioclass.domain.xx.Res)
+17:14:41 - Mapped "{[/xx/res/getPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ResController.getPage(int,int)
+17:14:41 - Mapped "{[/xx/res/getList],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ResController.getList()
+17:14:41 - Mapped "{[/xx/res/getById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ResController.getById(java.lang.Integer)
+17:14:41 - Mapped "{[/xx/res/delById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ResController.delById(java.lang.Integer)
+17:14:41 - Mapped "{[/xx/{path}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.XXController.base(java.lang.String,java.lang.Integer)
+17:14:42 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'mvc_dispatcher-servlet': startup date [Fri Jan 12 17:14:39 CST 2018]; parent: Root WebApplicationContext
+17:14:42 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'mvc_dispatcher-servlet': startup date [Fri Jan 12 17:14:39 CST 2018]; parent: Root WebApplicationContext
+17:14:42 - Detected @ExceptionHandler methods in resultExceptionHandler
+17:14:42 - FrameworkServlet 'mvc_dispatcher': initialization completed in 2704 ms
+17:14:52 - Closing WebApplicationContext for namespace 'mvc_dispatcher-servlet': startup date [Fri Jan 12 17:14:39 CST 2018]; parent: Root WebApplicationContext
+17:14:52 - Closing Root WebApplicationContext: startup date [Fri Jan 12 17:14:21 CST 2018]; root of context hierarchy
+17:14:52 - Closing JPA EntityManagerFactory for persistence unit 'default'
+17:15:04 - Root WebApplicationContext: initialization started
+17:15:04 - Refreshing Root WebApplicationContext: startup date [Fri Jan 12 17:15:04 CST 2018]; root of context hierarchy
+17:15:04 - Loading XML bean definitions from class path resource [beans.xml]
+17:15:06 - Loading XML bean definitions from class path resource [mvc_security.xml]
+17:15:07 - You are running with Spring Security Core 4.2.3.RELEASE
+17:15:07 - **** You are advised to use Spring 4.3.9.RELEASE or later with this version. You are running: 4.3.6.RELEASE
+17:15:07 - Spring Security 'config' module version is 4.2.3.RELEASE
+17:15:07 - Creating access control expression attribute 'hasRole('ROLE_USER')' for /upload
+17:15:07 - Creating access control expression attribute 'hasRole('ROLE_USER')' for /admin/**
+17:15:07 - No login page configured. The default internal one will be used. Use the 'login-page' attribute to set the URL of the login page.
+17:15:07 - Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 200, Root bean: class [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 400, Root bean: class [org.springframework.security.web.header.HeaderWriterFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 500, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 800, <org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0>, order = 1200, Root bean: class [org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1400, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1600, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1700, Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.security.config.http.HttpConfigurationBuilder$SecurityContextHolderAwareRequestFilterBeanFactory#0; factoryMethodName=getBean; initMethodName=null; destroyMethodName=null, order = 1800, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2100, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2200, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2300, <org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0>, order = 2400]
+17:15:07 - Loading XML bean definitions from class path resource [spring_redis.xml]
+17:15:07 - Loading properties file from class path resource [db.properties]
+17:15:09 - Loaded JDBC driver: com.mysql.jdbc.Driver
+17:15:09 - Building JPA container EntityManagerFactory for persistence unit 'default'
+17:15:09 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+17:15:09 - HHH000412: Hibernate Core {4.3.6.Final}
+17:15:09 - HHH000206: hibernate.properties not found
+17:15:09 - HHH000021: Bytecode provider name : javassist
+17:15:10 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+17:15:11 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+17:15:11 - HHH000397: Using ASTQueryTranslatorFactory
+17:15:13 - HHH000228: Running hbm2ddl schema update
+17:15:13 - HHH000102: Fetching database metadata
+17:15:13 - HHH000396: Updating schema
+17:15:13 - HHH000261: Table found: spring_data.batch_inspection
+17:15:13 - HHH000037: Columns: [batch_id, inspection_id]
+17:15:13 - HHH000108: Foreign keys: [fk_8ylu2oofaeej6vxcjh8pdlut, fk_6gbrptqob4jokm1n4kcnws77q]
+17:15:13 - HHH000126: Indexes: [fk_8ylu2oofaeej6vxcjh8pdlut, fk_6gbrptqob4jokm1n4kcnws77q]
+17:15:13 - HHH000261: Table found: spring_data.batch_process
+17:15:13 - HHH000037: Columns: [process_id, batch_id]
+17:15:13 - HHH000108: Foreign keys: [fk_jewtgchoeandtsurq84mafd8v, fk_ejiwqyxh1ci9syj1netqshbhj]
+17:15:13 - HHH000126: Indexes: [fk_jewtgchoeandtsurq84mafd8v, fk_ejiwqyxh1ci9syj1netqshbhj]
+17:15:13 - HHH000261: Table found: spring_data.batch_retroactive
+17:15:13 - HHH000037: Columns: [retroactive_id, batch_id]
+17:15:13 - HHH000108: Foreign keys: [fk_hxuntw56vyeppk2h49gb2sov8, fk_jeejk398o3xj77oi3w2tx9i53]
+17:15:13 - HHH000126: Indexes: [fk_hxuntw56vyeppk2h49gb2sov8, fk_jeejk398o3xj77oi3w2tx9i53]
+17:15:13 - HHH000261: Table found: spring_data.bole
+17:15:13 - HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction]
+17:15:13 - HHH000108: Foreign keys: []
+17:15:13 - HHH000126: Indexes: [primary]
+17:15:13 - HHH000261: Table found: spring_data.exercise
+17:15:13 - HHH000037: Columns: [last_update_time, imgurl, flag, create_time, img_url, publishdate, remark, id, lastupdate_time, title, publish_date, url]
+17:15:13 - HHH000108: Foreign keys: []
+17:15:13 - HHH000126: Indexes: [primary]
+17:15:13 - HHH000261: Table found: spring_data.furniture
+17:15:13 - HHH000037: Columns: [name, alias, remark, id, furniture_project]
+17:15:13 - HHH000108: Foreign keys: [fk_kr70ijy8pqw71e8b614xioeuf]
+17:15:13 - HHH000126: Indexes: [fk_kr70ijy8pqw71e8b614xioeuf, primary]
+17:15:13 - HHH000261: Table found: spring_data.furniture_image
+17:15:13 - HHH000037: Columns: [furniture, image_order, id, create_date, image_desc, title, update_date, url]
+17:15:13 - HHH000108: Foreign keys: [fk_fi7ub87xpgkwsia48as3q6hq7]
+17:15:13 - HHH000126: Indexes: [fk_fi7ub87xpgkwsia48as3q6hq7, primary]
+17:15:13 - HHH000261: Table found: spring_data.furniture_project
+17:15:13 - HHH000037: Columns: [name, alias, remark, id]
+17:15:13 - HHH000108: Foreign keys: []
+17:15:13 - HHH000126: Indexes: [primary]
+17:15:13 - HHH000261: Table found: spring_data.jsoup_links
+17:15:13 - HHH000037: Columns: [create_time, domain, remark, id, text, title, url, domain_text]
+17:15:13 - HHH000108: Foreign keys: []
+17:15:13 - HHH000126: Indexes: [primary]
+17:15:13 - HHH000261: Table found: spring_data.km_attach
+17:15:13 - HHH000037: Columns: [fname, ftype, created, fkey, id, author_id]
+17:15:13 - HHH000108: Foreign keys: []
+17:15:13 - HHH000126: Indexes: [primary]
+17:15:13 - HHH000261: Table found: spring_data.km_comments
+17:15:13 - HHH000037: Columns: [parent, agent, mail, author, created, owner_id, ip, coid, type, content, url, author_id, cid, status]
+17:15:13 - HHH000108: Foreign keys: []
+17:15:13 - HHH000126: Indexes: [primary]
+17:15:13 - HHH000261: Table found: spring_data.km_contents
+17:15:13 - HHH000037: Columns: [allow_comment, created, comments_num, title, type, allow_ping, content, fmt_type, tags, hits, allow_feed, modified, categories, author_id, thumb_img, slug, cid, status]
+17:15:13 - HHH000108: Foreign keys: []
+17:15:13 - HHH000126: Indexes: [primary]
+17:15:13 - HHH000261: Table found: spring_data.km_logs
+17:15:13 - HHH000037: Columns: [data, created, ip, action, id, author_id]
+17:15:13 - HHH000108: Foreign keys: []
+17:15:13 - HHH000126: Indexes: [primary]
+17:15:13 - HHH000261: Table found: spring_data.km_metas
+17:15:13 - HHH000037: Columns: [parent, name, mid, description, sort, type, slug]
+17:15:13 - HHH000108: Foreign keys: []
+17:15:13 - HHH000126: Indexes: [primary]
+17:15:13 - HHH000261: Table found: spring_data.km_options
+17:15:13 - HHH000037: Columns: [name, description, id, value]
+17:15:13 - HHH000108: Foreign keys: []
+17:15:13 - HHH000126: Indexes: [primary]
+17:15:13 - HHH000261: Table found: spring_data.km_relationships
+17:15:13 - HHH000037: Columns: [mid, id, cid]
+17:15:13 - HHH000108: Foreign keys: []
+17:15:13 - HHH000126: Indexes: [primary]
+17:15:13 - HHH000261: Table found: spring_data.km_users
+17:15:13 - HHH000037: Columns: [uid, password, group_name, home_url, logged, screen_name, created, email, activated, username]
+17:15:13 - HHH000108: Foreign keys: []
+17:15:13 - HHH000126: Indexes: [primary]
+17:15:13 - HHH000261: Table found: spring_data.lecturer
+17:15:13 - HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction]
+17:15:13 - HHH000108: Foreign keys: []
+17:15:13 - HHH000126: Indexes: [primary]
+17:15:13 - HHH000261: Table found: spring_data.mall_cart
+17:15:13 - HHH000037: Columns: [update_time, quantity, create_time, user_id, product_id, checked, id]
+17:15:13 - HHH000108: Foreign keys: []
+17:15:13 - HHH000126: Indexes: [primary]
+17:15:13 - HHH000261: Table found: spring_data.mall_category
+17:15:13 - HHH000037: Columns: [update_time, create_time, parent_id, name, id, sort_order, status]
+17:15:13 - HHH000108: Foreign keys: []
+17:15:13 - HHH000126: Indexes: [primary]
+17:15:13 - HHH000261: Table found: spring_data.mall_order
+17:15:13 - HHH000037: Columns: [order_no, shipping_id, create_time, payment_time, end_time, close_time, postage, payment_type, update_time, send_time, user_id, payment, id, status]
+17:15:13 - HHH000108: Foreign keys: []
+17:15:13 - HHH000126: Indexes: [primary]
+17:15:13 - HHH000261: Table found: spring_data.mall_order_item
+17:15:13 - HHH000037: Columns: [current_unit_price, order_no, update_time, quantity, create_time, total_price, user_id, product_image, product_id, id, product_name]
+17:15:13 - HHH000108: Foreign keys: []
+17:15:13 - HHH000126: Indexes: [primary]
+17:15:13 - HHH000261: Table found: spring_data.mall_pay_info
+17:15:13 - HHH000037: Columns: [order_no, update_time, pay_platform, create_time, user_id, platform_number, id, platform_status]
+17:15:13 - HHH000108: Foreign keys: []
+17:15:13 - HHH000126: Indexes: [primary]
+17:15:13 - HHH000261: Table found: spring_data.mall_product
+17:15:13 - HHH000037: Columns: [update_time, category_id, create_time, sub_images, main_image, price, subtitle, name, id, detail, stock, status]
+17:15:13 - HHH000108: Foreign keys: []
+17:15:13 - HHH000126: Indexes: [primary]
+17:15:13 - HHH000261: Table found: spring_data.mall_shipping
+17:15:13 - HHH000037: Columns: [update_time, create_time, receiver_province, receiver_zip, user_id, receiver_city, receiver_district, receiver_address, receiver_name, id, receiver_phone, receiver_mobile]
+17:15:13 - HHH000108: Foreign keys: []
+17:15:13 - HHH000126: Indexes: [primary]
+17:15:13 - HHH000261: Table found: spring_data.mall_user
+17:15:13 - HHH000037: Columns: [password, update_time, role, answer, create_time, question, phone, id, email, username]
+17:15:13 - HHH000108: Foreign keys: []
+17:15:13 - HHH000126: Indexes: [primary]
+17:15:13 - HHH000261: Table found: spring_data.maxima
+17:15:13 - HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction]
+17:15:13 - HHH000108: Foreign keys: []
+17:15:13 - HHH000126: Indexes: [primary]
+17:15:13 - HHH000261: Table found: spring_data.menu
+17:15:13 - HHH000037: Columns: [parent_name, parentname, icon, ordernum, type, url, parentid, parent_id, name, menuid, perms, id, order_num, menu_id, open]
+17:15:13 - HHH000108: Foreign keys: []
+17:15:13 - HHH000126: Indexes: [primary]
+17:15:13 - HHH000261: Table found: spring_data.note_tickler
+17:15:13 - HHH000037: Columns: [create_time, tickler_id, title, content]
+17:15:13 - HHH000108: Foreign keys: []
+17:15:13 - HHH000126: Indexes: [primary]
+17:15:13 - HHH000261: Table found: spring_data.orbatch_info
+17:15:13 - HHH000037: Columns: [product, batch_number, date_of_manufacture, id, recall_status]
+17:15:13 - HHH000108: Foreign keys: [fk_m905y9o26fct9w7n56vrmctqf]
+17:15:13 - HHH000126: Indexes: [fk_m905y9o26fct9w7n56vrmctqf, primary]
+17:15:13 - HHH000261: Table found: spring_data.orbatch_sub
+17:15:13 - HHH000037: Columns: [code, orbatch_info, id, status]
+17:15:13 - HHH000108: Foreign keys: [fk_576tgfpucqpvch3lfhmgt51q1]
+17:15:13 - HHH000126: Indexes: [fk_576tgfpucqpvch3lfhmgt51q1, primary]
+17:15:13 - HHH000261: Table found: spring_data.orcompany
+17:15:13 - HHH000037: Columns: [summary, main_product, responsible_person, legal_representative, industry, remark, abbreviation, date_of_application, registered_capital, zip_code, mailing_address, number_of_employees, mobile_phone, period_of_validity, id, area_covered, enterprise_code, region, enterprise_name, email, home_agent, business_registration_no]
+17:15:13 - HHH000108: Foreign keys: []
+17:15:13 - HHH000126: Indexes: [primary]
+17:15:13 - HHH000261: Table found: spring_data.orinspection_info
+17:15:13 - HHH000037: Columns: [result, censorate, suggestion, remark, id]
+17:15:13 - HHH000108: Foreign keys: []
+17:15:13 - HHH000126: Indexes: [primary]
+17:15:13 - HHH000261: Table found: spring_data.orprocess_log
+17:15:13 - HHH000037: Columns: [tache_no, id, content, tache_date, tache_name]
+17:15:13 - HHH000108: Foreign keys: []
+17:15:13 - HHH000126: Indexes: [primary]
+17:15:13 - HHH000261: Table found: spring_data.orproduct
+17:15:13 - HHH000037: Columns: [term_of_validity, remark, source_area, id, product_code, retroactive_info, product_name, spec]
+17:15:13 - HHH000108: Foreign keys: [fk_5y3e438839af8ej6tfya1ivat]
+17:15:13 - HHH000126: Indexes: [fk_5y3e438839af8ej6tfya1ivat, primary]
+17:15:14 - HHH000261: Table found: spring_data.orretroactive_info
+17:15:14 - HHH000037: Columns: [trace_type, id, content]
+17:15:14 - HHH000108: Foreign keys: []
+17:15:14 - HHH000126: Indexes: [primary]
+17:15:14 - HHH000261: Table found: spring_data.orsearch
+17:15:14 - HHH000037: Columns: [batch_info, company, id]
+17:15:14 - HHH000108: Foreign keys: [fk_hxm9mj5ufynmfumq43x59ob42, fk_cohojre21pfk8jm0le2yfwisk]
+17:15:14 - HHH000126: Indexes: [fk_hxm9mj5ufynmfumq43x59ob42, fk_cohojre21pfk8jm0le2yfwisk, primary]
+17:15:14 - HHH000261: Table found: spring_data.ortrace_type
+17:15:14 - HHH000037: Columns: [type_name, id]
+17:15:14 - HHH000108: Foreign keys: []
+17:15:14 - HHH000126: Indexes: [primary]
+17:15:14 - HHH000261: Table found: spring_data.qrcode_builder4xsentity
+17:15:14 - HHH000037: Columns: [code_size, code, create_time, batch_id, prefix, activate_status, num, en, remark, bn, url, num_size, update_time, id, status]
+17:15:14 - HHH000108: Foreign keys: []
+17:15:14 - HHH000126: Indexes: [primary]
+17:15:14 - HHH000261: Table found: spring_data.recruit
+17:15:14 - HHH000037: Columns: [requirements, flag, create_time, remark, auditing, lastupdate_time, salary, linkman, last_update_time, phone, companyname, company_name, station, id, email]
+17:15:14 - HHH000108: Foreign keys: []
+17:15:14 - HHH000126: Indexes: [primary]
+17:15:14 - HHH000261: Table found: spring_data.shop_goods
+17:15:14 - HHH000037: Columns: [goods_name, goods_id]
+17:15:14 - HHH000108: Foreign keys: []
+17:15:14 - HHH000126: Indexes: [primary]
+17:15:14 - HHH000261: Table found: spring_data.shop_goods_catalog
+17:15:14 - HHH000037: Columns: [catalog_id, catalog_name, pid]
+17:15:14 - HHH000108: Foreign keys: []
+17:15:14 - HHH000126: Indexes: [primary]
+17:15:14 - HHH000261: Table found: spring_data.shop_goods_property
+17:15:14 - HHH000037: Columns: [prop_id, length, pid, type, prop_desc, property_name]
+17:15:14 - HHH000108: Foreign keys: []
+17:15:14 - HHH000126: Indexes: [primary]
+17:15:14 - HHH000261: Table found: spring_data.shop_goods_property_condition
+17:15:14 - HHH000037: Columns: [condition_str, condition_name, condition_id]
+17:15:14 - HHH000108: Foreign keys: []
+17:15:14 - HHH000126: Indexes: [primary]
+17:15:14 - HHH000261: Table found: spring_data.shop_goods_property_value
+17:15:14 - HHH000037: Columns: [catalog_id, prop_id, nid, goods_id, value]
+17:15:14 - HHH000108: Foreign keys: [fk_aq3p9hnq6x7n1hrb9xulxd8sr, fk_osahi002qauqin44gb96kxj91, fk_6q7nb5jufvimrjdinr5mmcfhh]
+17:15:14 - HHH000126: Indexes: [fk_aq3p9hnq6x7n1hrb9xulxd8sr, fk_6q7nb5jufvimrjdinr5mmcfhh, primary]
+17:15:14 - HHH000261: Table found: spring_data.sys_acl
+17:15:14 - HHH000037: Columns: [code, acl_module_id, name, remark, id, type, operator, seq, url, operate_ip, operate_time, status]
+17:15:14 - HHH000108: Foreign keys: []
+17:15:14 - HHH000126: Indexes: [primary]
+17:15:14 - HHH000261: Table found: spring_data.sys_acl_module
+17:15:14 - HHH000037: Columns: [level, parent_id, name, remark, id, operator, seq, operate_ip, operate_time, status]
+17:15:14 - HHH000108: Foreign keys: []
+17:15:14 - HHH000126: Indexes: [primary]
+17:15:14 - HHH000261: Table found: spring_data.sys_dept
+17:15:14 - HHH000037: Columns: [level, parent_id, name, remark, id, operator, seq, operate_ip, operate_time]
+17:15:14 - HHH000108: Foreign keys: []
+17:15:14 - HHH000126: Indexes: [primary]
+17:15:14 - HHH000261: Table found: spring_data.sys_log
+17:15:14 - HHH000037: Columns: [target_id, id, type, operator, operate_ip, operate_time, status]
+17:15:14 - HHH000108: Foreign keys: []
+17:15:14 - HHH000126: Indexes: [primary]
+17:15:14 - HHH000261: Table found: spring_data.sys_role
+17:15:14 - HHH000037: Columns: [name, remark, id, type, operator, operate_ip, operate_time, status]
+17:15:14 - HHH000108: Foreign keys: []
+17:15:14 - HHH000126: Indexes: [primary]
+17:15:14 - HHH000261: Table found: spring_data.sys_role_acl
+17:15:14 - HHH000037: Columns: [role_id, id, acl_id, operator, operate_ip, operate_time]
+17:15:14 - HHH000108: Foreign keys: []
+17:15:14 - HHH000126: Indexes: [primary]
+17:15:14 - HHH000261: Table found: spring_data.sys_role_user
+17:15:14 - HHH000037: Columns: [role_id, user_id, id, operator, operate_ip, operate_time]
+17:15:14 - HHH000108: Foreign keys: []
+17:15:14 - HHH000126: Indexes: [primary]
+17:15:14 - HHH000261: Table found: spring_data.sys_user
+17:15:14 - HHH000037: Columns: [password, mail, remark, telephone, id, dept_id, operator, operate_ip, operate_time, status, username]
+17:15:14 - HHH000108: Foreign keys: []
+17:15:14 - HHH000126: Indexes: [primary]
+17:15:14 - HHH000261: Table found: spring_data.trainee
+17:15:14 - HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction]
+17:15:14 - HHH000108: Foreign keys: []
+17:15:14 - HHH000126: Indexes: [primary]
+17:15:14 - HHH000261: Table found: spring_data.user
+17:15:14 - HHH000037: Columns: [last_update_time, password, flag, answer, create_time, question, phone, name, remark, id, email]
+17:15:14 - HHH000108: Foreign keys: []
+17:15:14 - HHH000126: Indexes: [primary]
+17:15:14 - HHH000261: Table found: spring_data.xx_attribute
+17:15:14 - HHH000037: Columns: [attr_desc, check_user_id, attr_checked, length, pid, remark, type, update_date, attr_id, attr_level, name, make_user_id, short_name, create_date]
+17:15:14 - HHH000108: Foreign keys: []
+17:15:14 - HHH000126: Indexes: [primary]
+17:15:14 - HHH000261: Table found: spring_data.xx_attribute_value
+17:15:14 - HHH000037: Columns: [score, attrid, classify_id, res_id, value_id, value, resid, attr_id]
+17:15:14 - HHH000108: Foreign keys: []
+17:15:14 - HHH000126: Indexes: [primary]
+17:15:14 - HHH000261: Table found: spring_data.xx_classify
+17:15:14 - HHH000037: Columns: [classify_status, check_user_id, classify_id, classify_level, pid, remark, update_date, classify_checked, classify_option, classify_desc, name, make_user_id, short_name, create_date]
+17:15:14 - HHH000108: Foreign keys: []
+17:15:14 - HHH000126: Indexes: [primary]
+17:15:14 - HHH000261: Table found: spring_data.xx_demand
+17:15:14 - HHH000037: Columns: [demand_id, name]
+17:15:14 - HHH000108: Foreign keys: []
+17:15:14 - HHH000126: Indexes: [primary]
+17:15:14 - HHH000261: Table found: spring_data.xx_question
+17:15:14 - HHH000037: Columns: [id, question_des]
+17:15:14 - HHH000108: Foreign keys: []
+17:15:14 - HHH000126: Indexes: [primary]
+17:15:14 - HHH000261: Table found: spring_data.xx_question_item
+17:15:14 - HHH000037: Columns: [item_desc, question, id, item_value]
+17:15:14 - HHH000108: Foreign keys: [fk_ljngho2cn3h57rifqic2aq95j]
+17:15:14 - HHH000126: Indexes: [fk_ljngho2cn3h57rifqic2aq95j, primary]
+17:15:14 - HHH000261: Table found: spring_data.xx_res
+17:15:14 - HHH000037: Columns: [res_desc, check_user_id, res_checked, res_id, name, res_status, make_user_id, short_name, remark, create_date, update_date, res_level]
+17:15:14 - HHH000108: Foreign keys: []
+17:15:14 - HHH000126: Indexes: [primary]
+17:15:14 - HHH000261: Table found: spring_data.xx_res_attrs
+17:15:14 - HHH000037: Columns: [id, xx_res, attrs]
+17:15:14 - HHH000108: Foreign keys: []
+17:15:14 - HHH000126: Indexes: [primary]
+17:15:14 - HHH000232: Schema update complete
+17:15:14 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+17:15:22 - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.SecurityContextPersistenceFilter@15b8428, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1d92898, org.springframework.security.web.header.HeaderWriterFilter@11ba3a9, org.springframework.security.web.authentication.logout.LogoutFilter@72241c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@e8cfda, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@f68543, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@423c5d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1a31b1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@18ce618, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@d4aeaa, org.springframework.security.web.session.SessionManagementFilter@101ddab, org.springframework.security.web.access.ExceptionTranslationFilter@4ee4b0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1536c52]
+17:15:22 - Checking whether login URL '/login' is accessible with your configuration
+17:15:22 - Root WebApplicationContext: initialization completed in 18255 ms
+17:15:22 - FrameworkServlet 'mvc_dispatcher': initialization started
+17:15:22 - Refreshing WebApplicationContext for namespace 'mvc_dispatcher-servlet': startup date [Fri Jan 12 17:15:22 CST 2018]; parent: Root WebApplicationContext
+17:15:22 - Loading XML bean definitions from class path resource [mvc_dispatcher.xml]
+17:15:24 - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+17:15:24 - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+17:15:24 - Mapped "{[/admin/{path}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.admin.AdminController.base(java.lang.String)
+17:15:24 - Mapped "{[/admin/or],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.cioclass.controller.admin.AdminController.orXiaShang(int,int,java.lang.String,javax.servlet.http.HttpServletRequest)
+17:15:24 - Mapped "{[/addBole],methods=[POST]}" onto public java.lang.String com.cioclass.controller.BoleController.addBole(com.cioclass.domain.Bole)
+17:15:24 - Mapped "{[/getBole],methods=[GET]}" onto public java.lang.String com.cioclass.controller.BoleController.getBole()
+17:15:24 - Mapped "{[/delBoleById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.BoleController.delBoleById(java.lang.Integer)
+17:15:24 - Mapped "{[/getBoleById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.BoleController.getBoleById(java.lang.Integer)
+17:15:24 - Mapped "{[/getBolePage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.BoleController.getBolePage(int,int)
+17:15:24 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ControllerTest.index()
+17:15:24 - Mapped "{[/{path}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ControllerTest.base(java.lang.String)
+17:15:24 - Mapped "{[/test/{path}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ControllerTest.test(java.lang.String)
+17:15:24 - Mapped "{[/o],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ControllerTest.o(java.lang.String,int,int)
+17:15:24 - Mapped "{[/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.cioclass.controller.ControllerTest.login(java.lang.String,java.lang.String)
+17:15:24 - Mapped "{[/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.cioclass.controller.ControllerTest.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:15:24 - Mapped "{[/sql],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ControllerTest.sql(java.lang.String,java.lang.String,java.lang.String)
+17:15:24 - Mapped "{[/oSearch],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.cioclass.controller.ControllerTest.oSearch(java.lang.String,java.lang.String)
+17:15:24 - Mapped "{[/ip],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ControllerTest.getIpInfo(java.lang.String)
+17:15:24 - Mapped "{[/echarts/{path}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.echarts.EchartsController.base(java.lang.String)
+17:15:24 - Mapped "{[/getExercisePage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ExerciseController.getBolePage(int,int)
+17:15:24 - Mapped "{[/addExercise],methods=[POST]}" onto public java.lang.String com.cioclass.controller.ExerciseController.addExercise(com.cioclass.domain.Exercise)
+17:15:24 - Mapped "{[/delExerciseById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ExerciseController.delExerciseById(java.lang.Integer)
+17:15:24 - Mapped "{[/getExerciseById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ExerciseController.getExerciseById(java.lang.Integer)
+17:15:24 - Mapped "{[/getExercise],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ExerciseController.getExercise()
+17:15:24 - Mapped "{[/fileUpload],methods=[POST]}" onto public java.lang.String com.cioclass.controller.FileController.fileUpload(javax.servlet.http.HttpServletRequest,org.springframework.web.multipart.MultipartFile)
+17:15:24 - Mapped "{[/filesUpload],methods=[POST]}" onto public java.lang.String com.cioclass.controller.FileController.fileUploads(javax.servlet.http.HttpServletRequest,org.springframework.web.multipart.MultipartFile[])
+17:15:24 - Mapped "{[/zx/{path}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.jsoup.JsoupController.base(java.lang.String)
+17:15:24 - Mapped "{[/zx/getPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.jsoup.JsoupLinksController.getPage(int,int)
+17:15:24 - Mapped "{[/zx/searchLinks],methods=[GET]}" onto public java.lang.String com.cioclass.controller.jsoup.JsoupLinksController.addLinks(java.lang.String)
+17:15:24 - Mapped "{[/zx/saveLink],methods=[POST]}" onto public java.lang.String com.cioclass.controller.jsoup.JsoupLinksController.saveLink(com.cioclass.domain.jsoup.JsoupLinks)
+17:15:24 - Mapped "{[/zx/delById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.jsoup.JsoupLinksController.delById(java.lang.Integer)
+17:15:24 - Mapped "{[/zx/getLinkById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.jsoup.JsoupLinksController.getLinkById(java.lang.Integer)
+17:15:24 - Mapped "{[/zx/updateTitle],methods=[GET]}" onto public java.lang.String com.cioclass.controller.jsoup.JsoupLinksController.updateTitle()
+17:15:24 - Mapped "{[/addLecturer],methods=[POST]}" onto public java.lang.String com.cioclass.controller.LecturerController.addLecturer(com.cioclass.domain.Lecturer)
+17:15:24 - Mapped "{[/delLecturerById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.LecturerController.delLecturerById(java.lang.Integer)
+17:15:24 - Mapped "{[/getLecturerById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.LecturerController.getLecturerById(java.lang.Integer)
+17:15:24 - Mapped "{[/getLecturer],methods=[GET]}" onto public java.lang.String com.cioclass.controller.LecturerController.getLecturer()
+17:15:24 - Mapped "{[/getLecturerPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.LecturerController.getLecturerPage(int,int)
+17:15:24 - Mapped "{[/addMaxima_c],methods=[POST]}" onto public java.lang.String com.cioclass.controller.MaximaController.addMaxima_c(com.cioclass.domain.Maxima)
+17:15:24 - Mapped "{[/addMaxima_z],methods=[POST]}" onto public java.lang.String com.cioclass.controller.MaximaController.addMaxima_z(com.cioclass.domain.Maxima)
+17:15:24 - Mapped "{[/addMaxima_g],methods=[POST]}" onto public java.lang.String com.cioclass.controller.MaximaController.addMaxima_g(com.cioclass.domain.Maxima)
+17:15:24 - Mapped "{[/delMaximaById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.MaximaController.delMaximaById(java.lang.Integer)
+17:15:24 - Mapped "{[/getMaximaById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.MaximaController.getMaximaById(java.lang.Integer)
+17:15:24 - Mapped "{[/getMaxima],methods=[GET]}" onto public java.lang.String com.cioclass.controller.MaximaController.getMaxima()
+17:15:24 - Mapped "{[/getMaximaPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.MaximaController.getMaximaPage(int,int)
+17:15:24 - Mapped "{[/getMaximaPageSub],methods=[GET]}" onto public java.lang.String com.cioclass.controller.MaximaController.getMaximaPageSub(int,int,java.lang.String)
+17:15:24 - Mapped "{[/note/{path}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.note.NoteController.noteBase(java.lang.String)
+17:15:24 - Mapped "{[/note/addTickler],methods=[POST]}" onto public java.lang.String com.cioclass.controller.note.TicklerController.addTickler(com.cioclass.domain.note.Tickler)
+17:15:24 - Mapped "{[/note/getTicklerById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.note.TicklerController.getTicklerById(java.lang.Integer)
+17:15:24 - Mapped "{[/note/getTickler],methods=[GET]}" onto public java.lang.String com.cioclass.controller.note.TicklerController.getTickler()
+17:15:24 - Mapped "{[/note/getTicklerPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.note.TicklerController.getTicklerPage(int,int)
+17:15:24 - Mapped "{[/note/delTicklerById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.note.TicklerController.delGoodsById(java.lang.Integer)
+17:15:24 - Mapped "{[/or/batchInfo/add],methods=[POST]}" onto public java.lang.String com.cioclass.controller.or.OrBatchInfoController.add(com.cioclass.domain.or.ORBatchInfo)
+17:15:24 - Mapped "{[/or/batchInfo/findRetroactiveInfoTempListById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrBatchInfoController.findRetroactiveInfoListById(java.lang.Integer)
+17:15:24 - Mapped "{[/or/batchInfo/findLogById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrBatchInfoController.findLogById(java.lang.Integer)
+17:15:24 - Mapped "{[/or/batchInfo/findCompanysByBatchNumber],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrBatchInfoController.findCompanysByBatchNumber(java.lang.String)
+17:15:24 - Mapped "{[/or/batchInfo/{id}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrBatchInfoController.getBatchInfoById(java.lang.Integer)
+17:15:24 - Mapped "{[/or/batchInfo/getBatchInfoPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrBatchInfoController.getBatchInfoPage(int,int)
+17:15:24 - Mapped "{[/or/batchSub/{id}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrBatchSubController.getCompanyById(java.lang.Integer)
+17:15:24 - Mapped "{[/or/company/{id}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrCompanyController.getCompanyById(java.lang.Integer)
+17:15:24 - Mapped "{[/or/company/deleteById/{id}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrCompanyController.companyPage(java.lang.Integer)
+17:15:24 - Mapped "{[/or/company/companyPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrCompanyController.companyPage(int,int)
+17:15:24 - Mapped "{[/or/company/saveCompany],methods=[POST]}" onto public java.lang.String com.cioclass.controller.or.OrCompanyController.saveCompany(com.cioclass.domain.or.ORCompany)
+17:15:24 - Mapped "{[/or/{path}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.cioclass.controller.or.OrController.base(java.lang.String,java.lang.Integer)
+17:15:24 - Mapped "{[/or/inspection],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrInspectionInfoController.getById(java.lang.Integer)
+17:15:24 - Mapped "{[/or/inspection/{id}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrInspectionInfoController.getInspectionInfoByBatchInfoId(java.lang.Integer)
+17:15:24 - Mapped "{[/or/product/add],methods=[POST]}" onto public java.lang.String com.cioclass.controller.or.OrProductController.add(com.cioclass.domain.or.ORProduct)
+17:15:24 - Mapped "{[/or/product/getPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrProductController.getPage(int,int)
+17:15:24 - Mapped "{[/or/product/findRIByPID],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrProductController.findORRetroactiveInfoByProductId(java.lang.Integer)
+17:15:24 - Mapped "{[/or/product/findBaseProductByBatchInfoId],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrProductController.findBaseProductByBatchInfoId(java.lang.Integer)
+17:15:24 - Mapped "{[/or/retroactive/{id}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.OrRetroactiveInfoController.getCompanyById(java.lang.Integer)
+17:15:24 - Mapped "{[/or/search],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.cioclass.controller.or.OrSearchController.base(java.lang.String,java.lang.String,java.lang.String)
+17:15:24 - Mapped "{[/or/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.cioclass.controller.or.OrSearchController.main(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:15:24 - Mapped "{[/or/searchOld],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.cioclass.controller.or.OrSearchController.searchOld(java.lang.String,java.lang.String,java.lang.String)
+17:15:24 - Mapped "{[/or/searchBrand],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.cioclass.controller.or.OrSearchController.searchBrand(java.lang.Integer,java.lang.Integer)
+17:15:24 - Mapped "{[/or/search/addSearch],methods=[POST]}" onto public java.lang.String com.cioclass.controller.or.OrSearchController.addSearch(java.lang.Integer,java.lang.Integer)
+17:15:24 - Mapped "{[/or/qr/addOne],methods=[POST]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.addOne(com.cioclass.domain.or.QrcodeBuilder4XSEntity)
+17:15:24 - Mapped "{[/or/qr/findByEn],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.findByEn(java.lang.String,int,int)
+17:15:24 - Mapped "{[/or/qr/findByEnBnNumLeftMatch],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.findByEnBnNumLeftMatch(java.lang.String,java.lang.String,java.lang.String,int,int)
+17:15:24 - Mapped "{[/or/qr/findByEnBnNumRightMatch],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.findByEnBnNumRightMatch(java.lang.String,java.lang.String,java.lang.String,int,int)
+17:15:24 - Mapped "{[/or/qr/findByEnBnNumMatch],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.findByEnBnNumMatch(java.lang.String,java.lang.String,java.lang.String,int,int)
+17:15:24 - Mapped "{[/or/qr/findByEnBnNumCode],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.findByEnBnNumCode(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,int)
+17:15:24 - Mapped "{[/or/qr/findAllEn],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.findAllEn(int,int)
+17:15:24 - Mapped "{[/or/qr/findAllBn],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.findAllBn(int,int)
+17:15:24 - Mapped "{[/or/qr/findByEnBn],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.findByEnBn(java.lang.String,java.lang.String,int,int)
+17:15:24 - Mapped "{[/or/qr/findByEnBnNum],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.findByEnBnNum(java.lang.String,java.lang.String,java.lang.String,int,int)
+17:15:24 - Mapped "{[/or/qr/delById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.delById(java.lang.Integer)
+17:15:24 - Mapped "{[/or/qr/findById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.findById(java.lang.String)
+17:15:24 - Mapped "{[/or/qr/delByIds],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.delByIds(java.lang.Integer...)
+17:15:24 - Mapped "{[/or/qr/updateOfActive],methods=[POST]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.updateOfActive(java.lang.String,java.lang.Integer...)
+17:15:24 - Mapped "{[/or/qr/updateOfStatus],methods=[POST]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.updateOfStatus(java.lang.String,java.lang.Integer...)
+17:15:24 - Mapped "{[/or/qr/updateInfo],methods=[POST]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.updateInfo(com.cioclass.dto.or.QrcodeBuilder4XSUpdateDto,java.lang.Integer...)
+17:15:24 - Mapped "{[/or/qr/readFromFile2DB],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.readFromFile2DB(java.lang.String,java.lang.String,java.lang.String)
+17:15:24 - Mapped "{[/or/qr/readFromDB2File],methods=[GET]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.readFromDB2File(java.lang.String,java.lang.String,java.lang.String)
+17:15:24 - Mapped "{[/or/qr/addBatchContentInDB],methods=[POST]}" onto public java.lang.String com.cioclass.controller.or.QrcodeBuilder4XSController.addBatchContentInDB(com.cioclass.dto.or.QrcodeBuilder4XSDto)
+17:15:24 - Mapped "{[/delRecruitById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.RecruitController.delMaximaById(java.lang.Integer)
+17:15:24 - Mapped "{[/addRecruit],methods=[POST]}" onto public java.lang.String com.cioclass.controller.RecruitController.addRecruit(com.cioclass.domain.Recruit)
+17:15:24 - Mapped "{[/getRecruit],methods=[GET]}" onto public java.lang.String com.cioclass.controller.RecruitController.getRecruit()
+17:15:24 - Mapped "{[/getRecruitById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.RecruitController.getRecruitById(java.lang.Integer)
+17:15:24 - Mapped "{[/getRecruitPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.RecruitController.getRecruitPage(int,int)
+17:15:24 - Mapped "{[/shop/addCGPV],methods=[POST]}" onto public java.lang.String com.cioclass.controller.shop.CatalogGoodsPropertyValueController.addCGPV(com.cioclass.domain.shop.CatalogGoodsPropertyValue)
+17:15:24 - Mapped "{[/shop/getCGPV],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogGoodsPropertyValueController.getCGPV()
+17:15:24 - Mapped "{[/shop/getCGPVById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogGoodsPropertyValueController.getCGPVById(java.lang.Integer)
+17:15:24 - Mapped "{[/shop/getCGPVPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogGoodsPropertyValueController.getCGPVPage(int,int)
+17:15:24 - Mapped "{[/shop/delCGPVById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogGoodsPropertyValueController.delCGPVById(java.lang.Integer)
+17:15:24 - Mapped "{[/shop/getPropsByCatalogId],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogGoodsPropertyValueController.getPropsByCatalogId(java.lang.Integer)
+17:15:24 - Mapped "{[/shop/getPropsValueByCatalogId],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogGoodsPropertyValueController.getPropsValueByCatalogId(java.lang.Integer)
+17:15:24 - Mapped "{[/shop/getGoodsByCatalogId],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogGoodsPropertyValueController.getGoodsByCatalogId(java.lang.Integer)
+17:15:24 - Mapped "{[/shop/addGoodsProperty],methods=[POST]}" onto public java.lang.String com.cioclass.controller.shop.CatalogPropertyController.addGoodsProperty(com.cioclass.domain.shop.GoodsProperty)
+17:15:24 - Mapped "{[/shop/getGoodsProperty],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogPropertyController.getGoodsProperty()
+17:15:24 - Mapped "{[/shop/getGoodsPropertyById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogPropertyController.getGoodsPropertyById(java.lang.Integer)
+17:15:24 - Mapped "{[/shop/getGoodsPropertyPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogPropertyController.getGoodsPropertyPage(int,int)
+17:15:24 - Mapped "{[/shop/getOneGoodsProperty],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogPropertyController.getOneGoodsProperty(java.lang.Integer)
+17:15:24 - Mapped "{[/shop/delGoodsPropertyById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.CatalogPropertyController.delGoodsPropertyById(java.lang.Integer)
+17:15:24 - Mapped "{[/shop/delGoodsCatalogById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.GoodsCatalogController.delGoodsById(java.lang.Integer)
+17:15:24 - Mapped "{[/shop/addcatalog],methods=[POST]}" onto public java.lang.String com.cioclass.controller.shop.GoodsCatalogController.addcatalog(com.cioclass.domain.shop.GoodsCatalog)
+17:15:24 - Mapped "{[/shop/getGoodsCatalog],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.GoodsCatalogController.getGoodsCatalog()
+17:15:24 - Mapped "{[/shop/getGoodsCatalogById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.GoodsCatalogController.getGoodsCatalogById(java.lang.Integer)
+17:15:24 - Mapped "{[/shop/getGoodsCatalogPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.GoodsCatalogController.getGoodsCatalogPage(int,int)
+17:15:24 - Mapped "{[/shop/getOneGoodsCatalog],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.GoodsCatalogController.getOneGoodsCatalog(java.lang.Integer)
+17:15:24 - Mapped "{[/shop/addGoods],methods=[POST]}" onto public java.lang.String com.cioclass.controller.shop.GoodsController.addGoods(com.cioclass.domain.shop.Goods)
+17:15:24 - Mapped "{[/shop/getGoods],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.GoodsController.getGoods()
+17:15:24 - Mapped "{[/shop/delGoodsById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.GoodsController.delGoodsById(java.lang.Integer)
+17:15:24 - Mapped "{[/shop/getGoodsById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.GoodsController.getGoodsById(java.lang.Integer)
+17:15:24 - Mapped "{[/shop/getGoodsPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.GoodsController.getGoodsPage(int,int)
+17:15:24 - Mapped "{[/shop/getOneGoods],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.GoodsController.getOneGoodsCatalog(java.lang.Integer)
+17:15:24 - Mapped "{[/shop/{path}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.shop.ShopController.shopBase(java.lang.String)
+17:15:24 - Mapped "{[/ss/{path}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.ss.SSDataController.base(java.lang.String)
+17:15:24 - Mapped "{[/addTrainee],methods=[POST]}" onto public java.lang.String com.cioclass.controller.TraineeController.addTrainee(com.cioclass.domain.Trainee)
+17:15:24 - Mapped "{[/delTraineeById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.TraineeController.delTraineeById(java.lang.Integer)
+17:15:24 - Mapped "{[/getTraineeById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.TraineeController.getTraineeById(java.lang.Integer)
+17:15:24 - Mapped "{[/getTrainee],methods=[GET]}" onto public java.lang.String com.cioclass.controller.TraineeController.getTrainee()
+17:15:24 - Mapped "{[/getTraineePage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.TraineeController.getTraineePage(int,int)
+17:15:24 - Mapped "{[/getTraineeAll],methods=[GET]}" onto public java.lang.String com.cioclass.controller.TraineeController.getTraineeAll()
+17:15:24 - Mapped "{[/findQuestionByName],methods=[GET]}" onto public java.lang.String com.cioclass.controller.UserController.findQuestionByName(java.lang.String)
+17:15:24 - Mapped "{[/findQuestionByEmail],methods=[GET]}" onto public java.lang.String com.cioclass.controller.UserController.findQuestionByEmail(java.lang.String)
+17:15:24 - Mapped "{[/findQuestionByPhone],methods=[GET]}" onto public java.lang.String com.cioclass.controller.UserController.findQuestionByPhone(java.lang.String)
+17:15:24 - Mapped "{[/findAnswerByEmail],methods=[GET]}" onto public java.lang.String com.cioclass.controller.UserController.findAnswerByEmail(java.lang.String)
+17:15:24 - Mapped "{[/findAnswerByPhone],methods=[GET]}" onto public java.lang.String com.cioclass.controller.UserController.findAnswerByPhone(java.lang.String)
+17:15:24 - Mapped "{[/findAnswerByName],methods=[GET]}" onto public java.lang.String com.cioclass.controller.UserController.findAnswerByName(java.lang.String)
+17:15:24 - Mapped "{[/addUser],methods=[POST]}" onto public java.lang.String com.cioclass.controller.UserController.addUser(com.cioclass.domain.User)
+17:15:24 - Mapped "{[/getUserById],methods=[POST]}" onto public java.lang.String com.cioclass.controller.UserController.getUserById(java.lang.Integer)
+17:15:24 - Mapped "{[/findRepeat],methods=[GET]}" onto public java.lang.String com.cioclass.controller.UserController.findRepeat(java.lang.String)
+17:15:24 - Mapped "{[/findByNameAndPassword],methods=[GET]}" onto public java.lang.String com.cioclass.controller.UserController.findByNameAndPassword(java.lang.String,java.lang.String)
+17:15:24 - Mapped "{[/findByEmailAndPassword],methods=[GET]}" onto public java.lang.String com.cioclass.controller.UserController.findByEmailAndPassword(java.lang.String,java.lang.String)
+17:15:24 - Mapped "{[/findByPhoneAndPassword],methods=[GET]}" onto public java.lang.String com.cioclass.controller.UserController.findByPhoneAndPassword(java.lang.String,java.lang.String)
+17:15:24 - Mapped "{[/xx/attribute/add],methods=[POST]}" onto public java.lang.String com.cioclass.controller.xx.AttributeController.add(com.cioclass.domain.xx.Attribute)
+17:15:24 - Mapped "{[/xx/attribute/getPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeController.getPage(int,int)
+17:15:24 - Mapped "{[/xx/attribute/getList],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeController.getList()
+17:15:24 - Mapped "{[/xx/attribute/findByClassifyId],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeController.findByClassifyId(java.lang.Integer)
+17:15:24 - Mapped "{[/xx/attribute/getById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeController.getById(java.lang.Integer)
+17:15:24 - Mapped "{[/xx/attribute/delById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeController.delById(java.lang.Integer)
+17:15:24 - Mapped "{[/xx/attributeValue/add],methods=[POST]}" onto public java.lang.String com.cioclass.controller.xx.AttributeValueController.add(com.cioclass.domain.xx.AttributeValue)
+17:15:24 - Mapped "{[/xx/attributeValue/getPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeValueController.getPage(int,int)
+17:15:24 - Mapped "{[/xx/attributeValue/findCan],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeValueController.findCan(java.lang.Integer,java.lang.Integer)
+17:15:24 - Mapped "{[/xx/attributeValue/getList],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeValueController.getList()
+17:15:24 - Mapped "{[/xx/attributeValue/findAlready],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeValueController.findAlready(java.lang.Integer,java.lang.Integer)
+17:15:24 - Mapped "{[/xx/attributeValue/getById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeValueController.getById(java.lang.Integer)
+17:15:24 - Mapped "{[/xx/attributeValue/delById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeValueController.delById(java.lang.Integer)
+17:15:24 - Mapped "{[/xx/attributeValue/getAttrValues],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeValueController.getAttrValues(java.lang.Integer,java.lang.Integer)
+17:15:24 - Mapped "{[/xx/attributeValue/getResByclassifyId],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeValueController.getResByclassifyId(java.lang.Integer)
+17:15:24 - Mapped "{[/xx/attributeValue/getResByclassifyId1],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.AttributeValueController.getResByclassifyId1(java.lang.Integer)
+17:15:24 - Mapped "{[/xx/classify/add],methods=[POST]}" onto public java.lang.String com.cioclass.controller.xx.ClassifyController.add(com.cioclass.domain.xx.Classify)
+17:15:24 - Mapped "{[/xx/classify/getPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ClassifyController.getPage(int,int)
+17:15:24 - Mapped "{[/xx/classify/getList],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ClassifyController.getList()
+17:15:24 - Mapped "{[/xx/classify/getById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ClassifyController.getById(java.lang.Integer)
+17:15:24 - Mapped "{[/xx/classify/delById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ClassifyController.delById(java.lang.Integer)
+17:15:24 - Mapped "{[/xx/modal/resModal],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ModalController.resModal(int,int)
+17:15:24 - Mapped "{[/xx/modal/model6],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ModalController.model6(int,int)
+17:15:24 - Mapped "{[/xx/modal/model5],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ModalController.model5()
+17:15:24 - Mapped "{[/xx/modal/attrModal],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ModalController.attrModal(int,int)
+17:15:24 - Mapped "{[/xx/modal/classifyModal],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ModalController.classifyModal(int,int)
+17:15:24 - Mapped "{[/xx/question/getPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.QuestionController.getPage(int,int)
+17:15:24 - Mapped "{[/xx/questionItem/getPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.QuestionItemController.getPage(int,int)
+17:15:24 - Mapped "{[/xx/questionItem/getPage2],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.QuestionItemController.getPage2(int,int,java.lang.String...)
+17:15:24 - Mapped "{[/xx/questionItem/getQuestionById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.QuestionItemController.getQuestionById(java.lang.Integer)
+17:15:24 - Mapped "{[/xx/modal/add],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ResAttributeRelationController.add(com.cioclass.domain.xx.ResAttribute)
+17:15:24 - Mapped "{[/xx/modal/deleteById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ResAttributeRelationController.deelteById(java.lang.Integer)
+17:15:24 - Mapped "{[/xx/modal/deleteByResIdAndAttributeId],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ResAttributeRelationController.deleteByResIdAndAttributeId(java.lang.Integer,java.lang.Integer)
+17:15:24 - Mapped "{[/xx/modal/addByResIdAndAttributeId],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ResAttributeRelationController.addByResIdAndAttributeId(java.lang.Integer,java.lang.Integer)
+17:15:24 - Mapped "{[/xx/modal/resAttrRelationModal],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ResAttributeRelationController.resAttrRelationModal(java.lang.String,java.lang.Integer,java.lang.Integer)
+17:15:24 - Mapped "{[/xx/modal/resAttrRelationModal1],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ResAttributeRelationController.resAttrRelationModal1(java.lang.String)
+17:15:24 - Mapped "{[/xx/res/add],methods=[POST]}" onto public java.lang.String com.cioclass.controller.xx.ResController.add(com.cioclass.domain.xx.Res)
+17:15:24 - Mapped "{[/xx/res/getPage],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ResController.getPage(int,int)
+17:15:24 - Mapped "{[/xx/res/getList],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ResController.getList()
+17:15:24 - Mapped "{[/xx/res/getById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ResController.getById(java.lang.Integer)
+17:15:24 - Mapped "{[/xx/res/delById],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.ResController.delById(java.lang.Integer)
+17:15:24 - Mapped "{[/xx/{path}],methods=[GET]}" onto public java.lang.String com.cioclass.controller.xx.XXController.base(java.lang.String,java.lang.Integer)
+17:15:25 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'mvc_dispatcher-servlet': startup date [Fri Jan 12 17:15:22 CST 2018]; parent: Root WebApplicationContext
+17:15:25 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'mvc_dispatcher-servlet': startup date [Fri Jan 12 17:15:22 CST 2018]; parent: Root WebApplicationContext
+17:15:25 - Detected @ExceptionHandler methods in resultExceptionHandler
+17:15:25 - FrameworkServlet 'mvc_dispatcher': initialization completed in 2918 ms
+17:17:17 - 访问路径：qrcode4XSBatchNo
+17:18:31 - 访问路径：qrcode4XSBatchNo
+17:19:24 - 访问路径：qrcode4XSBatchNo
+17:38:58 - Closing WebApplicationContext for namespace 'mvc_dispatcher-servlet': startup date [Fri Jan 12 17:15:22 CST 2018]; parent: Root WebApplicationContext
+17:38:58 - Closing Root WebApplicationContext: startup date [Fri Jan 12 17:15:04 CST 2018]; root of context hierarchy
+17:38:58 - Closing JPA EntityManagerFactory for persistence unit 'default'
+17:39:10 - Root WebApplicationContext: initialization started
+17:39:10 - Refreshing Root WebApplicationContext: startup date [Fri Jan 12 17:39:10 CST 2018]; root of context hierarchy
+17:39:10 - Loading XML bean definitions from class path resource [beans.xml]
+17:39:14 - Loading XML bean definitions from class path resource [mvc_security.xml]
+17:39:14 - You are running with Spring Security Core 4.2.3.RELEASE
+17:39:14 - **** You are advised to use Spring 4.3.9.RELEASE or later with this version. You are running: 4.3.6.RELEASE
+17:39:14 - Spring Security 'config' module version is 4.2.3.RELEASE
+17:39:14 - Creating access control expression attribute 'hasRole('ROLE_USER')' for /upload
+17:39:14 - Creating access control expression attribute 'hasRole('ROLE_USER')' for /admin/**
+17:39:14 - No login page configured. The default internal one will be used. Use the 'login-page' attribute to set the URL of the login page.
+17:39:14 - Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 200, Root bean: class [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 400, Root bean: class [org.springframework.security.web.header.HeaderWriterFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 500, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 800, <org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0>, order = 1200, Root bean: class [org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1400, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1600, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1700, Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.security.config.http.HttpConfigurationBuilder$SecurityContextHolderAwareRequestFilterBeanFactory#0; factoryMethodName=getBean; initMethodName=null; destroyMethodName=null, order = 1800, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2100, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2200, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2300, <org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0>, order = 2400]
+17:39:14 - Loading XML bean definitions from class path resource [spring_redis.xml]
+17:39:15 - Loading properties file from class path resource [db.properties]
+17:39:17 - Loaded JDBC driver: com.mysql.jdbc.Driver
+17:39:17 - Building JPA container EntityManagerFactory for persistence unit 'default'
+17:39:17 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+17:39:17 - HHH000412: Hibernate Core {4.3.6.Final}
+17:39:17 - HHH000206: hibernate.properties not found
+17:39:17 - HHH000021: Bytecode provider name : javassist
+17:39:18 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+17:39:19 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+17:39:20 - HHH000397: Using ASTQueryTranslatorFactory

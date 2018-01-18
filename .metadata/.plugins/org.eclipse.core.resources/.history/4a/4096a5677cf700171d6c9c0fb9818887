@@ -1,0 +1,93 @@
+package com.cioclass.dao.or;
+
+import java.util.List;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import com.cioclass.domain.or.QrcodeBuilder4XSEntity;
+import com.cioclass.dto.or.OrBatchInfoDto;
+import com.cioclass.dto.or.OrCompanyInfoDto;
+
+public interface QrcodeBuilder4XSDao
+		extends JpaRepository<QrcodeBuilder4XSEntity, Integer>, JpaSpecificationExecutor<QrcodeBuilder4XSEntity> {
+	@Query(value = "select new com.cioclass.dto.or.OrCompanyInfoDto(c.enterpriseCode,c.enterpriseName) from ORCompany c where c.enterpriseCode in(select DISTINCT qr.en from QrcodeBuilder4XSEntity qr)")
+	Page<OrCompanyInfoDto> findAllEn(Pageable pageable);
+	
+	@Query(value = "select new com.cioclass.dto.or.OrBatchInfoDto(b.id,b.batchNumber) from ORBatchInfo b where b.batchNumber in(select DISTINCT qr.bn from QrcodeBuilder4XSEntity qr)")
+	Page<OrBatchInfoDto> findAllBn(Pageable pageable);
+	/**
+	 * 通过 en 和 bn 查询该商家的批次编号(大批次)的详细信息
+	 * 
+	 * @param en
+	 * @param bn
+	 * @return
+	 */
+	@Query(value = "from QrcodeBuilder4XSEntity qbe where qbe.en=:en and qbe.bn=:bn")
+	List<QrcodeBuilder4XSEntity> findByEnBn(@Param("en") String en, @Param("bn") String bn);
+	
+	@Query(value = "from QrcodeBuilder4XSEntity qbe where qbe.en=:en")
+	Page<QrcodeBuilder4XSEntity> findByEn(@Param("en") String en, Pageable pageable);
+	
+	@Query(value = "from QrcodeBuilder4XSEntity qbe where qbe.en=:en and qbe.bn=:bn")
+	Page<QrcodeBuilder4XSEntity> findByEnBn(@Param("en") String en, @Param("bn") String bn, Pageable pageable);
+
+	/**
+	 * findByEnBnNum
+	 * @param en
+	 * @param bn
+	 * @param numStr
+	 * @param pageable
+	 * @return
+	 */
+	@Query(value = "from QrcodeBuilder4XSEntity qbe where qbe.en=:en and qbe.bn=:bn and qbe.num=:numStr")
+	Page<QrcodeBuilder4XSEntity> findByEnBnNum(@Param("en") String en, @Param("bn") String bn,
+			@Param("numStr") String numStr, Pageable pageable);
+
+	/* 流水号模糊匹配 */
+	@Query(value = "from QrcodeBuilder4XSEntity qbe where qbe.en=:en and qbe.bn=:bn and qbe.num like :numStr%")
+	Page<QrcodeBuilder4XSEntity> findByEnBnNumLeftMatch(@Param("en") String en, @Param("bn") String bn,
+			@Param("numStr") String numStr, Pageable pageable);
+
+	@Query(value = "from QrcodeBuilder4XSEntity qbe where qbe.en=:en and qbe.bn=:bn and qbe.num like '%:numStr'")
+	Page<QrcodeBuilder4XSEntity> findByEnBnNumRightMatch(@Param("en") String en, @Param("bn") String bn,
+			@Param("numStr") String numStr, Pageable pageable);
+
+	@Query(value = "from QrcodeBuilder4XSEntity qbe where qbe.en=:en and qbe.bn=:bn and qbe.num like '%:numStr%'")
+	Page<QrcodeBuilder4XSEntity> findByEnBnNumMatch(@Param("en") String en, @Param("bn") String bn,
+			@Param("numStr") String numStr, Pageable pageable);
+
+	/**
+	 * 
+	 * @param en
+	 * @param bn
+	 * @param numStr
+	 * @param code
+	 * @param pageable
+	 * @return
+	 */
+	@Query(value = "from QrcodeBuilder4XSEntity qbe where qbe.en=:en and qbe.bn=:bn and qbe.num=:numStr and qbe.code=:code")
+	Page<QrcodeBuilder4XSEntity> findByEnBnNumCode(@Param("en") String en, @Param("bn") String bn,
+			@Param("numStr") String numStr, @Param("code") String code, Pageable pageable);
+
+	
+	/**
+	 * select * from qrcode_builder4xsentity qb 
+where 
+qb.en='43' 
+and bn='13' 
+and num>'010 0'
+and num<'010 500';
+
+select * from qrcode_builder4xsentity qb 
+where 
+qb.en='43' 
+and bn='13' 
+and num>'010 5'
+and num<'011 000';
+	 */
+}

@@ -1,0 +1,52 @@
+package com.cioclass.domain.guns;
+
+import javax.persistence.Column;
+
+public class GunsDept {
+	
+	private Integer id;
+	
+	private Integer num;
+	
+	private Integer pid;
+	
+	private String pids;
+	
+	private String simpleName;
+	@Column(name="fullname",length=255,columnDefinition="全称")
+	private String fullName;
+	@Column(name="tips",length=255,columnDefinition="提示")
+	private String tips;
+	@Column(name="version",length=11,columnDefinition="版本（乐观锁保留字段）")
+	private Integer version;
+	
+	@Column(name="id",length=11,columnDefinition="主键id")
+	public Integer getId() {
+		return id;
+	}@Column(name="num",length=11,columnDefinition="排序")
+	public Integer getNum() {
+		return num;
+	}@Column(name="pid",length=11,columnDefinition="父部门id")
+	public Integer getPid() {
+		return pid;
+	}@Column(name="pids",length=255,columnDefinition="父级ids")
+	public String getPids() {
+		return pids;
+	}@Column(name="simplename",length=45,columnDefinition="简称")
+	public String getSimpleName() {
+		return simpleName;
+	}
+	public String getFullName() {
+		return fullName;
+	}
+	public String getTips() {
+		return tips;
+	}
+	public Integer getVersion() {
+		return version;
+	}
+	
+	
+	
+
+}

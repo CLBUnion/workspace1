@@ -1,0 +1,118 @@
+package com.cioclass.domain.guns;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Index;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "guns_role", indexes = @Index(columnList = "id", unique = true))
+public class GunsRole  implements Serializable{
+    private static final long serialVersionUID = 572L;
+    /**
+     * 主键id
+     */
+	private Integer id;
+    /**
+     * 序号
+     */
+	private Integer num;
+    /**
+     * 父角色id
+     */
+	private Integer pid;
+    /**
+     * 角色名称
+     */
+	private String name;
+    /**
+     * 部门名称
+     */
+	private Integer deptid;
+    /**
+     * 提示
+     */
+	private String tips;
+    /**
+     * 保留字段(暂时没用）
+     */
+	private Integer version;
+	public GunsRole() {
+		
+	}
+	@Id
+	@GeneratedValue
+	@Column(name = "id", length = 11, columnDefinition = "int(11) COMMENT '主键id'")
+	public Integer getId() {
+		return id;
+	}
+
+	@Column(name = "num", length = 11, columnDefinition = "int(11) COMMENT '序号'")
+	public Integer getNum() {
+		return num;
+	}
+
+	@Column(name = "pid", length = 11, columnDefinition = "int(11) COMMENT '父角色id'")
+	public Integer getPid() {
+		return pid;
+	}
+
+	@Column(name = "name", length = 255, columnDefinition = "varchar(255) COMMENT '角色名称'")
+	public String getName() {
+		return name;
+	}
+
+	@Column(name = "deptid", length = 11, columnDefinition = "int(11) COMMENT '部门id'")
+	public Integer getDeptId() {
+		return deptId;
+	}
+
+	@Column(name = "tips", length = 255, columnDefinition = "varchar(255) COMMENT '提示'")
+	public String getTips() {
+		return tips;
+	}
+
+	@Column(name = "version", length = 11, columnDefinition = "int(11) COMMENT '保留字段(暂时没用）'")
+	public Integer getVersion() {
+		return version;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public void setNum(Integer num) {
+		this.num = num;
+	}
+
+	public void setPid(Integer pid) {
+		this.pid = pid;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setDeptId(Integer deptId) {
+		this.deptId = deptId;
+	}
+
+	public void setTips(String tips) {
+		this.tips = tips;
+	}
+
+	public void setVersion(Integer version) {
+		this.version = version;
+	}
+
+	@Override
+	public String toString() {
+		return "GunsRole [id=" + id + ", num=" + num + ", pid=" + pid + ", name=" + name + ", deptId=" + deptId
+				+ ", tips=" + tips + ", version=" + version + "]";
+	}
+
+}

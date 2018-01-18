@@ -1,0 +1,47 @@
+package com.cioclass.domain.guns;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Index;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "guns_role",indexes=@Index(columnList="id",unique=true))
+public class GunsRole {
+	private Integer id;
+	private Integer num;
+	private Integer pid;
+	private String name;
+	private Integer deptId;
+	private String tips;
+	private Integer version;
+	@Id
+	@GeneratedValue
+	@Column(name = "id", length = 11, columnDefinition = "主键id")
+	public Integer getId() {
+		return id;
+	}
+	@Column(name = "num", length = 11, columnDefinition = "序号")
+	public Integer getNum() {
+		return num;
+	}@Column(name = "pid", length = 11, columnDefinition = "父角色id")
+	public Integer getPid() {
+		return pid;
+	}
+	public String getName() {
+		return name;
+	}@Column(name = "deptid", length = 11, columnDefinition = "部门id")
+	public Integer getDeptId() {
+		return deptId;
+	}
+	public String getTips() {
+		return tips;
+	}@Column(name = "version", length = 11, columnDefinition = "保留字段(暂时没用）")
+	public Integer getVersion() {
+		return version;
+	}
+	
+	
+}

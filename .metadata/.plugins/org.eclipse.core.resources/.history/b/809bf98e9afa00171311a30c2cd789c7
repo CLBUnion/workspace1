@@ -1,0 +1,55 @@
+package com.cioclass.domain.guns;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Index;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "guns_relation", indexes = @Index(columnList = "id", unique = true))
+public class GunsRelation {
+	private Integer id;
+	private Integer menuId;
+	private Integer roleId;
+
+	public GunsRelation() {
+
+	}
+
+	@Id
+	@GeneratedValue
+	@Column(name = "id", length = 11, columnDefinition = "主键id")
+	public Integer getId() {
+		return id;
+	}
+
+	@Column(name = "menuid", length = 11, columnDefinition = "菜单id")
+	public Integer getMenuId() {
+		return menuId;
+	}
+
+	@Column(name = "roleid", length = 11, columnDefinition = "角色id")
+	public Integer getRoleId() {
+		return roleId;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public void setMenuId(Integer menuId) {
+		this.menuId = menuId;
+	}
+
+	public void setRoleId(Integer roleId) {
+		this.roleId = roleId;
+	}
+
+	@Override
+	public String toString() {
+		return "GunsRelation [id=" + id + ", menuId=" + menuId + ", roleId=" + roleId + "]";
+	}
+
+}

@@ -1,4 +1,9 @@
-[ERROR][2017-12-08 10:22:13] org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:351) Context initialization failed 
+[ERROR][2018-01-18 09:02:36] com.cioclass.util.exceptionhandler.ResultExceptionHandler.handle(ResultExceptionHandler.java:27) 【system error】: java.lang.NumberFormatException: For input string: "" 
+[ERROR][2018-01-18 09:02:50] com.cioclass.util.exceptionhandler.ResultExceptionHandler.handle(ResultExceptionHandler.java:27) 【system error】: org.apache.catalina.connector.ClientAbortException: java.io.IOException: 您的主机中的软件中止了一个已建立的连接。 
+[ERROR][2018-01-18 09:02:50] com.cioclass.util.exceptionhandler.ResultExceptionHandler.handle(ResultExceptionHandler.java:27) 【system error】: org.apache.catalina.connector.ClientAbortException: java.io.IOException: 您的主机中的软件中止了一个已建立的连接。 
+[ERROR][2018-01-18 09:02:50] com.cioclass.util.exceptionhandler.ResultExceptionHandler.handle(ResultExceptionHandler.java:27) 【system error】: org.apache.catalina.connector.ClientAbortException: java.io.IOException: 您的主机中的软件中止了一个已建立的连接。 
+[ERROR][2018-01-18 09:03:34] com.cioclass.util.exceptionhandler.ResultExceptionHandler.handle(ResultExceptionHandler.java:27) 【system error】: java.lang.NumberFormatException: For input string: "" 
+[ERROR][2018-01-18 14:11:46] org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:351) Context initialization failed 
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
@@ -36,15 +41,17 @@ Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Un
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
 	... 21 more
-Caused by: org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.cioclass.domain.or.ORRetroactiveInfo.traceType references an unknown entity: java.lang.Integer
-	at org.hibernate.cfg.ToOneFkSecondPass.doSecondPass(ToOneFkSecondPass.java:109)
-	at org.hibernate.cfg.Configuration.processEndOfQueue(Configuration.java:1596)
-	at org.hibernate.cfg.Configuration.processFkSecondPassInOrder(Configuration.java:1519)
-	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1420)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1844)
+Caused by: org.hibernate.MappingException: Repeated column in mapping for entity: com.cioclass.domain.guns.GunsDict column: num (should be mapped with insert="false" update="false")
+	at org.hibernate.mapping.PersistentClass.checkColumnDuplication(PersistentClass.java:709)
+	at org.hibernate.mapping.PersistentClass.checkPropertyColumnDuplication(PersistentClass.java:731)
+	at org.hibernate.mapping.PersistentClass.checkColumnDuplication(PersistentClass.java:753)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:506)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:270)
+	at org.hibernate.cfg.Configuration.validate(Configuration.java:1358)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1849)
 	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:850)
 	... 30 more
-[ERROR][2017-12-08 10:34:27] org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:351) Context initialization failed 
+[ERROR][2018-01-18 14:24:04] org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:351) Context initialization failed 
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
@@ -62,13 +69,11 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4853)
 	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5314)
 	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
-	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3869)
-	at org.apache.catalina.loader.WebappLoader.backgroundProcess(WebappLoader.java:291)
-	at org.apache.catalina.core.StandardContext.backgroundProcess(StandardContext.java:5671)
-	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1377)
-	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1381)
-	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1381)
-	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1349)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1408)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1398)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
 Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
 	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.persistenceException(EntityManagerFactoryBuilderImpl.java:1225)
@@ -83,35 +88,20 @@ Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Un
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:362)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
-	... 23 more
-Caused by: org.hibernate.MappingException: Could not get constructor for org.hibernate.persister.entity.SingleTableEntityPersister
-	at org.hibernate.persister.internal.PersisterFactoryImpl.create(PersisterFactoryImpl.java:185)
-	at org.hibernate.persister.internal.PersisterFactoryImpl.createEntityPersister(PersisterFactoryImpl.java:135)
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:401)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1857)
+	... 21 more
+Caused by: org.hibernate.MappingException: Repeated column in mapping for entity: com.cioclass.domain.guns.GunsOperationLog column: logname (should be mapped with insert="false" update="false")
+	at org.hibernate.mapping.PersistentClass.checkColumnDuplication(PersistentClass.java:709)
+	at org.hibernate.mapping.PersistentClass.checkPropertyColumnDuplication(PersistentClass.java:731)
+	at org.hibernate.mapping.PersistentClass.checkColumnDuplication(PersistentClass.java:753)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:506)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:270)
+	at org.hibernate.cfg.Configuration.validate(Configuration.java:1358)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1849)
 	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:850)
-	... 32 more
-Caused by: org.hibernate.InstantiationException: could not instantiate test object : com.cioclass.domain.or.QrcodeBuilder4XSEntity
-	at org.hibernate.engine.internal.UnsavedValueFactory.instantiate(UnsavedValueFactory.java:60)
-	at org.hibernate.engine.internal.UnsavedValueFactory.getUnsavedIdentifierValue(UnsavedValueFactory.java:85)
-	at org.hibernate.tuple.PropertyFactory.buildIdentifierAttribute(PropertyFactory.java:87)
-	at org.hibernate.tuple.entity.EntityMetamodel.<init>(EntityMetamodel.java:163)
-	at org.hibernate.persister.entity.AbstractEntityPersister.<init>(AbstractEntityPersister.java:520)
-	at org.hibernate.persister.entity.SingleTableEntityPersister.<init>(SingleTableEntityPersister.java:148)
-	at sun.reflect.GeneratedConstructorAccessor91.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.hibernate.persister.internal.PersisterFactoryImpl.create(PersisterFactoryImpl.java:163)
-	... 36 more
-Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.hibernate.engine.internal.UnsavedValueFactory.instantiate(UnsavedValueFactory.java:57)
-	... 45 more
-Caused by: java.lang.Error: Unresolved compilation problem: 
-	Type mismatch: cannot convert from int to String
-
-	at com.cioclass.domain.or.QrcodeBuilder4XSEntity.<init>(QrcodeBuilder4XSEntity.java:41)
-	... 50 more
+	... 30 more
+[ERROR][2018-01-18 14:38:58] org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:236) HHH000388: Unsuccessful: create table guns_user (id int(11) COMMENT '主键id' not null auto_increment, account varchar(45) COMMENT '账号', avatar varchar(255) COMMENT '头像', birthday datetime COMMENT '生日', createtime datetime COMMENT '创建时间', deptid int(11) COMMENT '部门id, email varchar(45) COMMENT '电子邮件', name varchar(45) COMMENT '名字', password varchar(45) COMMENT '密码', phone varchar(45) COMMENT '电话', roleid varchar(255) COMMENT '角色id', salt varchar(45) COMMENT 'md5密码盐', sex int(11) COMMENT '性别（1：男 2：女）, status int(11) COMMENT '状态(1：启用  2：冻结  3：删除）, version int(11) COMMENT '保留字段, primary key (id)) ENGINE=InnoDB 
+[ERROR][2018-01-18 14:38:58] org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:237) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '电子邮件', name varchar(45) COMMENT '名字', password varchar(45) COMMENT '' at line 7 
+[ERROR][2018-01-18 14:41:52] org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:236) HHH000388: Unsuccessful: create table guns_user (id int(11) COMMENT '主键id' not null auto_increment, account varchar(45) COMMENT '账号', avatar varchar(255) COMMENT '头像', birthday datetime COMMENT '生日', createtime datetime COMMENT '创建时间', deptid int(11) COMMENT '部门id, email varchar(45) COMMENT '电子邮件', name varchar(45) COMMENT '名字', password varchar(45) COMMENT '密码', phone varchar(45) COMMENT '电话', roleid varchar(255) COMMENT '角色id', salt varchar(45) COMMENT 'md5密码盐', sex int(11) COMMENT '性别（1：男 2：女）, status int(11) COMMENT '状态(1：启用  2：冻结  3：删除）, version int(11) COMMENT '保留字段, primary key (id)) ENGINE=InnoDB 
+[ERROR][2018-01-18 14:41:52] org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:237) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '电子邮件', name varchar(45) COMMENT '名字', password varchar(45) COMMENT '' at line 7 
+[ERROR][2018-01-18 15:10:58] org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:236) HHH000388: Unsuccessful: create table guns_user (id int(11) COMMENT '主键id' not null auto_increment, account varchar(45) COMMENT '账号', avatar varchar(255) COMMENT '头像', birthday datetime COMMENT '生日', createtime datetime COMMENT '创建时间', deptid int(11) COMMENT '部门id, email varchar(45) COMMENT '电子邮件', name varchar(45) COMMENT '名字', password varchar(45) COMMENT '密码', phone varchar(45) COMMENT '电话', roleid varchar(255) COMMENT '角色id', salt varchar(45) COMMENT 'md5密码盐', sex int(11) COMMENT '性别（1：男 2：女）, status int(11) COMMENT '状态(1：启用  2：冻结  3：删除）, version int(11) COMMENT '保留字段, primary key (id)) ENGINE=InnoDB 
+[ERROR][2018-01-18 15:10:58] org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:237) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '电子邮件', name varchar(45) COMMENT '名字', password varchar(45) COMMENT '' at line 7 

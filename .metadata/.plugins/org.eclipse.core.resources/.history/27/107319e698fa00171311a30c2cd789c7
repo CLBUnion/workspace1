@@ -1,0 +1,15 @@
+package com.cioclass.domain.guns;
+
+import javax.persistence.Entity;
+import javax.persistence.Index;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "guns_relation",indexes=@Index(columnList="id",unique=true))
+public class GunsRelation {
+	private Integer id;
+	private Integer menuId;
+	private Integer roleId;
+	
+	
+}

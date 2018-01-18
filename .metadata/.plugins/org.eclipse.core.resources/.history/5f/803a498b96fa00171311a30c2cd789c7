@@ -1,0 +1,15 @@
+package com.cioclass.domain.guns;
+
+public class GunsDept {
+	private Integer id;
+	private Integer num;
+	private Integer pid;
+	
+	private String pids;
+	
+	private String simplename;
+	private String fullname;
+	private String tips;
+	private Integer version;
+
+}

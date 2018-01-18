@@ -1,0 +1,1023 @@
+16:44:37 - Root WebApplicationContext: initialization started
+16:44:37 - Refreshing Root WebApplicationContext: startup date [Tue Jan 16 16:44:37 CST 2018]; root of context hierarchy
+16:44:38 - Loading XML bean definitions from class path resource [beans.xml]
+16:44:40 - Loading XML bean definitions from class path resource [mvc_security.xml]
+16:44:40 - You are running with Spring Security Core 4.2.3.RELEASE
+16:44:40 - **** You are advised to use Spring 4.3.9.RELEASE or later with this version. You are running: 4.3.6.RELEASE
+16:44:40 - Spring Security 'config' module version is 4.2.3.RELEASE
+16:44:40 - Creating access control expression attribute 'hasRole('ROLE_USER')' for /upload
+16:44:40 - Creating access control expression attribute 'hasRole('ROLE_USER')' for /admin/**
+16:44:40 - No login page configured. The default internal one will be used. Use the 'login-page' attribute to set the URL of the login page.
+16:44:40 - Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 200, Root bean: class [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 400, Root bean: class [org.springframework.security.web.header.HeaderWriterFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 500, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 800, <org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0>, order = 1200, Root bean: class [org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1400, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1600, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1700, Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.security.config.http.HttpConfigurationBuilder$SecurityContextHolderAwareRequestFilterBeanFactory#0; factoryMethodName=getBean; initMethodName=null; destroyMethodName=null, order = 1800, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2100, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2200, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2300, <org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0>, order = 2400]
+16:44:40 - Loading XML bean definitions from class path resource [spring_redis.xml]
+16:44:40 - Loading properties file from class path resource [db.properties]
+16:44:41 - Loaded JDBC driver: com.mysql.jdbc.Driver
+16:44:42 - Building JPA container EntityManagerFactory for persistence unit 'default'
+16:44:42 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+16:44:42 - HHH000412: Hibernate Core {4.3.6.Final}
+16:44:42 - HHH000206: hibernate.properties not found
+16:44:42 - HHH000021: Bytecode provider name : javassist
+16:44:43 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+16:44:43 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+16:44:44 - HHH000397: Using ASTQueryTranslatorFactory
+16:44:45 - HHH000228: Running hbm2ddl schema update
+16:44:45 - HHH000102: Fetching database metadata
+16:44:45 - HHH000396: Updating schema
+16:44:45 - HHH000261: Table found: spring_data.batch_inspection
+16:44:45 - HHH000037: Columns: [batch_id, inspection_id]
+16:44:45 - HHH000108: Foreign keys: [fk_8ylu2oofaeej6vxcjh8pdlut, fk_6gbrptqob4jokm1n4kcnws77q]
+16:44:45 - HHH000126: Indexes: [fk_8ylu2oofaeej6vxcjh8pdlut, fk_6gbrptqob4jokm1n4kcnws77q]
+16:44:45 - HHH000261: Table found: spring_data.batch_process
+16:44:45 - HHH000037: Columns: [process_id, batch_id]
+16:44:45 - HHH000108: Foreign keys: [fk_jewtgchoeandtsurq84mafd8v, fk_ejiwqyxh1ci9syj1netqshbhj]
+16:44:45 - HHH000126: Indexes: [fk_jewtgchoeandtsurq84mafd8v, fk_ejiwqyxh1ci9syj1netqshbhj]
+16:44:46 - HHH000261: Table found: spring_data.batch_retroactive
+16:44:46 - HHH000037: Columns: [retroactive_id, batch_id]
+16:44:46 - HHH000108: Foreign keys: [fk_hxuntw56vyeppk2h49gb2sov8, fk_jeejk398o3xj77oi3w2tx9i53]
+16:44:46 - HHH000126: Indexes: [fk_hxuntw56vyeppk2h49gb2sov8, fk_jeejk398o3xj77oi3w2tx9i53]
+16:44:46 - HHH000261: Table found: spring_data.bole
+16:44:46 - HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction]
+16:44:46 - HHH000108: Foreign keys: []
+16:44:46 - HHH000126: Indexes: [primary]
+16:44:46 - HHH000261: Table found: spring_data.exercise
+16:44:46 - HHH000037: Columns: [last_update_time, imgurl, flag, create_time, img_url, publishdate, remark, id, lastupdate_time, title, publish_date, url]
+16:44:46 - HHH000108: Foreign keys: []
+16:44:46 - HHH000126: Indexes: [primary]
+16:44:46 - HHH000261: Table found: spring_data.furniture
+16:44:46 - HHH000037: Columns: [name, alias, remark, id, furniture_project]
+16:44:46 - HHH000108: Foreign keys: [fk_kr70ijy8pqw71e8b614xioeuf]
+16:44:46 - HHH000126: Indexes: [fk_kr70ijy8pqw71e8b614xioeuf, primary]
+16:44:46 - HHH000261: Table found: spring_data.furniture_image
+16:44:46 - HHH000037: Columns: [furniture, image_order, id, create_date, image_desc, title, update_date, url]
+16:44:46 - HHH000108: Foreign keys: [fk_fi7ub87xpgkwsia48as3q6hq7]
+16:44:46 - HHH000126: Indexes: [fk_fi7ub87xpgkwsia48as3q6hq7, primary]
+16:44:46 - HHH000261: Table found: spring_data.furniture_project
+16:44:46 - HHH000037: Columns: [name, alias, remark, id]
+16:44:46 - HHH000108: Foreign keys: []
+16:44:46 - HHH000126: Indexes: [primary]
+16:44:46 - HHH000262: Table not found: guns_dept
+16:44:46 - HHH000262: Table not found: guns_relation
+16:44:46 - HHH000262: Table not found: guns_role
+16:44:46 - HHH000261: Table found: spring_data.jsoup_links
+16:44:46 - HHH000037: Columns: [create_time, domain, remark, id, text, title, url, domain_text]
+16:44:46 - HHH000108: Foreign keys: []
+16:44:46 - HHH000126: Indexes: [primary]
+16:44:46 - HHH000261: Table found: spring_data.km_attach
+16:44:46 - HHH000037: Columns: [fname, ftype, created, fkey, id, author_id]
+16:44:46 - HHH000108: Foreign keys: []
+16:44:46 - HHH000126: Indexes: [primary]
+16:44:46 - HHH000261: Table found: spring_data.km_comments
+16:44:46 - HHH000037: Columns: [parent, agent, mail, author, created, owner_id, ip, coid, type, content, url, author_id, cid, status]
+16:44:46 - HHH000108: Foreign keys: []
+16:44:46 - HHH000126: Indexes: [primary]
+16:44:46 - HHH000261: Table found: spring_data.km_contents
+16:44:46 - HHH000037: Columns: [allow_comment, created, comments_num, title, type, allow_ping, content, fmt_type, tags, hits, allow_feed, modified, categories, author_id, thumb_img, slug, cid, status]
+16:44:46 - HHH000108: Foreign keys: []
+16:44:46 - HHH000126: Indexes: [primary]
+16:44:47 - HHH000261: Table found: spring_data.km_logs
+16:44:47 - HHH000037: Columns: [data, created, ip, action, id, author_id]
+16:44:47 - HHH000108: Foreign keys: []
+16:44:47 - HHH000126: Indexes: [primary]
+16:44:47 - HHH000261: Table found: spring_data.km_metas
+16:44:47 - HHH000037: Columns: [parent, name, mid, description, sort, type, slug]
+16:44:47 - HHH000108: Foreign keys: []
+16:44:47 - HHH000126: Indexes: [primary]
+16:44:47 - HHH000261: Table found: spring_data.km_options
+16:44:47 - HHH000037: Columns: [name, description, id, value]
+16:44:47 - HHH000108: Foreign keys: []
+16:44:47 - HHH000126: Indexes: [primary]
+16:44:47 - HHH000261: Table found: spring_data.km_relationships
+16:44:47 - HHH000037: Columns: [mid, id, cid]
+16:44:47 - HHH000108: Foreign keys: []
+16:44:47 - HHH000126: Indexes: [primary]
+16:44:47 - HHH000261: Table found: spring_data.km_users
+16:44:47 - HHH000037: Columns: [uid, password, group_name, home_url, logged, screen_name, created, email, activated, username]
+16:44:47 - HHH000108: Foreign keys: []
+16:44:47 - HHH000126: Indexes: [primary]
+16:44:47 - HHH000261: Table found: spring_data.lecturer
+16:44:47 - HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction]
+16:44:47 - HHH000108: Foreign keys: []
+16:44:47 - HHH000126: Indexes: [primary]
+16:44:47 - HHH000261: Table found: spring_data.mall_cart
+16:44:47 - HHH000037: Columns: [update_time, quantity, create_time, user_id, product_id, checked, id]
+16:44:47 - HHH000108: Foreign keys: []
+16:44:47 - HHH000126: Indexes: [primary]
+16:44:47 - HHH000261: Table found: spring_data.mall_category
+16:44:47 - HHH000037: Columns: [update_time, create_time, parent_id, name, id, sort_order, status]
+16:44:47 - HHH000108: Foreign keys: []
+16:44:47 - HHH000126: Indexes: [primary]
+16:44:47 - HHH000261: Table found: spring_data.mall_order
+16:44:47 - HHH000037: Columns: [order_no, shipping_id, create_time, payment_time, end_time, close_time, postage, payment_type, update_time, send_time, user_id, payment, id, status]
+16:44:47 - HHH000108: Foreign keys: []
+16:44:47 - HHH000126: Indexes: [primary]
+16:44:47 - HHH000261: Table found: spring_data.mall_order_item
+16:44:47 - HHH000037: Columns: [current_unit_price, order_no, update_time, quantity, create_time, total_price, user_id, product_image, product_id, id, product_name]
+16:44:47 - HHH000108: Foreign keys: []
+16:44:47 - HHH000126: Indexes: [primary]
+16:44:47 - HHH000261: Table found: spring_data.mall_pay_info
+16:44:47 - HHH000037: Columns: [order_no, update_time, pay_platform, create_time, user_id, platform_number, id, platform_status]
+16:44:47 - HHH000108: Foreign keys: []
+16:44:47 - HHH000126: Indexes: [primary]
+16:44:47 - HHH000261: Table found: spring_data.mall_product
+16:44:47 - HHH000037: Columns: [update_time, category_id, create_time, sub_images, main_image, price, subtitle, name, id, detail, stock, status]
+16:44:47 - HHH000108: Foreign keys: []
+16:44:47 - HHH000126: Indexes: [primary]
+16:44:47 - HHH000261: Table found: spring_data.mall_shipping
+16:44:47 - HHH000037: Columns: [update_time, create_time, receiver_province, receiver_zip, user_id, receiver_city, receiver_district, receiver_address, receiver_name, id, receiver_phone, receiver_mobile]
+16:44:47 - HHH000108: Foreign keys: []
+16:44:47 - HHH000126: Indexes: [primary]
+16:44:47 - HHH000261: Table found: spring_data.mall_user
+16:44:47 - HHH000037: Columns: [password, update_time, role, answer, create_time, question, phone, id, email, username]
+16:44:47 - HHH000108: Foreign keys: []
+16:44:47 - HHH000126: Indexes: [primary]
+16:44:48 - HHH000261: Table found: spring_data.maxima
+16:44:48 - HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction]
+16:44:48 - HHH000108: Foreign keys: []
+16:44:48 - HHH000126: Indexes: [primary]
+16:44:48 - HHH000261: Table found: spring_data.menu
+16:44:48 - HHH000037: Columns: [parent_name, parentname, icon, ordernum, type, url, parentid, parent_id, name, menuid, perms, id, order_num, menu_id, open]
+16:44:48 - HHH000108: Foreign keys: []
+16:44:48 - HHH000126: Indexes: [primary]
+16:44:48 - HHH000261: Table found: spring_data.note_tickler
+16:44:48 - HHH000037: Columns: [create_time, tickler_id, title, content]
+16:44:48 - HHH000108: Foreign keys: []
+16:44:48 - HHH000126: Indexes: [primary]
+16:44:48 - HHH000261: Table found: spring_data.orbatch_info
+16:44:48 - HHH000037: Columns: [product, batch_number, date_of_manufacture, id, recall_status]
+16:44:48 - HHH000108: Foreign keys: [fk_m905y9o26fct9w7n56vrmctqf]
+16:44:48 - HHH000126: Indexes: [fk_m905y9o26fct9w7n56vrmctqf, primary]
+16:44:48 - HHH000261: Table found: spring_data.orbatch_sub
+16:44:48 - HHH000037: Columns: [code, orbatch_info, id, status]
+16:44:48 - HHH000108: Foreign keys: [fk_576tgfpucqpvch3lfhmgt51q1]
+16:44:48 - HHH000126: Indexes: [fk_576tgfpucqpvch3lfhmgt51q1, primary]
+16:44:48 - HHH000261: Table found: spring_data.orcompany
+16:44:48 - HHH000037: Columns: [summary, main_product, responsible_person, legal_representative, industry, remark, abbreviation, date_of_application, registered_capital, zip_code, mailing_address, number_of_employees, mobile_phone, period_of_validity, id, area_covered, enterprise_code, region, enterprise_name, email, home_agent, business_registration_no]
+16:44:48 - HHH000108: Foreign keys: []
+16:44:48 - HHH000126: Indexes: [primary]
+16:44:48 - HHH000261: Table found: spring_data.orinspection_info
+16:44:48 - HHH000037: Columns: [result, censorate, suggestion, remark, id]
+16:44:48 - HHH000108: Foreign keys: []
+16:44:48 - HHH000126: Indexes: [primary]
+16:44:48 - HHH000261: Table found: spring_data.orprocess_log
+16:44:48 - HHH000037: Columns: [tache_no, id, content, tache_date, tache_name]
+16:44:48 - HHH000108: Foreign keys: []
+16:44:48 - HHH000126: Indexes: [primary]
+16:44:48 - HHH000261: Table found: spring_data.orproduct
+16:44:48 - HHH000037: Columns: [term_of_validity, remark, source_area, id, product_code, retroactive_info, product_name, spec]
+16:44:48 - HHH000108: Foreign keys: [fk_5y3e438839af8ej6tfya1ivat]
+16:44:48 - HHH000126: Indexes: [fk_5y3e438839af8ej6tfya1ivat, primary]
+16:44:48 - HHH000261: Table found: spring_data.orretroactive_info
+16:44:48 - HHH000037: Columns: [trace_type, id, content]
+16:44:48 - HHH000108: Foreign keys: []
+16:44:48 - HHH000126: Indexes: [primary]
+16:44:48 - HHH000261: Table found: spring_data.orsearch
+16:44:48 - HHH000037: Columns: [batch_info, company, id]
+16:44:48 - HHH000108: Foreign keys: [fk_hxm9mj5ufynmfumq43x59ob42, fk_cohojre21pfk8jm0le2yfwisk]
+16:44:48 - HHH000126: Indexes: [fk_hxm9mj5ufynmfumq43x59ob42, fk_cohojre21pfk8jm0le2yfwisk, primary]
+16:44:48 - HHH000261: Table found: spring_data.ortrace_type
+16:44:48 - HHH000037: Columns: [type_name, id]
+16:44:48 - HHH000108: Foreign keys: []
+16:44:48 - HHH000126: Indexes: [primary]
+16:44:49 - HHH000261: Table found: spring_data.qrcode_builder4xsentity
+16:44:49 - HHH000037: Columns: [code_size, code, create_time, batch_id, prefix, activate_status, num, en, remark, bn, url, num_size, update_time, id, status]
+16:44:49 - HHH000108: Foreign keys: []
+16:44:49 - HHH000126: Indexes: [primary]
+16:44:49 - HHH000261: Table found: spring_data.recruit
+16:44:49 - HHH000037: Columns: [requirements, flag, create_time, remark, auditing, lastupdate_time, salary, linkman, last_update_time, phone, companyname, company_name, station, id, email]
+16:44:49 - HHH000108: Foreign keys: []
+16:44:49 - HHH000126: Indexes: [primary]
+16:44:49 - HHH000261: Table found: spring_data.shop_goods
+16:44:49 - HHH000037: Columns: [goods_name, goods_id]
+16:44:49 - HHH000108: Foreign keys: []
+16:44:49 - HHH000126: Indexes: [primary]
+16:44:49 - HHH000261: Table found: spring_data.shop_goods_catalog
+16:44:49 - HHH000037: Columns: [catalog_id, catalog_name, pid]
+16:44:49 - HHH000108: Foreign keys: []
+16:44:49 - HHH000126: Indexes: [primary]
+16:44:49 - HHH000261: Table found: spring_data.shop_goods_property
+16:44:49 - HHH000037: Columns: [prop_id, length, pid, type, prop_desc, property_name]
+16:44:49 - HHH000108: Foreign keys: []
+16:44:49 - HHH000126: Indexes: [primary]
+16:44:49 - HHH000261: Table found: spring_data.shop_goods_property_condition
+16:44:49 - HHH000037: Columns: [condition_str, condition_name, condition_id]
+16:44:49 - HHH000108: Foreign keys: []
+16:44:49 - HHH000126: Indexes: [primary]
+16:44:49 - HHH000261: Table found: spring_data.shop_goods_property_value
+16:44:49 - HHH000037: Columns: [catalog_id, prop_id, nid, goods_id, value]
+16:44:49 - HHH000108: Foreign keys: [fk_aq3p9hnq6x7n1hrb9xulxd8sr, fk_osahi002qauqin44gb96kxj91, fk_6q7nb5jufvimrjdinr5mmcfhh]
+16:44:49 - HHH000126: Indexes: [fk_aq3p9hnq6x7n1hrb9xulxd8sr, fk_6q7nb5jufvimrjdinr5mmcfhh, primary]
+16:44:49 - HHH000261: Table found: spring_data.sys_acl
+16:44:49 - HHH000037: Columns: [code, acl_module_id, name, remark, id, type, operator, seq, url, operate_ip, operate_time, status]
+16:44:49 - HHH000108: Foreign keys: []
+16:44:49 - HHH000126: Indexes: [primary]
+16:44:49 - HHH000261: Table found: spring_data.sys_acl_module
+16:44:49 - HHH000037: Columns: [level, parent_id, name, remark, id, operator, seq, operate_ip, operate_time, status]
+16:44:49 - HHH000108: Foreign keys: []
+16:44:49 - HHH000126: Indexes: [primary]
+16:44:49 - HHH000261: Table found: spring_data.sys_dept
+16:44:49 - HHH000037: Columns: [level, parent_id, name, remark, id, operator, seq, operate_ip, operate_time]
+16:44:49 - HHH000108: Foreign keys: []
+16:44:49 - HHH000126: Indexes: [primary]
+16:44:49 - HHH000261: Table found: spring_data.sys_log
+16:44:49 - HHH000037: Columns: [target_id, id, type, operator, operate_ip, operate_time, status]
+16:44:49 - HHH000108: Foreign keys: []
+16:44:49 - HHH000126: Indexes: [primary]
+16:44:49 - HHH000261: Table found: spring_data.sys_role
+16:44:49 - HHH000037: Columns: [name, remark, id, type, operator, operate_ip, operate_time, status]
+16:44:49 - HHH000108: Foreign keys: []
+16:44:49 - HHH000126: Indexes: [primary]
+16:44:49 - HHH000261: Table found: spring_data.sys_role_acl
+16:44:49 - HHH000037: Columns: [role_id, id, acl_id, operator, operate_ip, operate_time]
+16:44:49 - HHH000108: Foreign keys: []
+16:44:49 - HHH000126: Indexes: [primary]
+16:44:49 - HHH000261: Table found: spring_data.sys_role_user
+16:44:49 - HHH000037: Columns: [role_id, user_id, id, operator, operate_ip, operate_time]
+16:44:49 - HHH000108: Foreign keys: []
+16:44:49 - HHH000126: Indexes: [primary]
+16:44:49 - HHH000261: Table found: spring_data.sys_user
+16:44:49 - HHH000037: Columns: [password, mail, remark, telephone, id, dept_id, operator, operate_ip, operate_time, status, username]
+16:44:49 - HHH000108: Foreign keys: []
+16:44:49 - HHH000126: Indexes: [primary]
+16:44:49 - HHH000261: Table found: spring_data.trainee
+16:44:49 - HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction]
+16:44:49 - HHH000108: Foreign keys: []
+16:44:49 - HHH000126: Indexes: [primary]
+16:44:49 - HHH000261: Table found: spring_data.user
+16:44:49 - HHH000037: Columns: [last_update_time, password, flag, answer, create_time, question, phone, name, remark, id, email]
+16:44:49 - HHH000108: Foreign keys: []
+16:44:49 - HHH000126: Indexes: [primary]
+16:44:50 - HHH000261: Table found: spring_data.xx_attribute
+16:44:50 - HHH000037: Columns: [attr_desc, check_user_id, attr_checked, length, pid, remark, type, update_date, attr_id, attr_level, name, make_user_id, short_name, create_date]
+16:44:50 - HHH000108: Foreign keys: []
+16:44:50 - HHH000126: Indexes: [primary]
+16:44:50 - HHH000261: Table found: spring_data.xx_attribute_value
+16:44:50 - HHH000037: Columns: [score, attrid, classify_id, res_id, value_id, value, resid, attr_id]
+16:44:50 - HHH000108: Foreign keys: []
+16:44:50 - HHH000126: Indexes: [primary]
+16:44:50 - HHH000261: Table found: spring_data.xx_classify
+16:44:50 - HHH000037: Columns: [classify_status, check_user_id, classify_id, classify_level, pid, remark, update_date, classify_checked, classify_option, classify_desc, name, make_user_id, short_name, create_date]
+16:44:50 - HHH000108: Foreign keys: []
+16:44:50 - HHH000126: Indexes: [primary]
+16:44:50 - HHH000261: Table found: spring_data.xx_demand
+16:44:50 - HHH000037: Columns: [demand_id, name]
+16:44:50 - HHH000108: Foreign keys: []
+16:44:50 - HHH000126: Indexes: [primary]
+16:44:50 - HHH000261: Table found: spring_data.xx_question
+16:44:50 - HHH000037: Columns: [id, question_des]
+16:44:50 - HHH000108: Foreign keys: []
+16:44:50 - HHH000126: Indexes: [primary]
+16:44:50 - HHH000261: Table found: spring_data.xx_question_item
+16:44:50 - HHH000037: Columns: [item_desc, question, id, item_value]
+16:44:50 - HHH000108: Foreign keys: [fk_ljngho2cn3h57rifqic2aq95j]
+16:44:50 - HHH000126: Indexes: [fk_ljngho2cn3h57rifqic2aq95j, primary]
+16:44:50 - HHH000261: Table found: spring_data.xx_res
+16:44:50 - HHH000037: Columns: [res_desc, check_user_id, res_checked, res_id, name, res_status, make_user_id, short_name, remark, create_date, update_date, res_level]
+16:44:50 - HHH000108: Foreign keys: []
+16:44:50 - HHH000126: Indexes: [primary]
+16:44:50 - HHH000261: Table found: spring_data.xx_res_attrs
+16:44:50 - HHH000037: Columns: [id, xx_res, attrs]
+16:44:50 - HHH000108: Foreign keys: []
+16:44:50 - HHH000126: Indexes: [primary]
+16:44:50 - HHH000262: Table not found: guns_dept
+16:44:50 - HHH000262: Table not found: guns_relation
+16:44:50 - HHH000262: Table not found: guns_role
+16:44:50 - HHH000262: Table not found: guns_dept
+16:44:50 - HHH000262: Table not found: guns_relation
+16:44:50 - HHH000262: Table not found: guns_role
+16:44:50 - HHH000388: Unsuccessful: create table guns_dept (id 主键id not null auto_increment, fullname 全称, num 序号, pid 父部门id, pids 父级ids, simplename 简称, tips 提示, version 版本（乐观锁保留字段）, primary key (id)) ENGINE=InnoDB
+16:44:50 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '主键id not null auto_increment,
+        fullname 全称,
+        num 序号,
+ ' at line 2
+16:44:50 - HHH000388: Unsuccessful: create table guns_relation (id 主键id not null auto_increment, menuid 菜单id, roleid 角色id, primary key (id)) ENGINE=InnoDB
+16:44:50 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '主键id not null auto_increment,
+        menuid 菜单id,
+        roleid 角色' at line 2
+16:44:50 - HHH000388: Unsuccessful: create table guns_role (id 主键id not null auto_increment, deptid 部门id, name 角色名称, num 序号, pid 父角色id, tips 提示, version 保留字段(暂时没用）, primary key (id)) ENGINE=InnoDB
+16:44:50 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '主键id not null auto_increment,
+        deptid 部门id,
+        name 角色' at line 2
+16:44:51 - HHH000232: Schema update complete
+16:44:51 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:44:51 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminController': Failed to introspect bean class [com.cioclass.controller.admin.AdminController] for lookup method metadata: could not find class that it depends on; nested exception is java.lang.NoClassDefFoundError: HttpServletRequest
+16:44:51 - Closing JPA EntityManagerFactory for persistence unit 'default'
+16:44:51 - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminController': Failed to introspect bean class [com.cioclass.controller.admin.AdminController] for lookup method metadata: could not find class that it depends on; nested exception is java.lang.NoClassDefFoundError: HttpServletRequest
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:269)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1118)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1091)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:444)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:326)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4853)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5314)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1408)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1398)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NoClassDefFoundError: HttpServletRequest
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:613)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:524)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:510)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:247)
+	... 23 more
+Caused by: java.lang.ClassNotFoundException: HttpServletRequest
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1339)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1167)
+	... 30 more
+16:54:55 - Root WebApplicationContext: initialization started
+16:54:56 - Refreshing Root WebApplicationContext: startup date [Tue Jan 16 16:54:56 CST 2018]; root of context hierarchy
+16:54:56 - Loading XML bean definitions from class path resource [beans.xml]
+16:54:58 - Loading XML bean definitions from class path resource [mvc_security.xml]
+16:54:58 - You are running with Spring Security Core 4.2.3.RELEASE
+16:54:58 - **** You are advised to use Spring 4.3.9.RELEASE or later with this version. You are running: 4.3.6.RELEASE
+16:54:58 - Spring Security 'config' module version is 4.2.3.RELEASE
+16:54:58 - Creating access control expression attribute 'hasRole('ROLE_USER')' for /upload
+16:54:58 - Creating access control expression attribute 'hasRole('ROLE_USER')' for /admin/**
+16:54:58 - No login page configured. The default internal one will be used. Use the 'login-page' attribute to set the URL of the login page.
+16:54:58 - Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 200, Root bean: class [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 400, Root bean: class [org.springframework.security.web.header.HeaderWriterFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 500, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 800, <org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0>, order = 1200, Root bean: class [org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1400, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1600, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1700, Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.security.config.http.HttpConfigurationBuilder$SecurityContextHolderAwareRequestFilterBeanFactory#0; factoryMethodName=getBean; initMethodName=null; destroyMethodName=null, order = 1800, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2100, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2200, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2300, <org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0>, order = 2400]
+16:54:58 - Loading XML bean definitions from class path resource [spring_redis.xml]
+16:54:59 - Loading properties file from class path resource [db.properties]
+16:55:00 - Loaded JDBC driver: com.mysql.jdbc.Driver
+16:55:01 - Building JPA container EntityManagerFactory for persistence unit 'default'
+16:55:01 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+16:55:01 - HHH000412: Hibernate Core {4.3.6.Final}
+16:55:01 - HHH000206: hibernate.properties not found
+16:55:01 - HHH000021: Bytecode provider name : javassist
+16:55:01 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+16:55:02 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+16:55:03 - HHH000397: Using ASTQueryTranslatorFactory
+16:55:04 - HHH000228: Running hbm2ddl schema update
+16:55:04 - HHH000102: Fetching database metadata
+16:55:04 - HHH000396: Updating schema
+16:55:04 - HHH000261: Table found: spring_data.batch_inspection
+16:55:04 - HHH000037: Columns: [batch_id, inspection_id]
+16:55:04 - HHH000108: Foreign keys: [fk_8ylu2oofaeej6vxcjh8pdlut, fk_6gbrptqob4jokm1n4kcnws77q]
+16:55:04 - HHH000126: Indexes: [fk_8ylu2oofaeej6vxcjh8pdlut, fk_6gbrptqob4jokm1n4kcnws77q]
+16:55:04 - HHH000261: Table found: spring_data.batch_process
+16:55:04 - HHH000037: Columns: [process_id, batch_id]
+16:55:04 - HHH000108: Foreign keys: [fk_jewtgchoeandtsurq84mafd8v, fk_ejiwqyxh1ci9syj1netqshbhj]
+16:55:04 - HHH000126: Indexes: [fk_jewtgchoeandtsurq84mafd8v, fk_ejiwqyxh1ci9syj1netqshbhj]
+16:55:04 - HHH000261: Table found: spring_data.batch_retroactive
+16:55:04 - HHH000037: Columns: [retroactive_id, batch_id]
+16:55:04 - HHH000108: Foreign keys: [fk_hxuntw56vyeppk2h49gb2sov8, fk_jeejk398o3xj77oi3w2tx9i53]
+16:55:04 - HHH000126: Indexes: [fk_hxuntw56vyeppk2h49gb2sov8, fk_jeejk398o3xj77oi3w2tx9i53]
+16:55:04 - HHH000261: Table found: spring_data.bole
+16:55:04 - HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction]
+16:55:04 - HHH000108: Foreign keys: []
+16:55:04 - HHH000126: Indexes: [primary]
+16:55:04 - HHH000261: Table found: spring_data.exercise
+16:55:04 - HHH000037: Columns: [last_update_time, imgurl, flag, create_time, img_url, publishdate, remark, id, lastupdate_time, title, publish_date, url]
+16:55:04 - HHH000108: Foreign keys: []
+16:55:04 - HHH000126: Indexes: [primary]
+16:55:04 - HHH000261: Table found: spring_data.furniture
+16:55:04 - HHH000037: Columns: [name, alias, remark, id, furniture_project]
+16:55:04 - HHH000108: Foreign keys: [fk_kr70ijy8pqw71e8b614xioeuf]
+16:55:04 - HHH000126: Indexes: [fk_kr70ijy8pqw71e8b614xioeuf, primary]
+16:55:04 - HHH000261: Table found: spring_data.furniture_image
+16:55:04 - HHH000037: Columns: [furniture, image_order, id, create_date, image_desc, title, update_date, url]
+16:55:04 - HHH000108: Foreign keys: [fk_fi7ub87xpgkwsia48as3q6hq7]
+16:55:04 - HHH000126: Indexes: [fk_fi7ub87xpgkwsia48as3q6hq7, primary]
+16:55:04 - HHH000261: Table found: spring_data.furniture_project
+16:55:04 - HHH000037: Columns: [name, alias, remark, id]
+16:55:04 - HHH000108: Foreign keys: []
+16:55:04 - HHH000126: Indexes: [primary]
+16:55:04 - HHH000262: Table not found: guns_dept
+16:55:04 - HHH000262: Table not found: guns_relation
+16:55:04 - HHH000262: Table not found: guns_role
+16:55:04 - HHH000261: Table found: spring_data.jsoup_links
+16:55:04 - HHH000037: Columns: [create_time, domain, remark, id, text, title, url, domain_text]
+16:55:04 - HHH000108: Foreign keys: []
+16:55:04 - HHH000126: Indexes: [primary]
+16:55:04 - HHH000261: Table found: spring_data.km_attach
+16:55:04 - HHH000037: Columns: [fname, ftype, created, fkey, id, author_id]
+16:55:04 - HHH000108: Foreign keys: []
+16:55:04 - HHH000126: Indexes: [primary]
+16:55:04 - HHH000261: Table found: spring_data.km_comments
+16:55:04 - HHH000037: Columns: [parent, agent, mail, author, created, owner_id, ip, coid, type, content, url, author_id, cid, status]
+16:55:04 - HHH000108: Foreign keys: []
+16:55:04 - HHH000126: Indexes: [primary]
+16:55:04 - HHH000261: Table found: spring_data.km_contents
+16:55:04 - HHH000037: Columns: [allow_comment, created, comments_num, title, type, allow_ping, content, fmt_type, tags, hits, allow_feed, modified, categories, author_id, thumb_img, slug, cid, status]
+16:55:04 - HHH000108: Foreign keys: []
+16:55:04 - HHH000126: Indexes: [primary]
+16:55:04 - HHH000261: Table found: spring_data.km_logs
+16:55:04 - HHH000037: Columns: [data, created, ip, action, id, author_id]
+16:55:04 - HHH000108: Foreign keys: []
+16:55:04 - HHH000126: Indexes: [primary]
+16:55:04 - HHH000261: Table found: spring_data.km_metas
+16:55:04 - HHH000037: Columns: [parent, name, mid, description, sort, type, slug]
+16:55:04 - HHH000108: Foreign keys: []
+16:55:04 - HHH000126: Indexes: [primary]
+16:55:04 - HHH000261: Table found: spring_data.km_options
+16:55:04 - HHH000037: Columns: [name, description, id, value]
+16:55:04 - HHH000108: Foreign keys: []
+16:55:04 - HHH000126: Indexes: [primary]
+16:55:04 - HHH000261: Table found: spring_data.km_relationships
+16:55:04 - HHH000037: Columns: [mid, id, cid]
+16:55:04 - HHH000108: Foreign keys: []
+16:55:04 - HHH000126: Indexes: [primary]
+16:55:04 - HHH000261: Table found: spring_data.km_users
+16:55:04 - HHH000037: Columns: [uid, password, group_name, home_url, logged, screen_name, created, email, activated, username]
+16:55:04 - HHH000108: Foreign keys: []
+16:55:04 - HHH000126: Indexes: [primary]
+16:55:04 - HHH000261: Table found: spring_data.lecturer
+16:55:04 - HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction]
+16:55:04 - HHH000108: Foreign keys: []
+16:55:04 - HHH000126: Indexes: [primary]
+16:55:04 - HHH000261: Table found: spring_data.mall_cart
+16:55:04 - HHH000037: Columns: [update_time, quantity, create_time, user_id, product_id, checked, id]
+16:55:04 - HHH000108: Foreign keys: []
+16:55:04 - HHH000126: Indexes: [primary]
+16:55:04 - HHH000261: Table found: spring_data.mall_category
+16:55:04 - HHH000037: Columns: [update_time, create_time, parent_id, name, id, sort_order, status]
+16:55:04 - HHH000108: Foreign keys: []
+16:55:04 - HHH000126: Indexes: [primary]
+16:55:04 - HHH000261: Table found: spring_data.mall_order
+16:55:04 - HHH000037: Columns: [order_no, shipping_id, create_time, payment_time, end_time, close_time, postage, payment_type, update_time, send_time, user_id, payment, id, status]
+16:55:04 - HHH000108: Foreign keys: []
+16:55:04 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.mall_order_item
+16:55:05 - HHH000037: Columns: [current_unit_price, order_no, update_time, quantity, create_time, total_price, user_id, product_image, product_id, id, product_name]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.mall_pay_info
+16:55:05 - HHH000037: Columns: [order_no, update_time, pay_platform, create_time, user_id, platform_number, id, platform_status]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.mall_product
+16:55:05 - HHH000037: Columns: [update_time, category_id, create_time, sub_images, main_image, price, subtitle, name, id, detail, stock, status]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.mall_shipping
+16:55:05 - HHH000037: Columns: [update_time, create_time, receiver_province, receiver_zip, user_id, receiver_city, receiver_district, receiver_address, receiver_name, id, receiver_phone, receiver_mobile]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.mall_user
+16:55:05 - HHH000037: Columns: [password, update_time, role, answer, create_time, question, phone, id, email, username]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.maxima
+16:55:05 - HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.menu
+16:55:05 - HHH000037: Columns: [parent_name, parentname, icon, ordernum, type, url, parentid, parent_id, name, menuid, perms, id, order_num, menu_id, open]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.note_tickler
+16:55:05 - HHH000037: Columns: [create_time, tickler_id, title, content]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.orbatch_info
+16:55:05 - HHH000037: Columns: [product, batch_number, date_of_manufacture, id, recall_status]
+16:55:05 - HHH000108: Foreign keys: [fk_m905y9o26fct9w7n56vrmctqf]
+16:55:05 - HHH000126: Indexes: [fk_m905y9o26fct9w7n56vrmctqf, primary]
+16:55:05 - HHH000261: Table found: spring_data.orbatch_sub
+16:55:05 - HHH000037: Columns: [code, orbatch_info, id, status]
+16:55:05 - HHH000108: Foreign keys: [fk_576tgfpucqpvch3lfhmgt51q1]
+16:55:05 - HHH000126: Indexes: [fk_576tgfpucqpvch3lfhmgt51q1, primary]
+16:55:05 - HHH000261: Table found: spring_data.orcompany
+16:55:05 - HHH000037: Columns: [summary, main_product, responsible_person, legal_representative, industry, remark, abbreviation, date_of_application, registered_capital, zip_code, mailing_address, number_of_employees, mobile_phone, period_of_validity, id, area_covered, enterprise_code, region, enterprise_name, email, home_agent, business_registration_no]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.orinspection_info
+16:55:05 - HHH000037: Columns: [result, censorate, suggestion, remark, id]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.orprocess_log
+16:55:05 - HHH000037: Columns: [tache_no, id, content, tache_date, tache_name]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.orproduct
+16:55:05 - HHH000037: Columns: [term_of_validity, remark, source_area, id, product_code, retroactive_info, product_name, spec]
+16:55:05 - HHH000108: Foreign keys: [fk_5y3e438839af8ej6tfya1ivat]
+16:55:05 - HHH000126: Indexes: [fk_5y3e438839af8ej6tfya1ivat, primary]
+16:55:05 - HHH000261: Table found: spring_data.orretroactive_info
+16:55:05 - HHH000037: Columns: [trace_type, id, content]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.orsearch
+16:55:05 - HHH000037: Columns: [batch_info, company, id]
+16:55:05 - HHH000108: Foreign keys: [fk_hxm9mj5ufynmfumq43x59ob42, fk_cohojre21pfk8jm0le2yfwisk]
+16:55:05 - HHH000126: Indexes: [fk_hxm9mj5ufynmfumq43x59ob42, fk_cohojre21pfk8jm0le2yfwisk, primary]
+16:55:05 - HHH000261: Table found: spring_data.ortrace_type
+16:55:05 - HHH000037: Columns: [type_name, id]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.qrcode_builder4xsentity
+16:55:05 - HHH000037: Columns: [code_size, code, create_time, batch_id, prefix, activate_status, num, en, remark, bn, url, num_size, update_time, id, status]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.recruit
+16:55:05 - HHH000037: Columns: [requirements, flag, create_time, remark, auditing, lastupdate_time, salary, linkman, last_update_time, phone, companyname, company_name, station, id, email]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.shop_goods
+16:55:05 - HHH000037: Columns: [goods_name, goods_id]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.shop_goods_catalog
+16:55:05 - HHH000037: Columns: [catalog_id, catalog_name, pid]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.shop_goods_property
+16:55:05 - HHH000037: Columns: [prop_id, length, pid, type, prop_desc, property_name]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.shop_goods_property_condition
+16:55:05 - HHH000037: Columns: [condition_str, condition_name, condition_id]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.shop_goods_property_value
+16:55:05 - HHH000037: Columns: [catalog_id, prop_id, nid, goods_id, value]
+16:55:05 - HHH000108: Foreign keys: [fk_aq3p9hnq6x7n1hrb9xulxd8sr, fk_osahi002qauqin44gb96kxj91, fk_6q7nb5jufvimrjdinr5mmcfhh]
+16:55:05 - HHH000126: Indexes: [fk_aq3p9hnq6x7n1hrb9xulxd8sr, fk_6q7nb5jufvimrjdinr5mmcfhh, primary]
+16:55:05 - HHH000261: Table found: spring_data.sys_acl
+16:55:05 - HHH000037: Columns: [code, acl_module_id, name, remark, id, type, operator, seq, url, operate_ip, operate_time, status]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.sys_acl_module
+16:55:05 - HHH000037: Columns: [level, parent_id, name, remark, id, operator, seq, operate_ip, operate_time, status]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.sys_dept
+16:55:05 - HHH000037: Columns: [level, parent_id, name, remark, id, operator, seq, operate_ip, operate_time]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.sys_log
+16:55:05 - HHH000037: Columns: [target_id, id, type, operator, operate_ip, operate_time, status]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.sys_role
+16:55:05 - HHH000037: Columns: [name, remark, id, type, operator, operate_ip, operate_time, status]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.sys_role_acl
+16:55:05 - HHH000037: Columns: [role_id, id, acl_id, operator, operate_ip, operate_time]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.sys_role_user
+16:55:05 - HHH000037: Columns: [role_id, user_id, id, operator, operate_ip, operate_time]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.sys_user
+16:55:05 - HHH000037: Columns: [password, mail, remark, telephone, id, dept_id, operator, operate_ip, operate_time, status, username]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.trainee
+16:55:05 - HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.user
+16:55:05 - HHH000037: Columns: [last_update_time, password, flag, answer, create_time, question, phone, name, remark, id, email]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.xx_attribute
+16:55:05 - HHH000037: Columns: [attr_desc, check_user_id, attr_checked, length, pid, remark, type, update_date, attr_id, attr_level, name, make_user_id, short_name, create_date]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.xx_attribute_value
+16:55:05 - HHH000037: Columns: [score, attrid, classify_id, res_id, value_id, value, resid, attr_id]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.xx_classify
+16:55:05 - HHH000037: Columns: [classify_status, check_user_id, classify_id, classify_level, pid, remark, update_date, classify_checked, classify_option, classify_desc, name, make_user_id, short_name, create_date]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.xx_demand
+16:55:05 - HHH000037: Columns: [demand_id, name]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.xx_question
+16:55:05 - HHH000037: Columns: [id, question_des]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.xx_question_item
+16:55:05 - HHH000037: Columns: [item_desc, question, id, item_value]
+16:55:05 - HHH000108: Foreign keys: [fk_ljngho2cn3h57rifqic2aq95j]
+16:55:05 - HHH000126: Indexes: [fk_ljngho2cn3h57rifqic2aq95j, primary]
+16:55:05 - HHH000261: Table found: spring_data.xx_res
+16:55:05 - HHH000037: Columns: [res_desc, check_user_id, res_checked, res_id, name, res_status, make_user_id, short_name, remark, create_date, update_date, res_level]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000261: Table found: spring_data.xx_res_attrs
+16:55:05 - HHH000037: Columns: [id, xx_res, attrs]
+16:55:05 - HHH000108: Foreign keys: []
+16:55:05 - HHH000126: Indexes: [primary]
+16:55:05 - HHH000262: Table not found: guns_dept
+16:55:05 - HHH000262: Table not found: guns_relation
+16:55:05 - HHH000262: Table not found: guns_role
+16:55:05 - HHH000262: Table not found: guns_dept
+16:55:05 - HHH000262: Table not found: guns_relation
+16:55:05 - HHH000262: Table not found: guns_role
+16:55:06 - HHH000232: Schema update complete
+16:55:06 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:55:06 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminController': Failed to introspect bean class [com.cioclass.controller.admin.AdminController] for lookup method metadata: could not find class that it depends on; nested exception is java.lang.NoClassDefFoundError: HttpServletRequest
+16:55:06 - Closing JPA EntityManagerFactory for persistence unit 'default'
+16:55:06 - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminController': Failed to introspect bean class [com.cioclass.controller.admin.AdminController] for lookup method metadata: could not find class that it depends on; nested exception is java.lang.NoClassDefFoundError: HttpServletRequest
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:269)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1118)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1091)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:444)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:326)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4853)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5314)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1408)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1398)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NoClassDefFoundError: HttpServletRequest
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:613)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:524)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:510)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:247)
+	... 23 more
+Caused by: java.lang.ClassNotFoundException: HttpServletRequest
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1339)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1167)
+	... 30 more
+16:56:42 - Root WebApplicationContext: initialization started
+16:56:43 - Refreshing Root WebApplicationContext: startup date [Tue Jan 16 16:56:43 CST 2018]; root of context hierarchy
+16:56:43 - Loading XML bean definitions from class path resource [beans.xml]
+16:56:46 - Loading XML bean definitions from class path resource [mvc_security.xml]
+16:56:46 - You are running with Spring Security Core 4.2.3.RELEASE
+16:56:46 - **** You are advised to use Spring 4.3.9.RELEASE or later with this version. You are running: 4.3.6.RELEASE
+16:56:46 - Spring Security 'config' module version is 4.2.3.RELEASE
+16:56:46 - Creating access control expression attribute 'hasRole('ROLE_USER')' for /upload
+16:56:46 - Creating access control expression attribute 'hasRole('ROLE_USER')' for /admin/**
+16:56:46 - No login page configured. The default internal one will be used. Use the 'login-page' attribute to set the URL of the login page.
+16:56:46 - Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 200, Root bean: class [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 400, Root bean: class [org.springframework.security.web.header.HeaderWriterFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 500, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 800, <org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0>, order = 1200, Root bean: class [org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1400, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1600, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1700, Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.security.config.http.HttpConfigurationBuilder$SecurityContextHolderAwareRequestFilterBeanFactory#0; factoryMethodName=getBean; initMethodName=null; destroyMethodName=null, order = 1800, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2100, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2200, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2300, <org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0>, order = 2400]
+16:56:46 - Loading XML bean definitions from class path resource [spring_redis.xml]
+16:56:47 - Loading properties file from class path resource [db.properties]
+16:56:48 - Loaded JDBC driver: com.mysql.jdbc.Driver
+16:56:48 - Building JPA container EntityManagerFactory for persistence unit 'default'
+16:56:48 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+16:56:49 - HHH000412: Hibernate Core {4.3.6.Final}
+16:56:49 - HHH000206: hibernate.properties not found
+16:56:49 - HHH000021: Bytecode provider name : javassist
+16:56:49 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+16:56:50 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+16:56:51 - HHH000397: Using ASTQueryTranslatorFactory
+16:56:52 - HHH000228: Running hbm2ddl schema update
+16:56:52 - HHH000102: Fetching database metadata
+16:56:52 - HHH000396: Updating schema
+16:56:52 - HHH000261: Table found: spring_data.batch_inspection
+16:56:52 - HHH000037: Columns: [batch_id, inspection_id]
+16:56:52 - HHH000108: Foreign keys: [fk_8ylu2oofaeej6vxcjh8pdlut, fk_6gbrptqob4jokm1n4kcnws77q]
+16:56:52 - HHH000126: Indexes: [fk_8ylu2oofaeej6vxcjh8pdlut, fk_6gbrptqob4jokm1n4kcnws77q]
+16:56:52 - HHH000261: Table found: spring_data.batch_process
+16:56:52 - HHH000037: Columns: [process_id, batch_id]
+16:56:52 - HHH000108: Foreign keys: [fk_jewtgchoeandtsurq84mafd8v, fk_ejiwqyxh1ci9syj1netqshbhj]
+16:56:52 - HHH000126: Indexes: [fk_jewtgchoeandtsurq84mafd8v, fk_ejiwqyxh1ci9syj1netqshbhj]
+16:56:52 - HHH000261: Table found: spring_data.batch_retroactive
+16:56:52 - HHH000037: Columns: [retroactive_id, batch_id]
+16:56:52 - HHH000108: Foreign keys: [fk_hxuntw56vyeppk2h49gb2sov8, fk_jeejk398o3xj77oi3w2tx9i53]
+16:56:52 - HHH000126: Indexes: [fk_hxuntw56vyeppk2h49gb2sov8, fk_jeejk398o3xj77oi3w2tx9i53]
+16:56:52 - HHH000261: Table found: spring_data.bole
+16:56:52 - HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.exercise
+16:56:52 - HHH000037: Columns: [last_update_time, imgurl, flag, create_time, img_url, publishdate, remark, id, lastupdate_time, title, publish_date, url]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.furniture
+16:56:52 - HHH000037: Columns: [name, alias, remark, id, furniture_project]
+16:56:52 - HHH000108: Foreign keys: [fk_kr70ijy8pqw71e8b614xioeuf]
+16:56:52 - HHH000126: Indexes: [fk_kr70ijy8pqw71e8b614xioeuf, primary]
+16:56:52 - HHH000261: Table found: spring_data.furniture_image
+16:56:52 - HHH000037: Columns: [furniture, image_order, id, create_date, image_desc, title, update_date, url]
+16:56:52 - HHH000108: Foreign keys: [fk_fi7ub87xpgkwsia48as3q6hq7]
+16:56:52 - HHH000126: Indexes: [fk_fi7ub87xpgkwsia48as3q6hq7, primary]
+16:56:52 - HHH000261: Table found: spring_data.furniture_project
+16:56:52 - HHH000037: Columns: [name, alias, remark, id]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.guns_dept
+16:56:52 - HHH000037: Columns: [num, pid, simplename, id, fullname, pids, version, tips]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.guns_relation
+16:56:52 - HHH000037: Columns: [roleid, menuid, id]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.guns_role
+16:56:52 - HHH000037: Columns: [num, deptid, name, pid, id, version, tips]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.jsoup_links
+16:56:52 - HHH000037: Columns: [create_time, domain, remark, id, text, title, url, domain_text]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.km_attach
+16:56:52 - HHH000037: Columns: [fname, ftype, created, fkey, id, author_id]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.km_comments
+16:56:52 - HHH000037: Columns: [parent, agent, mail, author, created, owner_id, ip, coid, type, content, url, author_id, cid, status]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.km_contents
+16:56:52 - HHH000037: Columns: [allow_comment, created, comments_num, title, type, allow_ping, content, fmt_type, tags, hits, allow_feed, modified, categories, author_id, thumb_img, slug, cid, status]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.km_logs
+16:56:52 - HHH000037: Columns: [data, created, ip, action, id, author_id]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.km_metas
+16:56:52 - HHH000037: Columns: [parent, name, mid, description, sort, type, slug]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.km_options
+16:56:52 - HHH000037: Columns: [name, description, id, value]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.km_relationships
+16:56:52 - HHH000037: Columns: [mid, id, cid]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.km_users
+16:56:52 - HHH000037: Columns: [uid, password, group_name, home_url, logged, screen_name, created, email, activated, username]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.lecturer
+16:56:52 - HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.mall_cart
+16:56:52 - HHH000037: Columns: [update_time, quantity, create_time, user_id, product_id, checked, id]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.mall_category
+16:56:52 - HHH000037: Columns: [update_time, create_time, parent_id, name, id, sort_order, status]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.mall_order
+16:56:52 - HHH000037: Columns: [order_no, shipping_id, create_time, payment_time, end_time, close_time, postage, payment_type, update_time, send_time, user_id, payment, id, status]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.mall_order_item
+16:56:52 - HHH000037: Columns: [current_unit_price, order_no, update_time, quantity, create_time, total_price, user_id, product_image, product_id, id, product_name]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.mall_pay_info
+16:56:52 - HHH000037: Columns: [order_no, update_time, pay_platform, create_time, user_id, platform_number, id, platform_status]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.mall_product
+16:56:52 - HHH000037: Columns: [update_time, category_id, create_time, sub_images, main_image, price, subtitle, name, id, detail, stock, status]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.mall_shipping
+16:56:52 - HHH000037: Columns: [update_time, create_time, receiver_province, receiver_zip, user_id, receiver_city, receiver_district, receiver_address, receiver_name, id, receiver_phone, receiver_mobile]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.mall_user
+16:56:52 - HHH000037: Columns: [password, update_time, role, answer, create_time, question, phone, id, email, username]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.maxima
+16:56:52 - HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.menu
+16:56:52 - HHH000037: Columns: [parent_name, parentname, icon, ordernum, type, url, parentid, parent_id, name, menuid, perms, id, order_num, menu_id, open]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.note_tickler
+16:56:52 - HHH000037: Columns: [create_time, tickler_id, title, content]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.orbatch_info
+16:56:52 - HHH000037: Columns: [product, batch_number, date_of_manufacture, id, recall_status]
+16:56:52 - HHH000108: Foreign keys: [fk_m905y9o26fct9w7n56vrmctqf]
+16:56:52 - HHH000126: Indexes: [fk_m905y9o26fct9w7n56vrmctqf, primary]
+16:56:52 - HHH000261: Table found: spring_data.orbatch_sub
+16:56:52 - HHH000037: Columns: [code, orbatch_info, id, status]
+16:56:52 - HHH000108: Foreign keys: [fk_576tgfpucqpvch3lfhmgt51q1]
+16:56:52 - HHH000126: Indexes: [fk_576tgfpucqpvch3lfhmgt51q1, primary]
+16:56:52 - HHH000261: Table found: spring_data.orcompany
+16:56:52 - HHH000037: Columns: [summary, main_product, responsible_person, legal_representative, industry, remark, abbreviation, date_of_application, registered_capital, zip_code, mailing_address, number_of_employees, mobile_phone, period_of_validity, id, area_covered, enterprise_code, region, enterprise_name, email, home_agent, business_registration_no]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.orinspection_info
+16:56:52 - HHH000037: Columns: [result, censorate, suggestion, remark, id]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.orprocess_log
+16:56:52 - HHH000037: Columns: [tache_no, id, content, tache_date, tache_name]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.orproduct
+16:56:52 - HHH000037: Columns: [term_of_validity, remark, source_area, id, product_code, retroactive_info, product_name, spec]
+16:56:52 - HHH000108: Foreign keys: [fk_5y3e438839af8ej6tfya1ivat]
+16:56:52 - HHH000126: Indexes: [fk_5y3e438839af8ej6tfya1ivat, primary]
+16:56:52 - HHH000261: Table found: spring_data.orretroactive_info
+16:56:52 - HHH000037: Columns: [trace_type, id, content]
+16:56:52 - HHH000108: Foreign keys: []
+16:56:52 - HHH000126: Indexes: [primary]
+16:56:52 - HHH000261: Table found: spring_data.orsearch
+16:56:52 - HHH000037: Columns: [batch_info, company, id]
+16:56:52 - HHH000108: Foreign keys: [fk_hxm9mj5ufynmfumq43x59ob42, fk_cohojre21pfk8jm0le2yfwisk]
+16:56:52 - HHH000126: Indexes: [fk_hxm9mj5ufynmfumq43x59ob42, fk_cohojre21pfk8jm0le2yfwisk, primary]
+16:56:53 - HHH000261: Table found: spring_data.ortrace_type
+16:56:53 - HHH000037: Columns: [type_name, id]
+16:56:53 - HHH000108: Foreign keys: []
+16:56:53 - HHH000126: Indexes: [primary]
+16:56:53 - HHH000261: Table found: spring_data.qrcode_builder4xsentity
+16:56:53 - HHH000037: Columns: [code_size, code, create_time, batch_id, prefix, activate_status, num, en, remark, bn, url, num_size, update_time, id, status]
+16:56:53 - HHH000108: Foreign keys: []
+16:56:53 - HHH000126: Indexes: [primary]
+16:56:53 - HHH000261: Table found: spring_data.recruit
+16:56:53 - HHH000037: Columns: [requirements, flag, create_time, remark, auditing, lastupdate_time, salary, linkman, last_update_time, phone, companyname, company_name, station, id, email]
+16:56:53 - HHH000108: Foreign keys: []
+16:56:53 - HHH000126: Indexes: [primary]
+16:56:53 - HHH000261: Table found: spring_data.shop_goods
+16:56:53 - HHH000037: Columns: [goods_name, goods_id]
+16:56:53 - HHH000108: Foreign keys: []
+16:56:53 - HHH000126: Indexes: [primary]
+16:56:53 - HHH000261: Table found: spring_data.shop_goods_catalog
+16:56:53 - HHH000037: Columns: [catalog_id, catalog_name, pid]
+16:56:53 - HHH000108: Foreign keys: []
+16:56:53 - HHH000126: Indexes: [primary]
+16:56:53 - HHH000261: Table found: spring_data.shop_goods_property
+16:56:53 - HHH000037: Columns: [prop_id, length, pid, type, prop_desc, property_name]
+16:56:53 - HHH000108: Foreign keys: []
+16:56:53 - HHH000126: Indexes: [primary]
+16:56:53 - HHH000261: Table found: spring_data.shop_goods_property_condition
+16:56:53 - HHH000037: Columns: [condition_str, condition_name, condition_id]
+16:56:53 - HHH000108: Foreign keys: []
+16:56:53 - HHH000126: Indexes: [primary]
+16:56:53 - HHH000261: Table found: spring_data.shop_goods_property_value
+16:56:53 - HHH000037: Columns: [catalog_id, prop_id, nid, goods_id, value]
+16:56:53 - HHH000108: Foreign keys: [fk_aq3p9hnq6x7n1hrb9xulxd8sr, fk_osahi002qauqin44gb96kxj91, fk_6q7nb5jufvimrjdinr5mmcfhh]
+16:56:53 - HHH000126: Indexes: [fk_aq3p9hnq6x7n1hrb9xulxd8sr, fk_6q7nb5jufvimrjdinr5mmcfhh, primary]
+16:56:53 - HHH000261: Table found: spring_data.sys_acl
+16:56:53 - HHH000037: Columns: [code, acl_module_id, name, remark, id, type, operator, seq, url, operate_ip, operate_time, status]
+16:56:53 - HHH000108: Foreign keys: []
+16:56:53 - HHH000126: Indexes: [primary]
+16:56:53 - HHH000261: Table found: spring_data.sys_acl_module
+16:56:53 - HHH000037: Columns: [level, parent_id, name, remark, id, operator, seq, operate_ip, operate_time, status]
+16:56:53 - HHH000108: Foreign keys: []
+16:56:53 - HHH000126: Indexes: [primary]
+16:56:53 - HHH000261: Table found: spring_data.sys_dept
+16:56:53 - HHH000037: Columns: [level, parent_id, name, remark, id, operator, seq, operate_ip, operate_time]
+16:56:53 - HHH000108: Foreign keys: []
+16:56:53 - HHH000126: Indexes: [primary]
+16:56:53 - HHH000261: Table found: spring_data.sys_log
+16:56:53 - HHH000037: Columns: [target_id, id, type, operator, operate_ip, operate_time, status]
+16:56:53 - HHH000108: Foreign keys: []
+16:56:53 - HHH000126: Indexes: [primary]
+16:56:53 - HHH000261: Table found: spring_data.sys_role
+16:56:53 - HHH000037: Columns: [name, remark, id, type, operator, operate_ip, operate_time, status]
+16:56:53 - HHH000108: Foreign keys: []
+16:56:53 - HHH000126: Indexes: [primary]
+16:56:53 - HHH000261: Table found: spring_data.sys_role_acl
+16:56:53 - HHH000037: Columns: [role_id, id, acl_id, operator, operate_ip, operate_time]
+16:56:53 - HHH000108: Foreign keys: []
+16:56:53 - HHH000126: Indexes: [primary]
+16:56:53 - HHH000261: Table found: spring_data.sys_role_user
+16:56:53 - HHH000037: Columns: [role_id, user_id, id, operator, operate_ip, operate_time]
+16:56:53 - HHH000108: Foreign keys: []
+16:56:53 - HHH000126: Indexes: [primary]
+16:56:53 - HHH000261: Table found: spring_data.sys_user
+16:56:53 - HHH000037: Columns: [password, mail, remark, telephone, id, dept_id, operator, operate_ip, operate_time, status, username]
+16:56:53 - HHH000108: Foreign keys: []
+16:56:53 - HHH000126: Indexes: [primary]
+16:56:53 - HHH000261: Table found: spring_data.trainee
+16:56:53 - HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction]
+16:56:53 - HHH000108: Foreign keys: []
+16:56:53 - HHH000126: Indexes: [primary]
+16:56:53 - HHH000261: Table found: spring_data.user
+16:56:53 - HHH000037: Columns: [last_update_time, password, flag, answer, create_time, question, phone, name, remark, id, email]
+16:56:53 - HHH000108: Foreign keys: []
+16:56:53 - HHH000126: Indexes: [primary]
+16:56:53 - HHH000261: Table found: spring_data.xx_attribute
+16:56:53 - HHH000037: Columns: [attr_desc, check_user_id, attr_checked, length, pid, remark, type, update_date, attr_id, attr_level, name, make_user_id, short_name, create_date]
+16:56:53 - HHH000108: Foreign keys: []
+16:56:53 - HHH000126: Indexes: [primary]
+16:56:53 - HHH000261: Table found: spring_data.xx_attribute_value
+16:56:53 - HHH000037: Columns: [score, attrid, classify_id, res_id, value_id, value, resid, attr_id]
+16:56:53 - HHH000108: Foreign keys: []
+16:56:53 - HHH000126: Indexes: [primary]
+16:56:53 - HHH000261: Table found: spring_data.xx_classify
+16:56:53 - HHH000037: Columns: [classify_status, check_user_id, classify_id, classify_level, pid, remark, update_date, classify_checked, classify_option, classify_desc, name, make_user_id, short_name, create_date]
+16:56:53 - HHH000108: Foreign keys: []
+16:56:53 - HHH000126: Indexes: [primary]
+16:56:53 - HHH000261: Table found: spring_data.xx_demand
+16:56:53 - HHH000037: Columns: [demand_id, name]
+16:56:53 - HHH000108: Foreign keys: []
+16:56:53 - HHH000126: Indexes: [primary]
+16:56:53 - HHH000261: Table found: spring_data.xx_question
+16:56:53 - HHH000037: Columns: [id, question_des]
+16:56:53 - HHH000108: Foreign keys: []
+16:56:53 - HHH000126: Indexes: [primary]
+16:56:53 - HHH000261: Table found: spring_data.xx_question_item
+16:56:53 - HHH000037: Columns: [item_desc, question, id, item_value]
+16:56:53 - HHH000108: Foreign keys: [fk_ljngho2cn3h57rifqic2aq95j]
+16:56:53 - HHH000126: Indexes: [fk_ljngho2cn3h57rifqic2aq95j, primary]
+16:56:53 - HHH000261: Table found: spring_data.xx_res
+16:56:53 - HHH000037: Columns: [res_desc, check_user_id, res_checked, res_id, name, res_status, make_user_id, short_name, remark, create_date, update_date, res_level]
+16:56:53 - HHH000108: Foreign keys: []
+16:56:53 - HHH000126: Indexes: [primary]
+16:56:53 - HHH000261: Table found: spring_data.xx_res_attrs
+16:56:53 - HHH000037: Columns: [id, xx_res, attrs]
+16:56:53 - HHH000108: Foreign keys: []
+16:56:53 - HHH000126: Indexes: [primary]
+16:56:53 - HHH000232: Schema update complete
+16:56:53 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:56:53 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'boleController': Unsatisfied dependency expressed through field 'boleService'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Error loading class [com.cioclass.service.impl.QrcodeServiceImpl] for bean with name 'qrcodeServiceImpl' defined in file [E:\javaee\apache-tomcat-8.0.47\webapps\cioclass\WEB-INF\classes\com\cioclass\service\impl\QrcodeServiceImpl.class]: problem with class file or dependent class; nested exception is java.lang.ClassFormatError: Duplicate method name&signature in class file com/cioclass/service/impl/QrcodeServiceImpl
+16:56:53 - Closing JPA EntityManagerFactory for persistence unit 'default'
+16:56:53 - Context initialization failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'boleController': Unsatisfied dependency expressed through field 'boleService'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Error loading class [com.cioclass.service.impl.QrcodeServiceImpl] for bean with name 'qrcodeServiceImpl' defined in file [E:\javaee\apache-tomcat-8.0.47\webapps\cioclass\WEB-INF\classes\com\cioclass\service\impl\QrcodeServiceImpl.class]: problem with class file or dependent class; nested exception is java.lang.ClassFormatError: Duplicate method name&signature in class file com/cioclass/service/impl/QrcodeServiceImpl
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:444)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:326)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4853)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5314)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1408)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1398)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Error loading class [com.cioclass.service.impl.QrcodeServiceImpl] for bean with name 'qrcodeServiceImpl' defined in file [E:\javaee\apache-tomcat-8.0.47\webapps\cioclass\WEB-INF\classes\com\cioclass\service\impl\QrcodeServiceImpl.class]: problem with class file or dependent class; nested exception is java.lang.ClassFormatError: Duplicate method name&signature in class file com/cioclass/service/impl/QrcodeServiceImpl
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1388)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:641)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:609)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1484)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:425)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:403)
+	at org.springframework.beans.factory.BeanFactoryUtils.beanNamesForTypeIncludingAncestors(BeanFactoryUtils.java:220)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1260)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1101)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 24 more
+Caused by: java.lang.ClassFormatError: Duplicate method name&signature in class file com/cioclass/service/impl/QrcodeServiceImpl
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:2573)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:859)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1308)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1167)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:250)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:401)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1432)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1377)
+	... 34 more

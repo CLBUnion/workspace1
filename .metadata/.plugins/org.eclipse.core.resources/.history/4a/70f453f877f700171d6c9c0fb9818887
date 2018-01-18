@@ -1,0 +1,16 @@
+package com.cioclass.util;
+
+import java.io.IOException;
+
+import org.junit.Test;
+
+public class UtilsTest {
+	@Test
+	public void getIpInfoTest() {
+		try {
+			System.out.println(Utils.getIpInfo("127.0.0.1"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}

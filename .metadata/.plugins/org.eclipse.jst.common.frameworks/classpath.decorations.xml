@@ -1,0 +1,7 @@
+<classpath>
+  <container id="cioclass!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="E:/javaee/workspace1/cioclass/WebContent/WEB-INF/lib/spring-data-jpa-1.8.0.RELEASE.jar">
+      <source-attachment-path>/cioclass/WebContent/WEB-INF/lib-source/spring-data-jpa-1.8.0.RELEASE-sources.jar</source-attachment-path>
+    </entry>
+  </container>
+</classpath>

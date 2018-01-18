@@ -1,0 +1,9 @@
+package com.cioclass.domain.guns;
+
+public class GunsRelation {
+	private Integer id;
+	private Integer menuId;
+	private Integer roleId;
+	
+	
+}

@@ -1,0 +1,23 @@
+package com.cioclass.domain.guns;
+
+import javax.persistence.Column;
+
+public class GunsDept {
+	@Column(name="id",length=11,columnDefinition="主键id")
+	private Integer id;
+	@Column(name="num",length=11,columnDefinition="排序")
+	private Integer num;
+	@Column(name="pid",length=11,columnDefinition="父部门id")
+	private Integer pid;
+	@Column(name="pids",length=255,columnDefinition="父级ids")
+	private String pids;
+	@Column(name="simplename",length=45,columnDefinition="简称")
+	private String simpleName;
+	@Column(name="fullname",length=255,columnDefinition="全称")
+	private String fullName;
+	@Column(name="tips",length=255,columnDefinition="提示")
+	private String tips;
+	@Column(name="version",length=11,columnDefinition="")
+	private Integer version;
+
+}

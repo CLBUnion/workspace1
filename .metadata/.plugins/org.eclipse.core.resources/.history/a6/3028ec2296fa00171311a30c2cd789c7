@@ -1,0 +1,5 @@
+package com.cioclass.domain.guns;
+
+public class GunsDept {
+
+}

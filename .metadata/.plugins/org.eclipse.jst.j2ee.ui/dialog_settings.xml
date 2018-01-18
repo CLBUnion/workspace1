@@ -3,7 +3,7 @@
 	<item value="false" key="J2EE_EXPORT_OVERWRITE"/>
 	<item value="false" key="J2EE_EXPORT_SOURCE"/>
 	<list key="J2EE_EXPORT_JST_WEB">
-		<item value="D:\cioclass3.war"/>
 		<item value="D:\cioclass.war"/>
+		<item value="D:\cioclass3.war"/>
 	</list>
 </section>

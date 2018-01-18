@@ -1,0 +1,266 @@
+package com.cioclass.controller;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.cioclass.domain.KeyValue;
+import com.cioclass.service.or.QrcodeBuilder4XSService;
+import com.cioclass.util.RController;
+import com.google.common.collect.Maps;
+
+/**
+ * ControllerTest 简单控制器
+ * @author lb_chen
+ */
+@Controller
+@RequestMapping("/")
+public class ControllerTest {
+	private static final Logger LOG = LoggerFactory.getLogger(ControllerTest.class);
+	private static final String Dot = ",";
+	@Autowired
+	private QrcodeBuilder4XSService qrcodeBuilder4XSService;
+	/**
+	 * 访问登录页面
+	 * @param error
+	 *            错误的参数
+	 * @param logout
+	 *            注销的参数
+	 * @return 登录界面
+	 */
+	@GetMapping(value = "login")
+	public ModelAndView login(@RequestParam(value = "error", required = false) String error,
+			@RequestParam(value = "logout", required = false) String logout) {
+		ModelAndView model = new ModelAndView();
+		if (error != null) {
+			LOG.error("Invalid username and password!");
+			model.addObject("error", "Invalid username and password!");
+		}
+		if (logout != null) {
+			return new ModelAndView("redirect:/logout");
+		}
+		model.setViewName("login");
+		return model;
+	}
+	/**
+	 * 
+	 * @param iPAddress
+	 * @param databaseName
+	 * @param tableName
+	 * @return
+	 */
+	@ResponseBody
+	@GetMapping(value = "sql")
+	public String sql(
+			@RequestParam(value = "IPAddress", required = false, defaultValue = "userchoose.gicp.net") String iPAddress,
+			@RequestParam(value = "databaseName", required = false, defaultValue = "DEMO") String databaseName,
+			@RequestParam(value = "tableName", required = false, defaultValue = "LRPTA") String tableName) {
+		RController<KeyValue> rc = new RController<>();
+		List<KeyValue> list = new ArrayList<>();
+		KeyValue kv = null;
+		if (tableName != null && tableName.contains(Dot)) {
+			String[] tables = tableName.split(Dot);
+			for (String table : tables) {
+				Integer i = this.queryCount(iPAddress, databaseName, table);
+				kv = new KeyValue(table, i);
+				list.add(kv);
+			}
+		} else {
+			Integer i = queryCount(iPAddress, databaseName, tableName);
+			kv = new KeyValue(tableName, i);
+			list.add(kv);
+		}
+		return rc.getList(list);
+	}
+	
+	@ResponseBody
+	@GetMapping(value = "sql")
+	public String sql(
+			@RequestParam(value = "IPAddress", required = false, defaultValue = "userchoose.gicp.net") String iPAddress,
+			@RequestParam(value = "databaseName", required = false, defaultValue = "DEMO") String databaseName,
+			@RequestParam(value = "tableName", required = false, defaultValue = "LRPTA") String tableName) {
+		RController<KeyValue> rc = new RController<>();
+		List<KeyValue> list = new ArrayList<>();
+		KeyValue kv = null;
+		if (tableName != null && tableName.contains(Dot)) {
+			String[] tables = tableName.split(Dot);
+			for (String table : tables) {
+				Integer i = this.queryCount(iPAddress, databaseName, table);
+				kv = new KeyValue(table, i);
+				list.add(kv);
+			}
+		} else {
+			Integer i = queryCount(iPAddress, databaseName, tableName);
+			kv = new KeyValue(tableName, i);
+			list.add(kv);
+		}
+		return rc.getList(list);
+	}
+	/**
+	 * 
+	 * @param iPAddress
+	 * @param databaseName
+	 * @param tableName
+	 * @return
+	 */
+	private Integer queryCount(String iPAddress, String databaseName, String tableName) {
+		String url = "jdbc:sqlserver://" + iPAddress + ";databaseName=" + databaseName
+				+ ";user=sa;password=clb6962091290fj.";
+		String SQL = "SELECT count(*) FROM " + tableName;
+		Connection con = null;
+		Statement stmt = null;
+		ResultSet rs = null;
+		try {
+			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+			con = DriverManager.getConnection(url);
+			stmt = con.createStatement();
+			rs = stmt.executeQuery(SQL);
+			Integer i = 0;
+			while (rs.next()) {
+				i = rs.getInt(1);
+				break;
+			}
+			rs.close();
+			stmt.close();
+			con.close();
+			return i;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return 0;
+		}
+	}
+
+	/**
+	 * 注销
+	 * @param request
+	 *            服务请求对象
+	 * @param response
+	 *            服务响应对象
+	 * @return 登录页面
+	 */
+	@GetMapping(value = "logout")
+	public ModelAndView logout(HttpServletRequest request, HttpServletResponse response) {
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		if (auth != null) {
+			System.out.println("注销操作");
+			new SecurityContextLogoutHandler().logout(request, response, auth);
+			return new ModelAndView("login");
+		}
+		return new ModelAndView("redirect:/login?logout");
+	}
+	
+	@GetMapping("oSearch")
+	public ModelAndView oSearch(@RequestParam(name = "n", required = false, defaultValue = "")String n,
+			@RequestParam(name = "msg", required = false, defaultValue = "查询号码不能为空！")String msg){
+		Map<String,String> model = Maps.newHashMap();
+		if(n== null || "".equals(n)) {
+			model.put("msg", "查询号码不能为空！");
+			return new ModelAndView("oSearch",model);
+		}
+		return new ModelAndView("redirect:/o?n="+n);
+	}
+	/**
+	 * 夏商溯源的查询界面
+	 * @param n 尾随n参数的code
+	 */
+	@ResponseBody
+	@GetMapping("o")
+	public String o(@RequestParam(name = "n", required = false, defaultValue = "") String n,
+			@RequestParam(defaultValue = "1", name = "pageNo", required = false) int pageNo,
+			@RequestParam(defaultValue = "10", name = "pageSize", required = false) int pageSize) {
+		Map<String,Object> model = Maps.newHashMap();
+		//n = n.trim();
+		n = n.replaceAll("\\s*", "");
+		LOG.info("n="+n+"  length="+n.length());
+		if(n== null || "".equals(n)) {
+			model.put("msg", "查询号码必须是10位无空格字符！");
+			return "查询号码必须是10位无空格字符！";
+		}else if(n.length()==10){
+			/*手动输入10位无空格的逻辑*/
+			LOG.info("手动输入无空格的逻辑:"+n+"  length="+n.length());
+			return "手动输入无空格的逻辑:"+n+"  length="+n.length();
+		}else if(n.length()==12){
+			/*手动输入10位无空格的逻辑*/
+			LOG.info("手动输入有空格的逻辑:"+n+"  length="+n.length());
+			return "手动输入有空格的逻辑:"+n+"  length="+n.length();
+		}else if(n.length()==47) {
+			/*扫描枪输入的逻辑*/
+			LOG.info("扫描枪输入的逻辑:"+n+"  length="+n.length());
+			return "扫描枪输入的逻辑:"+n+"  length="+n.length();
+		}else {
+			model.put("msg", "查询号码输入有误！");
+			return "查询号码输入有误！";
+		}
+	}
+	/*
+	@GetMapping("o")
+	public ModelAndView o(@RequestParam(name = "n", required = false, defaultValue = "") String n,
+			@RequestParam(defaultValue = "1", name = "pageNo", required = false) int pageNo,
+			@RequestParam(defaultValue = "10", name = "pageSize", required = false) int pageSize) {
+		Map<String,Object> model = Maps.newHashMap();
+		n = n.trim();
+		if(n== null || "".equals(n) || n.length()!=10) {
+			model.put("msg", "查询号码必须是10位无空格字符！");
+			return new ModelAndView("o",model);
+		}else {
+			String temp = n.substring(n.length()-10);
+			System.out.println("n后十位:"+temp);
+			RController<QrcodeBuilder4XSEntity> rc = new RController<>();
+			Page<QrcodeBuilder4XSEntity> page = qrcodeBuilder4XSService.findByTenCode(temp,rc.getPageable(pageNo, pageSize));
+			model.put("result", page);
+			return new ModelAndView("o",model);
+		}
+	}*/
+
+	/**
+	 * 访问根目录下的页面
+	 * @param path
+	 *            根目录下的文件路径及文件名
+	 * @return 根目录下的页面
+	 */
+	@GetMapping("{path}")
+	public String base(@PathVariable(name = "path") String path) {
+		return path;
+	}
+
+	/**
+	 * 访问test目录下的页面
+	 * @param path
+	 *            test目录下的文件路径及文件名
+	 * @return test目录下的页面
+	 */
+	@GetMapping("test/{path}")
+	public String test(@PathVariable(name = "path") String path) {
+		return "test/" + path;
+	}
+
+	/**
+	 * 系统的首页
+	 * @return
+	 */
+	@GetMapping("")
+	public String index() {
+		return "index";
+	}
+}

@@ -1,0 +1,68 @@
+package com.cioclass.domain.guns;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Index;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "guns_relation", indexes = @Index(columnList = "id", unique = true))
+public class GunsRelation  implements Serializable{
+
+    private static final long serialVersionUID = 571L;
+    /**
+     * 主键
+     */
+	private Integer id;
+    /**
+     * 菜单id
+     */
+	private Integer menuId;
+    /**
+     * 角色id
+     */
+	private Integer roleId;
+
+	public GunsRelation() {
+
+	}
+
+	@Id
+	@GeneratedValue
+	@Column(name = "id", length = 11, columnDefinition = "int(11) COMMENT '主键id'")
+	public Integer getId() {
+		return id;
+	}
+
+	@Column(name = "menuid", length = 11, columnDefinition = "int(11) COMMENT '菜单id'")
+	public Integer getMenuId() {
+		return menuId;
+	}
+
+	@Column(name = "roleid", length = 11, columnDefinition = "int(11) COMMENT '角色id'")
+	public Integer getRoleId() {
+		return roleId;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public void setMenuId(Integer menuId) {
+		this.menuId = menuId;
+	}
+
+	public void setRoleId(Integer roleId) {
+		this.roleId = roleId;
+	}
+
+	@Override
+	public String toString() {
+		return "GunsRelation [id=" + id + ", menuId=" + menuId + ", roleId=" + roleId + "]";
+	}
+
+}

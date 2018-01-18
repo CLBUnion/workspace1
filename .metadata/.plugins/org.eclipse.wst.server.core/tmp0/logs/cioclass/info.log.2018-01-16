@@ -1,0 +1,1023 @@
+[INFO][2018-01-16 16:44:37] org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:305) Root WebApplicationContext: initialization started 
+[INFO][2018-01-16 16:44:37] org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:582) Refreshing Root WebApplicationContext: startup date [Tue Jan 16 16:44:37 CST 2018]; root of context hierarchy 
+[INFO][2018-01-16 16:44:38] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317) Loading XML bean definitions from class path resource [beans.xml] 
+[INFO][2018-01-16 16:44:40] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317) Loading XML bean definitions from class path resource [mvc_security.xml] 
+[INFO][2018-01-16 16:44:40] org.springframework.security.core.SpringSecurityCoreVersion.performVersionChecks(SpringSecurityCoreVersion.java:75) You are running with Spring Security Core 4.2.3.RELEASE 
+[WARN][2018-01-16 16:44:40] org.springframework.security.core.SpringSecurityCoreVersion.performVersionChecks(SpringSecurityCoreVersion.java:78) **** You are advised to use Spring 4.3.9.RELEASE or later with this version. You are running: 4.3.6.RELEASE 
+[INFO][2018-01-16 16:44:40] org.springframework.security.config.SecurityNamespaceHandler.<init>(SecurityNamespaceHandler.java:78) Spring Security 'config' module version is 4.2.3.RELEASE 
+[INFO][2018-01-16 16:44:40] org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser.parseInterceptUrlsForFilterInvocationRequestMap(FilterInvocationSecurityMetadataSourceParser.java:194) Creating access control expression attribute 'hasRole('ROLE_USER')' for /upload 
+[INFO][2018-01-16 16:44:40] org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser.parseInterceptUrlsForFilterInvocationRequestMap(FilterInvocationSecurityMetadataSourceParser.java:194) Creating access control expression attribute 'hasRole('ROLE_USER')' for /admin/** 
+[INFO][2018-01-16 16:44:40] org.springframework.security.config.http.AuthenticationConfigBuilder.createLoginPageFilterIfNeeded(AuthenticationConfigBuilder.java:537) No login page configured. The default internal one will be used. Use the 'login-page' attribute to set the URL of the login page. 
+[INFO][2018-01-16 16:44:40] org.springframework.security.config.http.HttpSecurityBeanDefinitionParser.checkFilterChainOrder(HttpSecurityBeanDefinitionParser.java:306) Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 200, Root bean: class [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 400, Root bean: class [org.springframework.security.web.header.HeaderWriterFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 500, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 800, <org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0>, order = 1200, Root bean: class [org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1400, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1600, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1700, Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.security.config.http.HttpConfigurationBuilder$SecurityContextHolderAwareRequestFilterBeanFactory#0; factoryMethodName=getBean; initMethodName=null; destroyMethodName=null, order = 1800, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2100, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2200, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2300, <org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0>, order = 2400] 
+[INFO][2018-01-16 16:44:40] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317) Loading XML bean definitions from class path resource [spring_redis.xml] 
+[INFO][2018-01-16 16:44:40] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172) Loading properties file from class path resource [db.properties] 
+[INFO][2018-01-16 16:44:41] org.springframework.jdbc.datasource.DriverManagerDataSource.setDriverClassName(DriverManagerDataSource.java:133) Loaded JDBC driver: com.mysql.jdbc.Driver 
+[INFO][2018-01-16 16:44:42] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:349) Building JPA container EntityManagerFactory for persistence unit 'default' 
+[INFO][2018-01-16 16:44:42] org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:46) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...] 
+[INFO][2018-01-16 16:44:42] org.hibernate.Version.logVersion(Version.java:54) HHH000412: Hibernate Core {4.3.6.Final} 
+[INFO][2018-01-16 16:44:42] org.hibernate.cfg.Environment.<clinit>(Environment.java:239) HHH000206: hibernate.properties not found 
+[INFO][2018-01-16 16:44:42] org.hibernate.cfg.Environment.buildBytecodeProvider(Environment.java:346) HHH000021: Bytecode provider name : javassist 
+[INFO][2018-01-16 16:44:43] org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66) HCANN000001: Hibernate Commons Annotations {5.0.1.Final} 
+[INFO][2018-01-16 16:44:43] org.hibernate.dialect.Dialect.<init>(Dialect.java:145) HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect 
+[INFO][2018-01-16 16:44:44] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory.<init>(ASTQueryTranslatorFactory.java:47) HHH000397: Using ASTQueryTranslatorFactory 
+[INFO][2018-01-16 16:44:45] org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:182) HHH000228: Running hbm2ddl schema update 
+[INFO][2018-01-16 16:44:45] org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:193) HHH000102: Fetching database metadata 
+[INFO][2018-01-16 16:44:45] org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:205) HHH000396: Updating schema 
+[INFO][2018-01-16 16:44:45] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.batch_inspection 
+[INFO][2018-01-16 16:44:45] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [batch_id, inspection_id] 
+[INFO][2018-01-16 16:44:45] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_8ylu2oofaeej6vxcjh8pdlut, fk_6gbrptqob4jokm1n4kcnws77q] 
+[INFO][2018-01-16 16:44:45] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_8ylu2oofaeej6vxcjh8pdlut, fk_6gbrptqob4jokm1n4kcnws77q] 
+[INFO][2018-01-16 16:44:45] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.batch_process 
+[INFO][2018-01-16 16:44:45] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [process_id, batch_id] 
+[INFO][2018-01-16 16:44:45] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_jewtgchoeandtsurq84mafd8v, fk_ejiwqyxh1ci9syj1netqshbhj] 
+[INFO][2018-01-16 16:44:45] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_jewtgchoeandtsurq84mafd8v, fk_ejiwqyxh1ci9syj1netqshbhj] 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.batch_retroactive 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [retroactive_id, batch_id] 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_hxuntw56vyeppk2h49gb2sov8, fk_jeejk398o3xj77oi3w2tx9i53] 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_hxuntw56vyeppk2h49gb2sov8, fk_jeejk398o3xj77oi3w2tx9i53] 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.bole 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction] 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.exercise 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [last_update_time, imgurl, flag, create_time, img_url, publishdate, remark, id, lastupdate_time, title, publish_date, url] 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.furniture 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [name, alias, remark, id, furniture_project] 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_kr70ijy8pqw71e8b614xioeuf] 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_kr70ijy8pqw71e8b614xioeuf, primary] 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.furniture_image 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [furniture, image_order, id, create_date, image_desc, title, update_date, url] 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_fi7ub87xpgkwsia48as3q6hq7] 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_fi7ub87xpgkwsia48as3q6hq7, primary] 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.furniture_project 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [name, alias, remark, id] 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.DatabaseMetadata.getTableMetadata(DatabaseMetadata.java:147) HHH000262: Table not found: guns_dept 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.DatabaseMetadata.getTableMetadata(DatabaseMetadata.java:147) HHH000262: Table not found: guns_relation 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.DatabaseMetadata.getTableMetadata(DatabaseMetadata.java:147) HHH000262: Table not found: guns_role 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.jsoup_links 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [create_time, domain, remark, id, text, title, url, domain_text] 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.km_attach 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [fname, ftype, created, fkey, id, author_id] 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.km_comments 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [parent, agent, mail, author, created, owner_id, ip, coid, type, content, url, author_id, cid, status] 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.km_contents 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [allow_comment, created, comments_num, title, type, allow_ping, content, fmt_type, tags, hits, allow_feed, modified, categories, author_id, thumb_img, slug, cid, status] 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:46] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.km_logs 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [data, created, ip, action, id, author_id] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.km_metas 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [parent, name, mid, description, sort, type, slug] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.km_options 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [name, description, id, value] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.km_relationships 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [mid, id, cid] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.km_users 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [uid, password, group_name, home_url, logged, screen_name, created, email, activated, username] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.lecturer 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.mall_cart 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [update_time, quantity, create_time, user_id, product_id, checked, id] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.mall_category 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [update_time, create_time, parent_id, name, id, sort_order, status] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.mall_order 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [order_no, shipping_id, create_time, payment_time, end_time, close_time, postage, payment_type, update_time, send_time, user_id, payment, id, status] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.mall_order_item 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [current_unit_price, order_no, update_time, quantity, create_time, total_price, user_id, product_image, product_id, id, product_name] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.mall_pay_info 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [order_no, update_time, pay_platform, create_time, user_id, platform_number, id, platform_status] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.mall_product 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [update_time, category_id, create_time, sub_images, main_image, price, subtitle, name, id, detail, stock, status] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.mall_shipping 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [update_time, create_time, receiver_province, receiver_zip, user_id, receiver_city, receiver_district, receiver_address, receiver_name, id, receiver_phone, receiver_mobile] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.mall_user 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [password, update_time, role, answer, create_time, question, phone, id, email, username] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:47] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.maxima 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.menu 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [parent_name, parentname, icon, ordernum, type, url, parentid, parent_id, name, menuid, perms, id, order_num, menu_id, open] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.note_tickler 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [create_time, tickler_id, title, content] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.orbatch_info 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [product, batch_number, date_of_manufacture, id, recall_status] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_m905y9o26fct9w7n56vrmctqf] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_m905y9o26fct9w7n56vrmctqf, primary] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.orbatch_sub 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [code, orbatch_info, id, status] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_576tgfpucqpvch3lfhmgt51q1] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_576tgfpucqpvch3lfhmgt51q1, primary] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.orcompany 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [summary, main_product, responsible_person, legal_representative, industry, remark, abbreviation, date_of_application, registered_capital, zip_code, mailing_address, number_of_employees, mobile_phone, period_of_validity, id, area_covered, enterprise_code, region, enterprise_name, email, home_agent, business_registration_no] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.orinspection_info 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [result, censorate, suggestion, remark, id] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.orprocess_log 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [tache_no, id, content, tache_date, tache_name] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.orproduct 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [term_of_validity, remark, source_area, id, product_code, retroactive_info, product_name, spec] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_5y3e438839af8ej6tfya1ivat] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_5y3e438839af8ej6tfya1ivat, primary] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.orretroactive_info 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [trace_type, id, content] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.orsearch 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [batch_info, company, id] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_hxm9mj5ufynmfumq43x59ob42, fk_cohojre21pfk8jm0le2yfwisk] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_hxm9mj5ufynmfumq43x59ob42, fk_cohojre21pfk8jm0le2yfwisk, primary] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.ortrace_type 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [type_name, id] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:48] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.qrcode_builder4xsentity 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [code_size, code, create_time, batch_id, prefix, activate_status, num, en, remark, bn, url, num_size, update_time, id, status] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.recruit 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [requirements, flag, create_time, remark, auditing, lastupdate_time, salary, linkman, last_update_time, phone, companyname, company_name, station, id, email] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.shop_goods 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [goods_name, goods_id] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.shop_goods_catalog 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [catalog_id, catalog_name, pid] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.shop_goods_property 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [prop_id, length, pid, type, prop_desc, property_name] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.shop_goods_property_condition 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [condition_str, condition_name, condition_id] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.shop_goods_property_value 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [catalog_id, prop_id, nid, goods_id, value] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_aq3p9hnq6x7n1hrb9xulxd8sr, fk_osahi002qauqin44gb96kxj91, fk_6q7nb5jufvimrjdinr5mmcfhh] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_aq3p9hnq6x7n1hrb9xulxd8sr, fk_6q7nb5jufvimrjdinr5mmcfhh, primary] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.sys_acl 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [code, acl_module_id, name, remark, id, type, operator, seq, url, operate_ip, operate_time, status] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.sys_acl_module 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [level, parent_id, name, remark, id, operator, seq, operate_ip, operate_time, status] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.sys_dept 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [level, parent_id, name, remark, id, operator, seq, operate_ip, operate_time] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.sys_log 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [target_id, id, type, operator, operate_ip, operate_time, status] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.sys_role 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [name, remark, id, type, operator, operate_ip, operate_time, status] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.sys_role_acl 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [role_id, id, acl_id, operator, operate_ip, operate_time] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.sys_role_user 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [role_id, user_id, id, operator, operate_ip, operate_time] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.sys_user 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [password, mail, remark, telephone, id, dept_id, operator, operate_ip, operate_time, status, username] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.trainee 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.user 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [last_update_time, password, flag, answer, create_time, question, phone, name, remark, id, email] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:49] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.xx_attribute 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [attr_desc, check_user_id, attr_checked, length, pid, remark, type, update_date, attr_id, attr_level, name, make_user_id, short_name, create_date] 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.xx_attribute_value 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [score, attrid, classify_id, res_id, value_id, value, resid, attr_id] 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.xx_classify 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [classify_status, check_user_id, classify_id, classify_level, pid, remark, update_date, classify_checked, classify_option, classify_desc, name, make_user_id, short_name, create_date] 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.xx_demand 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [demand_id, name] 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.xx_question 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [id, question_des] 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.xx_question_item 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [item_desc, question, id, item_value] 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_ljngho2cn3h57rifqic2aq95j] 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_ljngho2cn3h57rifqic2aq95j, primary] 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.xx_res 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [res_desc, check_user_id, res_checked, res_id, name, res_status, make_user_id, short_name, remark, create_date, update_date, res_level] 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.xx_res_attrs 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [id, xx_res, attrs] 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.DatabaseMetadata.getTableMetadata(DatabaseMetadata.java:147) HHH000262: Table not found: guns_dept 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.DatabaseMetadata.getTableMetadata(DatabaseMetadata.java:147) HHH000262: Table not found: guns_relation 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.DatabaseMetadata.getTableMetadata(DatabaseMetadata.java:147) HHH000262: Table not found: guns_role 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.DatabaseMetadata.getTableMetadata(DatabaseMetadata.java:147) HHH000262: Table not found: guns_dept 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.DatabaseMetadata.getTableMetadata(DatabaseMetadata.java:147) HHH000262: Table not found: guns_relation 
+[INFO][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.DatabaseMetadata.getTableMetadata(DatabaseMetadata.java:147) HHH000262: Table not found: guns_role 
+[ERROR][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:236) HHH000388: Unsuccessful: create table guns_dept (id 主键id not null auto_increment, fullname 全称, num 序号, pid 父部门id, pids 父级ids, simplename 简称, tips 提示, version 版本（乐观锁保留字段）, primary key (id)) ENGINE=InnoDB 
+[ERROR][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:237) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '主键id not null auto_increment,
+        fullname 全称,
+        num 序号,
+ ' at line 2 
+[ERROR][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:236) HHH000388: Unsuccessful: create table guns_relation (id 主键id not null auto_increment, menuid 菜单id, roleid 角色id, primary key (id)) ENGINE=InnoDB 
+[ERROR][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:237) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '主键id not null auto_increment,
+        menuid 菜单id,
+        roleid 角色' at line 2 
+[ERROR][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:236) HHH000388: Unsuccessful: create table guns_role (id 主键id not null auto_increment, deptid 部门id, name 角色名称, num 序号, pid 父角色id, tips 提示, version 保留字段(暂时没用）, primary key (id)) ENGINE=InnoDB 
+[ERROR][2018-01-16 16:44:50] org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:237) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '主键id not null auto_increment,
+        deptid 部门id,
+        name 角色' at line 2 
+[INFO][2018-01-16 16:44:51] org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:242) HHH000232: Schema update complete 
+[INFO][2018-01-16 16:44:51] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:382) Initialized JPA EntityManagerFactory for persistence unit 'default' 
+[WARN][2018-01-16 16:44:51] org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminController': Failed to introspect bean class [com.cioclass.controller.admin.AdminController] for lookup method metadata: could not find class that it depends on; nested exception is java.lang.NoClassDefFoundError: HttpServletRequest 
+[INFO][2018-01-16 16:44:51] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:551) Closing JPA EntityManagerFactory for persistence unit 'default' 
+[ERROR][2018-01-16 16:44:51] org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:351) Context initialization failed 
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminController': Failed to introspect bean class [com.cioclass.controller.admin.AdminController] for lookup method metadata: could not find class that it depends on; nested exception is java.lang.NoClassDefFoundError: HttpServletRequest
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:269)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1118)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1091)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:444)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:326)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4853)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5314)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1408)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1398)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NoClassDefFoundError: HttpServletRequest
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:613)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:524)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:510)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:247)
+	... 23 more
+Caused by: java.lang.ClassNotFoundException: HttpServletRequest
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1339)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1167)
+	... 30 more
+[INFO][2018-01-16 16:54:55] org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:305) Root WebApplicationContext: initialization started 
+[INFO][2018-01-16 16:54:56] org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:582) Refreshing Root WebApplicationContext: startup date [Tue Jan 16 16:54:56 CST 2018]; root of context hierarchy 
+[INFO][2018-01-16 16:54:56] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317) Loading XML bean definitions from class path resource [beans.xml] 
+[INFO][2018-01-16 16:54:58] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317) Loading XML bean definitions from class path resource [mvc_security.xml] 
+[INFO][2018-01-16 16:54:58] org.springframework.security.core.SpringSecurityCoreVersion.performVersionChecks(SpringSecurityCoreVersion.java:75) You are running with Spring Security Core 4.2.3.RELEASE 
+[WARN][2018-01-16 16:54:58] org.springframework.security.core.SpringSecurityCoreVersion.performVersionChecks(SpringSecurityCoreVersion.java:78) **** You are advised to use Spring 4.3.9.RELEASE or later with this version. You are running: 4.3.6.RELEASE 
+[INFO][2018-01-16 16:54:58] org.springframework.security.config.SecurityNamespaceHandler.<init>(SecurityNamespaceHandler.java:78) Spring Security 'config' module version is 4.2.3.RELEASE 
+[INFO][2018-01-16 16:54:58] org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser.parseInterceptUrlsForFilterInvocationRequestMap(FilterInvocationSecurityMetadataSourceParser.java:194) Creating access control expression attribute 'hasRole('ROLE_USER')' for /upload 
+[INFO][2018-01-16 16:54:58] org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser.parseInterceptUrlsForFilterInvocationRequestMap(FilterInvocationSecurityMetadataSourceParser.java:194) Creating access control expression attribute 'hasRole('ROLE_USER')' for /admin/** 
+[INFO][2018-01-16 16:54:58] org.springframework.security.config.http.AuthenticationConfigBuilder.createLoginPageFilterIfNeeded(AuthenticationConfigBuilder.java:537) No login page configured. The default internal one will be used. Use the 'login-page' attribute to set the URL of the login page. 
+[INFO][2018-01-16 16:54:58] org.springframework.security.config.http.HttpSecurityBeanDefinitionParser.checkFilterChainOrder(HttpSecurityBeanDefinitionParser.java:306) Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 200, Root bean: class [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 400, Root bean: class [org.springframework.security.web.header.HeaderWriterFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 500, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 800, <org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0>, order = 1200, Root bean: class [org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1400, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1600, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1700, Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.security.config.http.HttpConfigurationBuilder$SecurityContextHolderAwareRequestFilterBeanFactory#0; factoryMethodName=getBean; initMethodName=null; destroyMethodName=null, order = 1800, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2100, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2200, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2300, <org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0>, order = 2400] 
+[INFO][2018-01-16 16:54:58] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317) Loading XML bean definitions from class path resource [spring_redis.xml] 
+[INFO][2018-01-16 16:54:59] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172) Loading properties file from class path resource [db.properties] 
+[INFO][2018-01-16 16:55:00] org.springframework.jdbc.datasource.DriverManagerDataSource.setDriverClassName(DriverManagerDataSource.java:133) Loaded JDBC driver: com.mysql.jdbc.Driver 
+[INFO][2018-01-16 16:55:01] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:349) Building JPA container EntityManagerFactory for persistence unit 'default' 
+[INFO][2018-01-16 16:55:01] org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:46) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...] 
+[INFO][2018-01-16 16:55:01] org.hibernate.Version.logVersion(Version.java:54) HHH000412: Hibernate Core {4.3.6.Final} 
+[INFO][2018-01-16 16:55:01] org.hibernate.cfg.Environment.<clinit>(Environment.java:239) HHH000206: hibernate.properties not found 
+[INFO][2018-01-16 16:55:01] org.hibernate.cfg.Environment.buildBytecodeProvider(Environment.java:346) HHH000021: Bytecode provider name : javassist 
+[INFO][2018-01-16 16:55:01] org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66) HCANN000001: Hibernate Commons Annotations {5.0.1.Final} 
+[INFO][2018-01-16 16:55:02] org.hibernate.dialect.Dialect.<init>(Dialect.java:145) HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect 
+[INFO][2018-01-16 16:55:03] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory.<init>(ASTQueryTranslatorFactory.java:47) HHH000397: Using ASTQueryTranslatorFactory 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:182) HHH000228: Running hbm2ddl schema update 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:193) HHH000102: Fetching database metadata 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:205) HHH000396: Updating schema 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.batch_inspection 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [batch_id, inspection_id] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_8ylu2oofaeej6vxcjh8pdlut, fk_6gbrptqob4jokm1n4kcnws77q] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_8ylu2oofaeej6vxcjh8pdlut, fk_6gbrptqob4jokm1n4kcnws77q] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.batch_process 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [process_id, batch_id] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_jewtgchoeandtsurq84mafd8v, fk_ejiwqyxh1ci9syj1netqshbhj] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_jewtgchoeandtsurq84mafd8v, fk_ejiwqyxh1ci9syj1netqshbhj] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.batch_retroactive 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [retroactive_id, batch_id] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_hxuntw56vyeppk2h49gb2sov8, fk_jeejk398o3xj77oi3w2tx9i53] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_hxuntw56vyeppk2h49gb2sov8, fk_jeejk398o3xj77oi3w2tx9i53] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.bole 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.exercise 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [last_update_time, imgurl, flag, create_time, img_url, publishdate, remark, id, lastupdate_time, title, publish_date, url] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.furniture 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [name, alias, remark, id, furniture_project] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_kr70ijy8pqw71e8b614xioeuf] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_kr70ijy8pqw71e8b614xioeuf, primary] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.furniture_image 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [furniture, image_order, id, create_date, image_desc, title, update_date, url] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_fi7ub87xpgkwsia48as3q6hq7] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_fi7ub87xpgkwsia48as3q6hq7, primary] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.furniture_project 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [name, alias, remark, id] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.DatabaseMetadata.getTableMetadata(DatabaseMetadata.java:147) HHH000262: Table not found: guns_dept 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.DatabaseMetadata.getTableMetadata(DatabaseMetadata.java:147) HHH000262: Table not found: guns_relation 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.DatabaseMetadata.getTableMetadata(DatabaseMetadata.java:147) HHH000262: Table not found: guns_role 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.jsoup_links 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [create_time, domain, remark, id, text, title, url, domain_text] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.km_attach 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [fname, ftype, created, fkey, id, author_id] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.km_comments 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [parent, agent, mail, author, created, owner_id, ip, coid, type, content, url, author_id, cid, status] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.km_contents 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [allow_comment, created, comments_num, title, type, allow_ping, content, fmt_type, tags, hits, allow_feed, modified, categories, author_id, thumb_img, slug, cid, status] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.km_logs 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [data, created, ip, action, id, author_id] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.km_metas 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [parent, name, mid, description, sort, type, slug] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.km_options 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [name, description, id, value] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.km_relationships 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [mid, id, cid] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.km_users 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [uid, password, group_name, home_url, logged, screen_name, created, email, activated, username] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.lecturer 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.mall_cart 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [update_time, quantity, create_time, user_id, product_id, checked, id] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.mall_category 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [update_time, create_time, parent_id, name, id, sort_order, status] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.mall_order 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [order_no, shipping_id, create_time, payment_time, end_time, close_time, postage, payment_type, update_time, send_time, user_id, payment, id, status] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:04] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.mall_order_item 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [current_unit_price, order_no, update_time, quantity, create_time, total_price, user_id, product_image, product_id, id, product_name] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.mall_pay_info 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [order_no, update_time, pay_platform, create_time, user_id, platform_number, id, platform_status] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.mall_product 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [update_time, category_id, create_time, sub_images, main_image, price, subtitle, name, id, detail, stock, status] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.mall_shipping 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [update_time, create_time, receiver_province, receiver_zip, user_id, receiver_city, receiver_district, receiver_address, receiver_name, id, receiver_phone, receiver_mobile] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.mall_user 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [password, update_time, role, answer, create_time, question, phone, id, email, username] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.maxima 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.menu 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [parent_name, parentname, icon, ordernum, type, url, parentid, parent_id, name, menuid, perms, id, order_num, menu_id, open] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.note_tickler 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [create_time, tickler_id, title, content] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.orbatch_info 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [product, batch_number, date_of_manufacture, id, recall_status] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_m905y9o26fct9w7n56vrmctqf] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_m905y9o26fct9w7n56vrmctqf, primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.orbatch_sub 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [code, orbatch_info, id, status] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_576tgfpucqpvch3lfhmgt51q1] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_576tgfpucqpvch3lfhmgt51q1, primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.orcompany 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [summary, main_product, responsible_person, legal_representative, industry, remark, abbreviation, date_of_application, registered_capital, zip_code, mailing_address, number_of_employees, mobile_phone, period_of_validity, id, area_covered, enterprise_code, region, enterprise_name, email, home_agent, business_registration_no] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.orinspection_info 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [result, censorate, suggestion, remark, id] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.orprocess_log 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [tache_no, id, content, tache_date, tache_name] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.orproduct 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [term_of_validity, remark, source_area, id, product_code, retroactive_info, product_name, spec] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_5y3e438839af8ej6tfya1ivat] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_5y3e438839af8ej6tfya1ivat, primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.orretroactive_info 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [trace_type, id, content] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.orsearch 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [batch_info, company, id] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_hxm9mj5ufynmfumq43x59ob42, fk_cohojre21pfk8jm0le2yfwisk] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_hxm9mj5ufynmfumq43x59ob42, fk_cohojre21pfk8jm0le2yfwisk, primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.ortrace_type 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [type_name, id] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.qrcode_builder4xsentity 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [code_size, code, create_time, batch_id, prefix, activate_status, num, en, remark, bn, url, num_size, update_time, id, status] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.recruit 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [requirements, flag, create_time, remark, auditing, lastupdate_time, salary, linkman, last_update_time, phone, companyname, company_name, station, id, email] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.shop_goods 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [goods_name, goods_id] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.shop_goods_catalog 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [catalog_id, catalog_name, pid] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.shop_goods_property 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [prop_id, length, pid, type, prop_desc, property_name] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.shop_goods_property_condition 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [condition_str, condition_name, condition_id] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.shop_goods_property_value 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [catalog_id, prop_id, nid, goods_id, value] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_aq3p9hnq6x7n1hrb9xulxd8sr, fk_osahi002qauqin44gb96kxj91, fk_6q7nb5jufvimrjdinr5mmcfhh] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_aq3p9hnq6x7n1hrb9xulxd8sr, fk_6q7nb5jufvimrjdinr5mmcfhh, primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.sys_acl 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [code, acl_module_id, name, remark, id, type, operator, seq, url, operate_ip, operate_time, status] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.sys_acl_module 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [level, parent_id, name, remark, id, operator, seq, operate_ip, operate_time, status] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.sys_dept 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [level, parent_id, name, remark, id, operator, seq, operate_ip, operate_time] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.sys_log 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [target_id, id, type, operator, operate_ip, operate_time, status] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.sys_role 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [name, remark, id, type, operator, operate_ip, operate_time, status] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.sys_role_acl 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [role_id, id, acl_id, operator, operate_ip, operate_time] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.sys_role_user 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [role_id, user_id, id, operator, operate_ip, operate_time] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.sys_user 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [password, mail, remark, telephone, id, dept_id, operator, operate_ip, operate_time, status, username] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.trainee 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.user 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [last_update_time, password, flag, answer, create_time, question, phone, name, remark, id, email] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.xx_attribute 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [attr_desc, check_user_id, attr_checked, length, pid, remark, type, update_date, attr_id, attr_level, name, make_user_id, short_name, create_date] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.xx_attribute_value 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [score, attrid, classify_id, res_id, value_id, value, resid, attr_id] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.xx_classify 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [classify_status, check_user_id, classify_id, classify_level, pid, remark, update_date, classify_checked, classify_option, classify_desc, name, make_user_id, short_name, create_date] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.xx_demand 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [demand_id, name] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.xx_question 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [id, question_des] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.xx_question_item 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [item_desc, question, id, item_value] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_ljngho2cn3h57rifqic2aq95j] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_ljngho2cn3h57rifqic2aq95j, primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.xx_res 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [res_desc, check_user_id, res_checked, res_id, name, res_status, make_user_id, short_name, remark, create_date, update_date, res_level] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.xx_res_attrs 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [id, xx_res, attrs] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.DatabaseMetadata.getTableMetadata(DatabaseMetadata.java:147) HHH000262: Table not found: guns_dept 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.DatabaseMetadata.getTableMetadata(DatabaseMetadata.java:147) HHH000262: Table not found: guns_relation 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.DatabaseMetadata.getTableMetadata(DatabaseMetadata.java:147) HHH000262: Table not found: guns_role 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.DatabaseMetadata.getTableMetadata(DatabaseMetadata.java:147) HHH000262: Table not found: guns_dept 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.DatabaseMetadata.getTableMetadata(DatabaseMetadata.java:147) HHH000262: Table not found: guns_relation 
+[INFO][2018-01-16 16:55:05] org.hibernate.tool.hbm2ddl.DatabaseMetadata.getTableMetadata(DatabaseMetadata.java:147) HHH000262: Table not found: guns_role 
+[INFO][2018-01-16 16:55:06] org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:242) HHH000232: Schema update complete 
+[INFO][2018-01-16 16:55:06] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:382) Initialized JPA EntityManagerFactory for persistence unit 'default' 
+[WARN][2018-01-16 16:55:06] org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminController': Failed to introspect bean class [com.cioclass.controller.admin.AdminController] for lookup method metadata: could not find class that it depends on; nested exception is java.lang.NoClassDefFoundError: HttpServletRequest 
+[INFO][2018-01-16 16:55:06] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:551) Closing JPA EntityManagerFactory for persistence unit 'default' 
+[ERROR][2018-01-16 16:55:06] org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:351) Context initialization failed 
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminController': Failed to introspect bean class [com.cioclass.controller.admin.AdminController] for lookup method metadata: could not find class that it depends on; nested exception is java.lang.NoClassDefFoundError: HttpServletRequest
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:269)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1118)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1091)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:444)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:326)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4853)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5314)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1408)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1398)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NoClassDefFoundError: HttpServletRequest
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:613)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:524)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:510)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:247)
+	... 23 more
+Caused by: java.lang.ClassNotFoundException: HttpServletRequest
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1339)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1167)
+	... 30 more
+[INFO][2018-01-16 16:56:42] org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:305) Root WebApplicationContext: initialization started 
+[INFO][2018-01-16 16:56:43] org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:582) Refreshing Root WebApplicationContext: startup date [Tue Jan 16 16:56:43 CST 2018]; root of context hierarchy 
+[INFO][2018-01-16 16:56:43] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317) Loading XML bean definitions from class path resource [beans.xml] 
+[INFO][2018-01-16 16:56:46] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317) Loading XML bean definitions from class path resource [mvc_security.xml] 
+[INFO][2018-01-16 16:56:46] org.springframework.security.core.SpringSecurityCoreVersion.performVersionChecks(SpringSecurityCoreVersion.java:75) You are running with Spring Security Core 4.2.3.RELEASE 
+[WARN][2018-01-16 16:56:46] org.springframework.security.core.SpringSecurityCoreVersion.performVersionChecks(SpringSecurityCoreVersion.java:78) **** You are advised to use Spring 4.3.9.RELEASE or later with this version. You are running: 4.3.6.RELEASE 
+[INFO][2018-01-16 16:56:46] org.springframework.security.config.SecurityNamespaceHandler.<init>(SecurityNamespaceHandler.java:78) Spring Security 'config' module version is 4.2.3.RELEASE 
+[INFO][2018-01-16 16:56:46] org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser.parseInterceptUrlsForFilterInvocationRequestMap(FilterInvocationSecurityMetadataSourceParser.java:194) Creating access control expression attribute 'hasRole('ROLE_USER')' for /upload 
+[INFO][2018-01-16 16:56:46] org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser.parseInterceptUrlsForFilterInvocationRequestMap(FilterInvocationSecurityMetadataSourceParser.java:194) Creating access control expression attribute 'hasRole('ROLE_USER')' for /admin/** 
+[INFO][2018-01-16 16:56:46] org.springframework.security.config.http.AuthenticationConfigBuilder.createLoginPageFilterIfNeeded(AuthenticationConfigBuilder.java:537) No login page configured. The default internal one will be used. Use the 'login-page' attribute to set the URL of the login page. 
+[INFO][2018-01-16 16:56:46] org.springframework.security.config.http.HttpSecurityBeanDefinitionParser.checkFilterChainOrder(HttpSecurityBeanDefinitionParser.java:306) Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 200, Root bean: class [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 400, Root bean: class [org.springframework.security.web.header.HeaderWriterFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 500, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 800, <org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0>, order = 1200, Root bean: class [org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1400, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1600, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1700, Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.security.config.http.HttpConfigurationBuilder$SecurityContextHolderAwareRequestFilterBeanFactory#0; factoryMethodName=getBean; initMethodName=null; destroyMethodName=null, order = 1800, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2100, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2200, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2300, <org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0>, order = 2400] 
+[INFO][2018-01-16 16:56:46] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317) Loading XML bean definitions from class path resource [spring_redis.xml] 
+[INFO][2018-01-16 16:56:47] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172) Loading properties file from class path resource [db.properties] 
+[INFO][2018-01-16 16:56:48] org.springframework.jdbc.datasource.DriverManagerDataSource.setDriverClassName(DriverManagerDataSource.java:133) Loaded JDBC driver: com.mysql.jdbc.Driver 
+[INFO][2018-01-16 16:56:48] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:349) Building JPA container EntityManagerFactory for persistence unit 'default' 
+[INFO][2018-01-16 16:56:48] org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:46) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...] 
+[INFO][2018-01-16 16:56:49] org.hibernate.Version.logVersion(Version.java:54) HHH000412: Hibernate Core {4.3.6.Final} 
+[INFO][2018-01-16 16:56:49] org.hibernate.cfg.Environment.<clinit>(Environment.java:239) HHH000206: hibernate.properties not found 
+[INFO][2018-01-16 16:56:49] org.hibernate.cfg.Environment.buildBytecodeProvider(Environment.java:346) HHH000021: Bytecode provider name : javassist 
+[INFO][2018-01-16 16:56:49] org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66) HCANN000001: Hibernate Commons Annotations {5.0.1.Final} 
+[INFO][2018-01-16 16:56:50] org.hibernate.dialect.Dialect.<init>(Dialect.java:145) HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect 
+[INFO][2018-01-16 16:56:51] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory.<init>(ASTQueryTranslatorFactory.java:47) HHH000397: Using ASTQueryTranslatorFactory 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:182) HHH000228: Running hbm2ddl schema update 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:193) HHH000102: Fetching database metadata 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:205) HHH000396: Updating schema 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.batch_inspection 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [batch_id, inspection_id] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_8ylu2oofaeej6vxcjh8pdlut, fk_6gbrptqob4jokm1n4kcnws77q] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_8ylu2oofaeej6vxcjh8pdlut, fk_6gbrptqob4jokm1n4kcnws77q] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.batch_process 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [process_id, batch_id] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_jewtgchoeandtsurq84mafd8v, fk_ejiwqyxh1ci9syj1netqshbhj] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_jewtgchoeandtsurq84mafd8v, fk_ejiwqyxh1ci9syj1netqshbhj] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.batch_retroactive 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [retroactive_id, batch_id] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_hxuntw56vyeppk2h49gb2sov8, fk_jeejk398o3xj77oi3w2tx9i53] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_hxuntw56vyeppk2h49gb2sov8, fk_jeejk398o3xj77oi3w2tx9i53] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.bole 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.exercise 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [last_update_time, imgurl, flag, create_time, img_url, publishdate, remark, id, lastupdate_time, title, publish_date, url] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.furniture 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [name, alias, remark, id, furniture_project] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_kr70ijy8pqw71e8b614xioeuf] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_kr70ijy8pqw71e8b614xioeuf, primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.furniture_image 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [furniture, image_order, id, create_date, image_desc, title, update_date, url] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_fi7ub87xpgkwsia48as3q6hq7] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_fi7ub87xpgkwsia48as3q6hq7, primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.furniture_project 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [name, alias, remark, id] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.guns_dept 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [num, pid, simplename, id, fullname, pids, version, tips] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.guns_relation 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [roleid, menuid, id] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.guns_role 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [num, deptid, name, pid, id, version, tips] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.jsoup_links 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [create_time, domain, remark, id, text, title, url, domain_text] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.km_attach 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [fname, ftype, created, fkey, id, author_id] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.km_comments 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [parent, agent, mail, author, created, owner_id, ip, coid, type, content, url, author_id, cid, status] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.km_contents 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [allow_comment, created, comments_num, title, type, allow_ping, content, fmt_type, tags, hits, allow_feed, modified, categories, author_id, thumb_img, slug, cid, status] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.km_logs 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [data, created, ip, action, id, author_id] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.km_metas 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [parent, name, mid, description, sort, type, slug] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.km_options 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [name, description, id, value] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.km_relationships 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [mid, id, cid] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.km_users 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [uid, password, group_name, home_url, logged, screen_name, created, email, activated, username] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.lecturer 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.mall_cart 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [update_time, quantity, create_time, user_id, product_id, checked, id] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.mall_category 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [update_time, create_time, parent_id, name, id, sort_order, status] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.mall_order 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [order_no, shipping_id, create_time, payment_time, end_time, close_time, postage, payment_type, update_time, send_time, user_id, payment, id, status] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.mall_order_item 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [current_unit_price, order_no, update_time, quantity, create_time, total_price, user_id, product_image, product_id, id, product_name] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.mall_pay_info 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [order_no, update_time, pay_platform, create_time, user_id, platform_number, id, platform_status] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.mall_product 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [update_time, category_id, create_time, sub_images, main_image, price, subtitle, name, id, detail, stock, status] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.mall_shipping 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [update_time, create_time, receiver_province, receiver_zip, user_id, receiver_city, receiver_district, receiver_address, receiver_name, id, receiver_phone, receiver_mobile] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.mall_user 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [password, update_time, role, answer, create_time, question, phone, id, email, username] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.maxima 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.menu 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [parent_name, parentname, icon, ordernum, type, url, parentid, parent_id, name, menuid, perms, id, order_num, menu_id, open] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.note_tickler 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [create_time, tickler_id, title, content] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.orbatch_info 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [product, batch_number, date_of_manufacture, id, recall_status] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_m905y9o26fct9w7n56vrmctqf] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_m905y9o26fct9w7n56vrmctqf, primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.orbatch_sub 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [code, orbatch_info, id, status] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_576tgfpucqpvch3lfhmgt51q1] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_576tgfpucqpvch3lfhmgt51q1, primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.orcompany 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [summary, main_product, responsible_person, legal_representative, industry, remark, abbreviation, date_of_application, registered_capital, zip_code, mailing_address, number_of_employees, mobile_phone, period_of_validity, id, area_covered, enterprise_code, region, enterprise_name, email, home_agent, business_registration_no] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.orinspection_info 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [result, censorate, suggestion, remark, id] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.orprocess_log 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [tache_no, id, content, tache_date, tache_name] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.orproduct 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [term_of_validity, remark, source_area, id, product_code, retroactive_info, product_name, spec] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_5y3e438839af8ej6tfya1ivat] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_5y3e438839af8ej6tfya1ivat, primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.orretroactive_info 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [trace_type, id, content] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.orsearch 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [batch_info, company, id] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_hxm9mj5ufynmfumq43x59ob42, fk_cohojre21pfk8jm0le2yfwisk] 
+[INFO][2018-01-16 16:56:52] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_hxm9mj5ufynmfumq43x59ob42, fk_cohojre21pfk8jm0le2yfwisk, primary] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.ortrace_type 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [type_name, id] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.qrcode_builder4xsentity 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [code_size, code, create_time, batch_id, prefix, activate_status, num, en, remark, bn, url, num_size, update_time, id, status] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.recruit 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [requirements, flag, create_time, remark, auditing, lastupdate_time, salary, linkman, last_update_time, phone, companyname, company_name, station, id, email] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.shop_goods 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [goods_name, goods_id] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.shop_goods_catalog 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [catalog_id, catalog_name, pid] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.shop_goods_property 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [prop_id, length, pid, type, prop_desc, property_name] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.shop_goods_property_condition 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [condition_str, condition_name, condition_id] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.shop_goods_property_value 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [catalog_id, prop_id, nid, goods_id, value] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_aq3p9hnq6x7n1hrb9xulxd8sr, fk_osahi002qauqin44gb96kxj91, fk_6q7nb5jufvimrjdinr5mmcfhh] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_aq3p9hnq6x7n1hrb9xulxd8sr, fk_6q7nb5jufvimrjdinr5mmcfhh, primary] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.sys_acl 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [code, acl_module_id, name, remark, id, type, operator, seq, url, operate_ip, operate_time, status] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.sys_acl_module 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [level, parent_id, name, remark, id, operator, seq, operate_ip, operate_time, status] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.sys_dept 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [level, parent_id, name, remark, id, operator, seq, operate_ip, operate_time] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.sys_log 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [target_id, id, type, operator, operate_ip, operate_time, status] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.sys_role 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [name, remark, id, type, operator, operate_ip, operate_time, status] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.sys_role_acl 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [role_id, id, acl_id, operator, operate_ip, operate_time] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.sys_role_user 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [role_id, user_id, id, operator, operate_ip, operate_time] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.sys_user 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [password, mail, remark, telephone, id, dept_id, operator, operate_ip, operate_time, status, username] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.trainee 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [last_update_time, education, flag, create_time, phone, name, remark, id, lastupdate_time, experience, email, direction] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.user 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [last_update_time, password, flag, answer, create_time, question, phone, name, remark, id, email] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.xx_attribute 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [attr_desc, check_user_id, attr_checked, length, pid, remark, type, update_date, attr_id, attr_level, name, make_user_id, short_name, create_date] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.xx_attribute_value 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [score, attrid, classify_id, res_id, value_id, value, resid, attr_id] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.xx_classify 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [classify_status, check_user_id, classify_id, classify_level, pid, remark, update_date, classify_checked, classify_option, classify_desc, name, make_user_id, short_name, create_date] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.xx_demand 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [demand_id, name] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.xx_question 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [id, question_des] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.xx_question_item 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [item_desc, question, id, item_value] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [fk_ljngho2cn3h57rifqic2aq95j] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [fk_ljngho2cn3h57rifqic2aq95j, primary] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.xx_res 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [res_desc, check_user_id, res_checked, res_id, name, res_status, make_user_id, short_name, remark, create_date, update_date, res_level] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:66) HHH000261: Table found: spring_data.xx_res_attrs 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:67) HHH000037: Columns: [id, xx_res, attrs] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:69) HHH000108: Foreign keys: [] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.TableMetadata.<init>(TableMetadata.java:70) HHH000126: Indexes: [primary] 
+[INFO][2018-01-16 16:56:53] org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:242) HHH000232: Schema update complete 
+[INFO][2018-01-16 16:56:53] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:382) Initialized JPA EntityManagerFactory for persistence unit 'default' 
+[WARN][2018-01-16 16:56:53] org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'boleController': Unsatisfied dependency expressed through field 'boleService'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Error loading class [com.cioclass.service.impl.QrcodeServiceImpl] for bean with name 'qrcodeServiceImpl' defined in file [E:\javaee\apache-tomcat-8.0.47\webapps\cioclass\WEB-INF\classes\com\cioclass\service\impl\QrcodeServiceImpl.class]: problem with class file or dependent class; nested exception is java.lang.ClassFormatError: Duplicate method name&signature in class file com/cioclass/service/impl/QrcodeServiceImpl 
+[INFO][2018-01-16 16:56:53] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:551) Closing JPA EntityManagerFactory for persistence unit 'default' 
+[ERROR][2018-01-16 16:56:53] org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:351) Context initialization failed 
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'boleController': Unsatisfied dependency expressed through field 'boleService'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Error loading class [com.cioclass.service.impl.QrcodeServiceImpl] for bean with name 'qrcodeServiceImpl' defined in file [E:\javaee\apache-tomcat-8.0.47\webapps\cioclass\WEB-INF\classes\com\cioclass\service\impl\QrcodeServiceImpl.class]: problem with class file or dependent class; nested exception is java.lang.ClassFormatError: Duplicate method name&signature in class file com/cioclass/service/impl/QrcodeServiceImpl
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:444)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:326)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4853)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5314)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1408)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1398)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Error loading class [com.cioclass.service.impl.QrcodeServiceImpl] for bean with name 'qrcodeServiceImpl' defined in file [E:\javaee\apache-tomcat-8.0.47\webapps\cioclass\WEB-INF\classes\com\cioclass\service\impl\QrcodeServiceImpl.class]: problem with class file or dependent class; nested exception is java.lang.ClassFormatError: Duplicate method name&signature in class file com/cioclass/service/impl/QrcodeServiceImpl
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1388)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:641)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:609)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1484)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:425)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:403)
+	at org.springframework.beans.factory.BeanFactoryUtils.beanNamesForTypeIncludingAncestors(BeanFactoryUtils.java:220)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1260)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1101)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 24 more
+Caused by: java.lang.ClassFormatError: Duplicate method name&signature in class file com/cioclass/service/impl/QrcodeServiceImpl
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:2573)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:859)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1308)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1167)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:250)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:401)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1432)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1377)
+	... 34 more

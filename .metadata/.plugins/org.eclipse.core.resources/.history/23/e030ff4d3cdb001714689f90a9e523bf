@@ -1,6 +1,0 @@
-package com.cioclass.service.or;
-
-public interface QrcodeBuilder4XSService {
-	
-	private List<QrcodeBuilder4XSEntity> save(QrcodeBuilder4XSEntity qbe);
-}
